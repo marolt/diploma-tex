@@ -384,8 +384,6 @@ V diplomski nalogi bomo predstavili kako smo pristopili k reševanju omenjenega 
 % Morda se to sprva sliši dolgočasno, vendar sam mislim, da je podpirati ta cilj težje, kot se sliši.
 
 
-
-
 \chapter{Razvoj aplikacije}
 \label{pregled-podrocja-chapter}
 
@@ -573,7 +571,7 @@ V našem projektu smo se odločili uporabiti sistem za verzioniranje kode Git. J
 \subsection{Infrastruktura}
 Uporaba programske opreme je zapletena. Pred namestitvijo je potrebno razmisliti, kateri operacijski sistem se bo uporabljal, katera so orodja, ki jih programska oprema potrebuje in še vrsto drugih vprašanj. Večina računalnikov že ima nameščene in zagnane aplikacije, katere so odvisne od druge programske opreme. V primeru, da dve programske opreme med seboj niso komatibilne, lahko pride do težave, katere ni enostavno odpraviti. Stvari postanejo bolj zapletene, če si aplikacije med seboj delijo skupne vire. 
 
-Na našem projektu smo se hoteli izogniti nevšečnostim z oteženim postavljanjem projekta, zato smo se odločili oporabili orodje za izoliranje okolja. Virtualizacija je postopek, ki strojni ali programski vir preslika v navidezni vir, tega pa potem odjemalec koristi kot pravi vir. Pomembna prednost uporabe virtualizacije je prenostljivost. Z njo lahko dosežemo enake pogoje za izvajanje programske opreme na različnih strojnih opremah \cite{docker-in-action}.
+Na našem projektu smo se hoteli izogniti nevšečnostim z oteženim postavljanjem projekta, zato smo se odločili uporabiti orodje za izoliranje okolja. Virtualizacija je postopek, ki strojni ali programski vir preslika v navidezni vir, tega pa potem odjemalec koristi kot pravi vir. Pomembna prednost uporabe virtualizacije je prenostljivost. Z njo lahko dosežemo enake pogoje za izvajanje programske opreme na različnih strojnih opremah \cite{docker-in-action}.
 
 Orodje Docker zagotavlja tako imenovano abstrakcijo, katera nudi enako okolje vsem razvijalcem, ki razvijajo na istem projektu, ne glede kateri operacijski sistem uporabljajo. Vsebniki (ang. containers) uporabljajo jedra operacijskega sistema in se obnašajo kot navadni programi, ki lahko uporabljajo vse sistemske vire, vendar omejijo dostop aplikacije samo na prostor v vsebnikih (Slika \ref{docker-vs-vm}). \clearpage
 
@@ -941,7 +939,7 @@ Odjemalec v glavi zahtevka pošlje \verb=Bearer= žeton s katerim identificira u
 \label{token-flow}
 \end{figure}
 
-Strežnik žeton prebere na podlagi skrivnega ključa preveri če je žeton veljaven. Uporabljen skrivni kjuč je enak kot ključ s katerim je bil žeton zgeneriran. S tem zagotovimo, da se podatki vmes niso spremenili.
+Strežnik, žeton prebere na podlagi skrivnega ključa preveri če je žeton veljaven. Uporabljen skrivni ključ je enak kot ključ s katerim je bil žeton zgeneriran. S tem zagotovimo, da se podatki vmes niso spremenili.
 
 V zalednem sistemu se ob vsakem zahtevku, sproži akcija za overjanje. Napisali smo funkcijo poznano kot \verb=middleware= (Koda \ref{lst:auth-middleware}), ki na podlagi skrivnega ključa preveri če je žeton veljaven. Uporabljen skrivni kjuč je enak kot ključ s katerim je bil žeton zgeneriran. S tem zagotovimo, da se podatki vmes niso spremenili.. V primeru da žeton ni veljaven odgovorimo z ustreznim odgovorom \verb=401 - Unauthorized=. 
 
@@ -982,7 +980,7 @@ func UserMiddleware(ctx context.Context, authService Service) MiddlewareFunc {
 }
 \end{lstlisting}
 
-Preverjanje pravic se preveri v kodi, ki vsebuje logiko kaj se zgodi z zahtevkom (Koda \ref{lst:auth-check-role}). Najprej preverimo, če je zahtevek od uporabnika, ki ima zadostne pravice za izvajanje tega zahtevka. V primeru, da uporabnik nima zadostnih pravic, mu odgovorimo z odgovorm \verb=403 - Forbidden=. Če ima uporabnik pravice, nadaljuje procesiranje zahtevka.
+Preverjanje pravic se preveri v kodi, ki vsebuje logiko kaj se zgodi z zahtevkom (Koda \ref{lst:auth-check-role}). Najprej preverimo, če je zahtevek od uporabnika, ki ima zadostne pravice za izvajanje tega zahtevka. V primeru, da uporabnik nima zadostnih pravic, mu odgovorimo z odgovorom \verb=403 - Forbidden=. Če ima uporabnik pravice, nadaljuje procesiranje zahtevka.
 
 \clearpage
 \begin{lstlisting}[language=go,style=mystyle,caption={Izsek kode za preverjanje pravic uporabnika},label=lst:auth-check-role]
@@ -1043,13 +1041,13 @@ CREATE TABLE "articles"
 
 % #####################################################################
 \subsubsection{ Struktura podatkov }
-Z migracijami smo definirali celotno strutkuro podatkovne baze, ki jo potrebujemo. Definirali smo 13 tabel, ki skrbijo, da so podatki pravilno shranjeni. Vizualni prikaz tabel in medsebojnih relacij je viden na sliki ~\ref{database-diagram-er}. Opis posameznih tabel:
+Z migracijami smo definirali celotno strukturo podatkovne baze, ki jo potrebujemo. Definirali smo 13 tabel, ki skrbijo, da so podatki pravilno shranjeni. Vizualni prikaz tabel in medsebojnih relacij je viden na sliki ~\ref{database-diagram-er}. Opis posameznih tabel:
 \begin{description}
-\item[gomigrate]: Tabela vsebuje informacije o stanju migracij. Ob vsakem izvajanju migracj, se v tabelo zapiše identifikator migracije, glede na katerega se izvajajo nadaljne migracije za podatkovno shemo. 
+\item[gomigrate]: Tabela vsebuje informacije o stanju migracij. Ob vsakem izvajanju migracij, se v tabelo zapiše identifikator migracije, glede na katerega se izvajajo nadaljnje migracije za podatkovno shemo. 
 
 \item[users]: Tabela vsebuje informacije o uporabnikih, ki so registrirani v sistem. Uporabniki se v aplikaciji razlikujejo glede na enoličen identifikator UUID in unikaten poštni predal (``email``). 
 
-\item[articles]: Tabela vsebuje informacije o publikacijah, vnešenih iz strani uporabnika. Vsebuje infomacije kot so naslov, leto izdaje, komentar, najvišja in najnižja temperatura. Poleg informacij, ki jih vnese uporabnik imamo tudi evidenco kdo je potrdil publikacijo. Tabela vsebuje tudi relacije z ostalimi entitetami, za povezavo z metodami, avtorji, viri, dinamičnimi podatki in živili. Ena publikacija lahko ima le en vir, zato je ta relacija definirana s tujim ključem v isti tabeli, prav tako za pripeto datoteko. 
+\item[articles]: Tabela vsebuje informacije o publikacijah vnešenih iz strani uporabnika. Vsebuje informacije kot so naslov, leto izdaje, komentar, najvišja in najnižja temperatura. Poleg informacij, ki jih vnese uporabnik imamo tudi evidenco kdo je potrdil publikacijo. Tabela vsebuje tudi relacije z ostalimi entitetami, za povezavo z metodami, avtorji, viri, dinamičnimi podatki in živili. Ena publikacija lahko ima le en vir, zato je ta relacija definirana s tujim ključem v isti tabeli, prav tako za pripeto datoteko. 
 
 Ostale relacije, kot so živila, pa so definirana kot mnogo proti mnogo, kar pomeni, da potrebujemo pivot tabele za povezovanje entitet.
 \begin{itemize}
@@ -1274,7 +1272,7 @@ Na dnu se nam prikaže vnosno polje, za katerega lahko izberemo in definiramo nj
 Podatek predstavlja podobne vrednosti, kot vnostno polje \sn{Input}, z razliko, da so vrednosti lahko že vnaprej definirane. Te vrednosti nam omogočajo hitrejše vnašanje podatkov. Na voljo je tudi iskanje po vnešenih vrednostih in sprotno dodajanje vrednosti v primeru, da vrednost še ne obstaja. Vse to je možno nastaviti med samim definiranjem parametra (Slika \ref{type-select}). Na voljo je tudi možnost izbire več kot ene vrednosti, z izbiro opcije \verb=multiple=.
 
 \begin{description}
-\item[Opis posameznih opcij, med samim defineranjem parametra]:
+\item[Opis posameznih opcij, med samim definiranjem parametra]:
 	\begin{itemize}
 		\item \textbf{taggable} - omogoča dodajanje novih vrednosti med samim urejanjem
 		\item \textbf{multiple} - omogoča izbiro več kot ene vrednosti
@@ -1308,14 +1306,14 @@ Predstavlja podatek katere vrednosti so statične in pred definirane. Vnos podat
 \subsubsection{Polje za izbiranje časovnega podatka (datum)}
 Predstavlja podatek, katera vrednost je časovna. Uporabniku je omogočeno definiranje podatka z izbiro datuma in časa na koledarju (Slika \ref{type-date}). 
 
-Uporabili smo minimalistično knjižnico \verb=Day.js=, ki z enostavnim aplikacijskim vmestnikom razčlenjuje, preverja, manipulira in prikazuje datume in ure za sodobne brskalnike. Ponuja tudi podporo z ostalimi knjižnicami, kot je naprimer bolj prizna knjižnica \verb=Moment.js=.
+Uporabili smo minimalistično knjižnico \verb=Day.js=, ki z enostavnim aplikacijskim vmesnikom razčlenjuje, preverja, manipulira in prikazuje datume in ure za sodobne brskalnike. Ponuja tudi podporo z ostalimi knjižnicami, kot je naprimer bolj prizna knjižnica \verb=Moment.js=.
 
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=1\textwidth]{slike/type_date.png}
 \end{center}
-\caption{ Prikaz grafičnega vmestnika za izbiranje datuma. }
+\caption{ Prikaz grafičnega vmesnika za izbiranje datuma. }
 \label{type-date}
 \end{figure}
 % #####################################################################
@@ -1355,7 +1353,7 @@ S klikom na gumb \sn{Vstopi v aplikacijo}, nadaljujemo v aplikacijo. V primeru, 
 % #####################################################################
 \section{Prijava uporabnika }
 \label{sign-in-page}
-Obstoječi uporabik se lahko prijavi z uporabniškim imenom in geslom (Slika \ref{login-form}. Če je uporabnik presegel določeno število neuspešnih poizkusov prijave, mu je dostop do strani začasno omejen in onemogočena prijava. Na vrhu obrazca se izpiše ustrezna napaka, ki podaja razlog in navodila za njeno odpravljanje. Poleg tega lahko uporabnik spodaj klikne \sn{Forgot password}, če je pozabil geslo, ali \sn{Create new account}, če še ni prijavljen. 
+Obstoječi uporabnik se lahko prijavi z uporabniškim imenom in geslom (Slika \ref{login-form}. Če je uporabnik presegel določeno število neuspešnih poizkusov prijave, mu je dostop do strani začasno omejen in onemogočena prijava. Na vrhu obrazca se izpiše ustrezna napaka, ki podaja razlog in navodila za njeno odpravljanje. Poleg tega lahko uporabnik spodaj klikne \sn{Forgot password}, če je pozabil geslo, ali \sn{Create new account}, če še ni prijavljen. 
 
 
 % V primeru pozabljenega gesla, lahko s klikom na \sn{Pozabljeno geslo} nadaljujemo na stran, kjer se odpre stran, z obrazcem za ponastavitev gesla (Poglavje \ref{forgotten-form}). 
