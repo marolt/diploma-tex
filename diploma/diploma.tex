@@ -252,7 +252,7 @@ Fakulteta za računalništvo in informatiko izdaja naslednjo nalogo:
 
 Tematika naloge:
 \end{tabbing}
-Kandidat naj v diplomskem delu implementira spletno rešitev za vnos razli\\čnih publikacij in dodatnih vsebin z namenom urejanja in pregledovanja pomembnih informacij. Predlagana rešitev naj bo zasnovana tako, da imajo prijavljeni uporabniki dostop do podatkov, urednik skrbi za vnos in urejanje, administrator pa ima celovit nadzor nad delovanjem. Uporaba aplikacije naj bo predstavljena za objavljene publikacije in pomembne podatke s področja živil.
+Kandidat naj v diplomskem delu implementira spletno rešitev za vnos različ-\\nih publikacij in dodatnih vsebin z namenom urejanja in pregledovanja pomembnih informacij. Predlagana rešitev naj bo zasnovana tako, da imajo prijavljeni uporabniki dostop do podatkov, urednik skrbi za vnos in urejanje, administrator pa ima celovit nadzor nad delovanjem. Uporaba aplikacije naj bo predstavljena za objavljene publikacije in pomembne podatke s področja živil.
 \vspace{15mm}
 
 
@@ -328,7 +328,7 @@ Zahvaljujem se mentorici doc. dr. Miri Trebar za vso pomoč in družini za podpo
 %\noindent\textbf{Povzetek:} 
 \noindent Dandanes se na spletu pojavlja vedno več raziskovalnih metod iz področja analize in napovedovanja dobe uporabnosti hitro pokvarljivih živil. Vsaka raziskovalna metoda lahko pri raziskovanju uporablja različne parametre. Parametri se razlikujejo glede na format, strukturo ali pa samo vrsto podatkov. 
 
-Namen te diplomske naloge je izdelati spletno aplikacijo, s primerno podatkovno shemo za pregled in urejanje publikacij. Preko nje je mogoče dodajati, urejati, brisati in iskati po vnesenih metodah in drugih podatkih. Dostop do posameznih delov aplikacije je dovoljen le določenim uporabnikom, z ustreznimi uporabniškimi pravicami. Predstavljen je celoten proces načrtovanja in implementacije aplikacije, ki je zasnovana kot mikrostoritev v programskem jeziku Go. Podane so zahteve, ki jih je potrebno upoštevati pri zasnovi arhitekture spletne aplikacije, iz vidika varnosti podatkov, hitrosti razvoja aplikacije in hitrosti same aplikacije. Aplikacije je predstavljena s primerom uporabe testnih podatkov.
+Namen te diplomske naloge je izdelati spletno aplikacijo s primerno podatkovno shemo za pregled in urejanje publikacij. Preko nje je mogoče dodajati, urejati, brisati in iskati po vnesenih metodah in drugih podatkih. Dostop do posameznih delov aplikacije je dovoljen le določenim uporabnikom z ustreznimi uporabniškimi pravicami. Predstavljen je celoten proces načrtovanja in implementacije aplikacije, ki je zasnovana kot mikrostoritev v programskem jeziku Go. Podane so zahteve, ki jih je potrebno upoštevati pri zasnovi arhitekture spletne aplikacije iz vidika varnosti podatkov, hitrosti razvoja aplikacije in hitrosti same aplikacije. Aplikacija je predstavljena s primerom uporabe testnih podatkov.
 
 \bigskip
 
@@ -349,8 +349,9 @@ Namen te diplomske naloge je izdelati spletno aplikacijo, s primerno podatkovno 
 \bigskip
 
 %\noindent\textbf{Abstract:} 
-\noindent This sample document presents an approach to typesetting your BSc thesis using \LaTeX. 
-A proper abstract should contain around 100 words which makes this one way too short.
+\noindent Nowadays, more and more research methods are appearing in the field of analysis and prediction of perishable foods shelf-life. Each research method may use different parameters in its research. The parameters vary according to format, structure or just the type of data.
+
+The aim of this thesis is to develop a web-based application with a suitable data structure to allow for reviewing and editing the publications. Through the application it is possible to add, edit, delete and search through the entered methods and other data. Access to individual parts of the application is restricted to specific users with the appropriate user rights. Presented here is the complete design process and implementation of the application, which is designed as a microservice in the Go programming language. Given are requirements to be taken into account in the design of the web application architecture in terms of data security, development time and the speed of the application itself. The application is presented with an example using test data.
 \bigskip
 
 \noindent\textbf{Keywords:} \tkeywordsEn.
@@ -370,9 +371,9 @@ Poleg splošnih informacij je eden od najpomembnejših podatkov, ki so na voljo 
 
 Iz dneva v dan nam je na voljo vedno več objavljenih raziskav iz področja ravnanja z živili v preskrbovalni verigi. Raziskave so objavljene v različnih virih, naj si bo to članek na svetovnem spletu, v reviji ali pa v znanstveni knjigi. Raziskovalci, ki prebirajo raziskave pogosto porabijo veliko časa, da pridobijo zanesljive vire in iz njih uspejo pridobiti pomembne in zanesljive informacije.
 
-Da bi poenostavili pridobivanje informacij, smo v diplomski nalogi zasnovali in implementirali aplikacijo za vnos in pregled raziskovalnih publikacij s področja analize in napovedovanja dobe uporabnosti hitro pokvarljivih živil. Aplikacija je zasnovana kot mikrostoritev. Za razvojno okolje je uporabljena docker arhitektura, kar nam omogoča enostavno postavitev projekta, in pa tudi enostavno objavljanje projekta v izbranem okolju. 
+Da bi poenostavili pridobivanje informacij, smo v diplomski nalogi zasnovali in implementirali aplikacijo za vnos in pregled raziskovalnih publikacij s področja analize in napovedovanja dobe uporabnosti hitro pokvarljivih živil. Aplikacija je zasnovana kot mikrostoritev. Za razvojno okolje je uporabljena Docker arhitektura, kar nam omogoča enostavno postavitev projekta, in pa tudi enostavno objavljanje projekta v izbranem okolju. 
 
-Ker se struktura podatkov razlikuje od raziskave do raziskave, od vira do vira, je pomembno da pravilno definiramo podatkovno strukturo. Za dobro uporabniško izkušnjo mora biti vnos podatkov o raziskavah enostaven in dosleden, iskanje po le teh pa mora biti hitro in uporabno. Definirali smo več vrst uporabnikov, ki imajo različne dostope do posameznih delov aplikacije.
+Ker se struktura podatkov razlikuje od raziskave do raziskave in od vira do vira, je pomembno, da podatkovno strukturo pravilno definiramo. Za dobro uporabniško izkušnjo mora biti vnos podatkov o raziskavah enostaven in dosleden, iskanje po le-teh pa mora biti hitro in uporabno. Definirali smo več vrst uporabnikov, ki imajo različne dostope do posameznih delov aplikacije.
 
 V diplomski nalogi bomo predstavili kako smo pristopili k reševanju omenjenega problema, kakšen je bil proces dela in sam razvoj aplikacije. Na koncu bomo spoznali še končno rešitev in samo implementacijo.
 
@@ -387,23 +388,23 @@ V diplomski nalogi bomo predstavili kako smo pristopili k reševanju omenjenega 
 \chapter{Razvoj aplikacije}
 \label{pregled-podrocja-chapter}
 
-Pred izdelavo diplomskega dela smo najprej na spletu preverili ali obstajajo podobne rešitve na trgu. S tem smo razmislili ali je problem sploh smislen in vreden razvoja. Med raziskavo smo odkrili nekaj orodij, ki so podobna naši aplikaciji. To so Food Safety Centre \cite{food-safety-centre}, Mendeley \cite{mendeley-manager} in pa Zotero \cite{zotero-manager}. Omenjena orodja nam do neke mere olajšajo delo z organizacijo publikacij, vendar nobeno popolnoma ne ustreza našim zahtevam. 
+Pred izdelavo diplomskega dela smo najprej na spletu preverili ali obstajajo podobne rešitve na trgu. S tem smo razmislili ali je problem sploh smiseln in vreden razvoja. Med raziskavo smo odkrili nekaj orodij, ki so podobna naši aplikaciji. To so Food Safety Centre \cite{food-safety-centre}, Mendeley \cite{mendeley-manager} in pa Zotero \cite{zotero-manager}. Omenjena orodja nam do neke mere olajšajo delo z organizacijo publikacij, vendar pa nobeno popolnoma ne ustreza našim zahtevam. 
 
 
 % #####################################################################
 \section{Življenjski cikel razvoja }
-Razvoj programske opreme je proces, ki je sestavljen iz vrste načrtovanih dejavnosti ali sprememb. Življenski cikel razvoja je drugačen za vsak projekt, zato je potrebno izbrati primeren model, ki omogoča boljši pregled nad samim procesom razvoja programske opreme kot tudi testiranja in definiranja le te.
+Razvoj programske opreme je proces, ki je sestavljen iz vrste načrtovanih dejavnosti ali sprememb. Življenjski cikel razvoja je drugačen za vsak projekt, zato je potrebno izbrati primeren model, ki omogoča boljši pregled nad samim procesom razvoja programske opreme, kot tudi testiranja in definiranja le-te.
 
-Za razvoj aplikacije smo uporabili \sn{slapovni model} (ang. watwrfall model). Omenjena metodologija je linearni model, pri katerem napredek pretežno teče v eno smer navzdol skozi faze zbiranja potreb, analize, načrtovanja, razvoja, testiranja, uvajanja in vzdrževanja. Izraz je bil prvič uveden v dokumentu, ki ga je leta 1970 objavil dr. Winston W. Royce, in se še naprej uporablja v aplikacijah industrijskega oblikovanja \cite{waterfall-model}.
+Za razvoj aplikacije smo uporabili \sn{slapovni model} (ang. waterfall model). Omenjena metodologija je linearni model, pri katerem napredek pretežno teče v eno smer navzdol skozi faze zbiranja potreb, analize, načrtovanja, razvoja, testiranja, uvajanja in vzdrževanja. Izraz je bil prvič uveden v dokumentu, ki ga je leta 1970 objavil dr. Winston W. Royce, in se še naprej uporablja v aplikacijah industrijskega oblikovanja \cite{waterfall-model}.
 
-Omenjen model je definiran z zaporedjem posameznih faz, katerih število je lahko različno glede na izvedbo metodologije, giblje se med pet in sedem različnimi fazami (Slika \ref{waterfall-phases}). Izhod ene faze se uporablja kot vhod naslednje faze, torej mora biti vsaka faza zaključena, preden se lahko začne naslednja.
+Omenjeni model je definiran z zaporedjem posameznih faz, katerih število je lahko različno glede na izvedbo metodologije, giblje pa se med pet in sedem različnimi fazami (Slika \ref{waterfall-phases}). Izhod ene faze se uporablja kot vhod naslednje faze, torej mora biti vsaka faza zaključena, preden se lahko začne naslednja.
 
 \begin{description}
     \item \textbf{Opis posameznih faz:}
     \begin{enumerate}
         \item \textbf{Zbiranje zahtev} – vse možne zahteve so zajete v dokumentih z opisom izdelka.
-        \item \textbf{Analizaranje} - pregled specifikacij in analiziranje le teh. Z analiziranjem se definra poslovno logiko in pa tudi finančni plan projekta.
-        \item \textbf{Zasnova sistema} - glede na predhodnjo analizo, se načrtuje arhitekturo programske opreme.
+        \item \textbf{Analiziranje} - pregled specifikacij in analiziranje le-teh. Z analiziranjem se definira poslovno logiko in pa tudi finančni plan projekta.
+        \item \textbf{Zasnova sistema} - glede na predhodno analizo se načrtuje arhitekturo programske opreme.
         \item \textbf{Izvedba} - razvoj programske opreme v manjših enotah s funkcionalnim testiranjem.
         \item \textbf{Integracija in testiranje} - integracija vsake enote, razvite v prejšnji fazi in po integraciji, katerim sledi testiranje celotnega sistema za morebitne napake.
         \item \textbf{Uvedba sistema} – po opravljenih vseh funkcionalnih in nefunkcionalnih testiranjih izdelek deluje v proizvodnem okolju.
@@ -411,8 +412,8 @@ Omenjen model je definiran z zaporedjem posameznih faz, katerih število je lahk
     \end{enumerate}
 \end{description}
 
-Zaradi medsebojne odvisnosti posameznih faz, je model zelo pregleden in jasen pri implementaciji. Vendar ima nekaj pomankljivosti in je učinkovit le pri manjših projektih, kjer zo zahtevki zelo jasno definirani in kjer je predviden obseg dela manjši.
-Model ne dovoljuje spreminjanja specifikacij, oziroma je spreminjanje zahtevkov med samo implementacijo oteženo. Ko je izdelek v fazi testiranja, se je težko vrniti in spremeniti nekaj, kar je ostalo v fazi analize.
+Zaradi medsebojne odvisnosti posameznih faz je model pri implementaciji zelo pregleden in jasen. Vendar ima nekaj pomanjkljivosti in je učinkovit le pri manjših projektih, kjer so zahteve zelo jasno definirane in kjer je predviden obseg dela manjši.
+Model ne dovoljuje spreminjanja specifikacij, oziroma je spreminjanje zahtev med samo implementacijo oteženo. Ko je izdelek v fazi testiranja, se je težko vrniti in spremeniti nekaj, kar je ostalo v fazi analize.
 To pomeni, da delujoč izdelek dobimo šele na koncu cikla omenjenega modela. 
 
 \begin{figure}[h]
@@ -425,14 +426,13 @@ To pomeni, da delujoč izdelek dobimo šele na koncu cikla omenjenega modela.
 
 % #####################################################################
 \section{Pregled zahtev}
-Cilj izdelave spletne aplikacije je agregirati podatke iz različnih virov, kot so knjiga, spletni vir ali pa revija. Vnašanje omenjenih podatkov iz nedefiniranih virov je težko in zamudno opravilo. Aplikacija mora biti razvita z namenom, da je uporabniku, ki publikacije vnaša v sistem delo olajšano. 
+Cilj izdelave spletne aplikacije je agregirati podatke iz različnih virov, kot so knjiga, spletni vir ali pa revija. Vnašanje omenjenih podatkov iz nedefiniranih virov je težko in zamudno opravilo. Aplikacija mora biti razvita z namenom, da je uporabniku, ki publikacije vnaša v sistem, delo olajšano. 
 
-Aplikacija naj omogoča vnos nove in urejanje obstoječe publikacije. Vsak vnos mora biti pred objavo potrjen s strani administratorja. Vnešene publikacije naj bodo primerno prikazane končnemu uporabniku, z možnostjo iskanja po posameznih zapisih. 
+Aplikacija naj omogoča vnos novih in urejanje obstoječih publikacij. Vsak vnos mora biti pred objavo potrjen s strani administratorja. Vnešene publikacije naj bodo primerno prikazane končnemu uporabniku, z možnostjo iskanja po posameznih zapisih. 
 
 % Urednikom in administratorjem mora biti omogočeno dodajanje novih parametrov za posamezno publikacijo, z možnostjo hitrega iskanja po vrednostih parametrov med samim dodajanjem publikacije. 
 
-Aplikacija mora biti pregledna in enostavna za uporabo. Podpirati mora registracijo novih uporabnikov v aplikacijo in omejiti dostop do določene vsebine glede na vlogo uporabnika. Dostop do posameznih strani naj bo omogočen le prijavljenim uporabnikom z uporabniškim imenom in geslom ter primernim dostopom (Slika \ref{user-rights}). 
-Definirani so: 
+Aplikacija mora biti pregledna in enostavna za uporabo. Podpirati mora registracijo novih uporabnikov v aplikacijo in omejiti dostop do določene vsebine glede na vlogo uporabnika. Dostop do posameznih strani naj bo omogočen le prijavljenim uporabnikom z uporabniškim imenom in geslom ter primernim dostopom (Slika \ref{user-rights}). Definirani uporabniki so: 
 \begin{itemize}
     \item \textbf{Uporabnik} - omogočen je pregled objavljenih publikacij in pripadajočih vsebin.
 	\item \textbf{Urednik} - lahko ureja publikacije, vsebine ter parametre za posamezno publikacijo.
@@ -458,15 +458,16 @@ Zaledni sistem naj bo zasnovan tako, da ga bo mogoče nadgraditi in kasneje upor
 % ===================
 \section{Načrtovanje aplikacije}
 \label{nacrtovanje}
-Na podlagi zahtev, smo začeli z načrtovanjem aplikacije. Najprej smo popisali vse funkcionalnosti, katere mora aplikacija zajemati in razdelali strukturo strani. Glede na popisane funkcionalnosti smo se odločili kako bo projekt postavljen in definirali arhitekturo aplikacije. 
+%% @ziga "razdelali strukturo strani" - nejasen pomen besede "strani" - manjka kak pridevnik?
+Na podlagi zahtev smo začeli z načrtovanjem aplikacije. Najprej smo popisali vse funkcionalnosti, katere mora aplikacija zajemati in razdelali strukturo strani. Glede na popisane funkcionalnosti smo se odločili kako bo projekt postavljen in definirali arhitekturo aplikacije. 
 
-Med načrtovanjem smo se odločili tudi kateri programski jezik bomo uporabili. Definirali smo, kako bo potekala komunikacija med posameznimi internimi storitvami in komunikacijo med zalednim in čelnim delom. 
+Med načrtovanjem smo se odločili tudi kateri programski jezik bomo uporabili. Definirali smo kako bo potekala komunikacija med posameznimi internimi storitvami in komunikacijo med zalednim in čelnim delom. 
 
-V nadaljevanju bomo spoznali posamezne tehnologije in metode uporabljene pri razvoju aplikacije in čemu je katera tehnologija namenjena. 
+V nadaljevanju bomo spoznali posamezne tehnologije in metode, uporabljene pri razvoju aplikacije in čemu je katera tehnologija namenjena. 
 
 % +++++++++++++++++++++++++++++++++++++++++++++
 \subsection{Funkcionalnosti in njihove povezave}
-Aplikacija je sestavljena iz sklopov strani, katere lahko dostopamo iz različnih delov aplikacije. Za lažjo predstavitev so na sliki \ref{sitemap} prikazane povezave med posameznimi stranmi, med katerimi uporabnik lahko navigira. Opisi zahtev za posamezne strani so naslednji:
+Aplikacija je sestavljena iz sklopov strani, do katerih lahko dostopamo iz različnih delov aplikacije. Za lažjo predstavitev so na sliki \ref{sitemap} prikazane povezave med posameznimi stranmi, med katerimi se uporabnik lahko premika. Opisi zahtev za posamezne strani so naslednji:
 
 
 \begin{figure}[h]
@@ -536,11 +537,11 @@ Aplikacija je sestavljena iz sklopov strani, katere lahko dostopamo iz različni
 \subsection{Postavitev spletne strani}
 Osnovno postavitev posameznih strani smo najprej skicirali na list papirja. Odločili smo se za postavitev, ki se v spletnih aplikacijah zelo pogosto uporablja in je enostavna in pregledna.
 
-Na vrhu strani se nahaja navigacija, katere namen je navigiranje med posameznimi sklopi. Na skrajenm levem delu se nahaja ime aplikacije \sn{Safe Food}. Na skrajnem desnem delu se nahaja gumb za nadzor nad uporabniškim delom. Na sredini navigacije pa se nahajajo povezave do posameznih sklopov aplikacije.
+Na vrhu strani se nahaja navigacija, katere namen je premikanje med posameznimi sklopi. Na skrajnem levem delu se nahaja ime aplikacije \sn{Safe Food}. Na skrajnem desnem delu se nahaja gumb za nadzor nad uporabniškim delom. Na sredini navigacije pa se nahajajo povezave do posameznih sklopov aplikacije.
 
-Na strani, kjer uporabnik pregleduje in išče publikacije, smo se odločili, da stran razdelimo na dva dela. Na levem delu se nahaja nabor filtrov in na desni strani prikaz publikacij (Slika \ref{wireframe}). 
+Na strani, kjer uporabnik pregleduje in išče publikacije, smo se odločili, da stran razdelimo na dva dela. Na levem delu strani se nahaja nabor filtrov, na desnem delu pa prikaz publikacij (Slika \ref{wireframe}). 
 
-Vse strani uporabljajo enak koncept. Za enostavno navigiranje med stranmi se na dnu nahaja paginacija. V primeru napake pri vnosu podatkov, se ta prikaže poleg vnosnega polja. V primeru generalne napake, kot je naprimer neuspešno poslan zahtevek na zaledni sistem, pa se ta izpiše na dnu strani v posebnem oknu.
+Vse strani uporabljajo enak koncept. Za enostavno premikanje med stranmi se na dnu nahaja paginacija. V primeru napake pri vnosu podatkov se ta prikaže poleg vnosnega polja. V primeru generalne napake, kot je na primer neuspešno poslan zahtevek na zaledni sistem, pa se ta izpiše na dnu strani v posebnem oknu.
 
 \begin{figure}[h]
 \begin{center}
@@ -555,9 +556,9 @@ Vse strani uporabljajo enak koncept. Za enostavno navigiranje med stranmi se na 
 \section{Spletne tehnologije}
 \subsection{Nadzor različic}
 \label{version-control}
-Orodje, ki upravlja in sledi različnim verzijam programske kode ali drugih podatkov, je poznano kot sistem za verzioniranje podatkov. V angleščini poznamo več izrazov, ki se navezujejo na omenjeno orodje, to so Version Control System (VCS), Source Code Manager (SCM) in Revision Control System (RCS). Nadzor različic, znan tudi kot nadzor vira, je praksa sledenja in upravljanja sprememb programske kode. Sistem običajno hrani kodo na dogovorjeni lokaciji na centralnem strežniku (primer GitHub). Razvijalci delajo na svojih lokalnih kopijah izvorne kode, ki jih pridobijo iz centralnega repozitorija. Svoje spremembe pošiljajo na centralni strežnik, pri čemer sistem omogoča tudi reševanje konfliktov, ko dva ali več razvijalcev poskuša poslati na strežnik spremembe istega dela posamične datoteke. Sistem omogoča restavriranje stanja izvorne kode iz poljubne verzije v preteklosti.
+Orodje, ki upravlja in sledi različnim verzijam programske kode ali drugih podatkov, je poznano kot sistem za verzioniranje podatkov. V angleščini poznamo več izrazov, ki se navezujejo na omenjeno orodje, to so Version Control System (VCS), Source Code Manager (SCM) in Revision Control System (RCS). Nadzor različic, znan tudi kot nadzor vira, je praksa sledenja in upravljanja sprememb programske kode. Sistem običajno hrani kodo na dogovorjeni lokaciji na centralnem strežniku (primer GitHub). Razvijalci delajo na svojih lokalnih kopijah izvorne kode, ki jih pridobijo iz centralnega repozitorija. Svoje spremembe pošiljajo na centralni strežnik, pri čemer sistem omogoča tudi reševanje konfliktov, ko dva ali več razvijalcev poskuša poslati na strežnik spremembe istega dela posamične datoteke. Sistem omogoča obnavljanje stanja izvorne kode iz poljubne verzije v preteklosti.
 
-V našem projektu smo se odločili uporabiti sistem za verzioniranje kode Git. Je distribuiran sistem s poudarkom na hitrosti, integriteti podatkov in podpira vzporedne nelinearne tokove dela. Predstavljen je bil leta 2005, za potrebo razvoja Linuxovega jedra iz strani Linux razvijalcev \cite{git-history} in je postal najbolj razširjen sistem na tem področju. Git repozitorij gostujemo na brezplačnem ponudniku omenjene storitve - GitHub (Slika \ref{github-project}). Poleg brezplačnega gostovanja ponuja tudi vrsto drugih rešitev, kot je naprimer beleženje dela (ang. "Task Management"), neprekinjeno integracijo (ang. "Continuous Integration") in vrsto drugih integracij.
+V našem projektu smo se odločili uporabiti sistem za verzioniranje kode Git. Je distribuiran sistem s poudarkom na hitrosti, integriteti podatkov in podpira vzporedne nelinearne tokove dela. Predstavljen je bil leta 2005, za potrebo razvoja Linuxovega jedra iz strani Linux razvijalcev \cite{git-history} in je postal najbolj razširjen sistem na tem področju. Git repozitorij gostujemo na brezplačnem ponudniku omenjene storitve - GitHub (Slika \ref{github-project}). Poleg brezplačnega gostovanja ponuja tudi vrsto drugih rešitev, kot je na primer beleženje dela (ang. "Task Management"), neprekinjeno integracijo (ang. ''Continuous Integration") in vrsto drugih integracij.
 
 \begin{figure}[h]
 \begin{center}
@@ -569,26 +570,27 @@ V našem projektu smo se odločili uporabiti sistem za verzioniranje kode Git. J
 
 % #####################################################################
 \subsection{Infrastruktura}
-Uporaba programske opreme je zapletena. Pred namestitvijo je potrebno razmisliti, kateri operacijski sistem se bo uporabljal, katera so orodja, ki jih programska oprema potrebuje in še vrsto drugih vprašanj. Večina računalnikov že ima nameščene in zagnane aplikacije, katere so odvisne od druge programske opreme. V primeru, da dve programske opreme med seboj niso komatibilne, lahko pride do težave, katere ni enostavno odpraviti. Stvari postanejo bolj zapletene, če si aplikacije med seboj delijo skupne vire. 
+Uporaba programske opreme je zapletena. Pred namestitvijo je potrebno razmisliti, kateri operacijski sistem se bo uporabljal, katera so orodja, ki jih programska oprema potrebuje in še vrsto drugih vprašanj. Večina računalnikov že ima nameščene in zagnane aplikacije, ki so odvisne od drugih aplikacij. V primeru, da nekatere aplikacije med seboj niso kompatibilne, lahko pride do težav, ki jih ni enostavno odpraviti. Stvari postanejo bolj zapletene, če si aplikacije med seboj delijo skupne vire. 
 
-Na našem projektu smo se hoteli izogniti nevšečnostim z oteženim postavljanjem projekta, zato smo se odločili uporabiti orodje za izoliranje okolja. Virtualizacija je postopek, ki strojni ali programski vir preslika v navidezni vir, tega pa potem odjemalec koristi kot pravi vir. Pomembna prednost uporabe virtualizacije je prenostljivost. Z njo lahko dosežemo enake pogoje za izvajanje programske opreme na različnih strojnih opremah \cite{docker-in-action}.
+Na našem projektu smo se hoteli izogniti nevšečnostim s postavljanjem projekta, zato smo se odločili uporabiti orodje za izoliranje okolja. Virtualizacija je postopek, ki strojni ali programski vir preslika v navidezni vir, tega pa potem odjemalec koristi kot pravi vir. Pomembna prednost uporabe virtualizacije je prenosljivost. Z njo lahko dosežemo enake pogoje za izvajanje programske opreme na različnih strojnih opremah \cite{docker-in-action}.
 
-Orodje Docker zagotavlja tako imenovano abstrakcijo, katera nudi enako okolje vsem razvijalcem, ki razvijajo na istem projektu, ne glede kateri operacijski sistem uporabljajo. Vsebniki (ang. containers) uporabljajo jedra operacijskega sistema in se obnašajo kot navadni programi, ki lahko uporabljajo vse sistemske vire, vendar omejijo dostop aplikacije samo na prostor v vsebnikih (Slika \ref{docker-vs-vm}). \clearpage
+Orodje Docker zagotavlja tako imenovano abstrakcijo, ki nudi enako okolje vsem razvijalcem, ki razvijajo na istem projektu, ne glede na to, kateri operacijski sistem uporabljajo. Vsebniki (ang. containers) uporabljajo jedra operacijskega sistema in se obnašajo kot navadni programi, ki lahko uporabljajo vse sistemske vire, vendar omejijo dostop aplikacije samo na prostor v vsebnikih (Slika \ref{docker-vs-vm}). \clearpage
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.75\textwidth]{slike/docker-vs-vm.png}
 \end{center}
-\caption{ Prikaz razlike med virtualnim strojem in Docker vsebnik. }
+\caption{ Prikaz razlike med virtualnim strojem in Docker vsebnikom. }
 \label{docker-vs-vm}
 \end{figure}
 
 % #####################################################################
 \subsubsection{Docker}
 \label{docker-section}
-Docker je trenutno najbolj priljubljena rešitev vsebnika. Ponuja številne funkcije in je podprt iz strani ostalih sistemov, kot so naprimer orodja za orkestracijo (ang. orchestration). V osnovi gre za izolacijo procesov in virtualizacijo virov, do katerih procesi dostopajo. Omogoča izoliranje aplikacije od infrastrukture, za hitro dostavljanje programske opreme \cite{linuxcontainers}. 
+Docker je trenutno najbolj priljubljena rešitev vsebnika. Ponuja številne funkcije in je podprt s strani ostalih sistemov, kot so na primer orodja za orkestracijo (ang. orchestration). V osnovi gre za izolacijo procesov in virtualizacijo virov, do katerih procesi dostopajo. Omogoča izoliranje aplikacije od infrastrukture, za hitro dostavljanje programske opreme \cite{linuxcontainers}. 
+%% @ziga "Omogoča izoliranje aplikacije od infrastrukture, za hitro dostavljanje programske opreme" - nejasno
 
-Docker je odvisen od jedra Linuxa, kar pomeni, da ne deluje v sistemu Windows ali macOS. V tem primeru je potreben zagon v virtualnem stroju, ki vsebuje jedro $Linuxa$ \cite{docker-in-action}.
+Docker je odvisen od jedra Linuxa, kar pomeni, da ne deluje v sistemu Windows ali macOS. V tem primeru je potreben zagon v virtualnem stroju, ki vsebuje jedro Linuxa \cite{docker-in-action}.
 
 Konfiguriranje slike vsebnika zahteva ustvarjanje konfiguracijske datoteke. Ta je ponavadi znotraj projekta in se imenuje \sn{Dockerfile}. To je tekstovna datoteka, ki opisuje zahteve posameznega programa, kot so osnovna slika za izvajanje (npr. slika ki omogoča izvajanje Go programov), ukazi za zagon (npr. namestitev), vrata na katerih bo aplikacija poslušala in tako naprej (Slika \ref{docker-flow}).
 
@@ -596,14 +598,14 @@ Konfiguriranje slike vsebnika zahteva ustvarjanje konfiguracijske datoteke. Ta j
 \begin{center}
 \includegraphics[width=0.75\textwidth]{slike/docker-flow.png}
 \end{center}
-\caption{ Prikaz gradnje docker vsebnikov }
+\caption{ Prikaz gradnje Docker vsebnikov }
 \label{docker-flow}
 \end{figure}
 
-Vsebniki so skupina procesov v operacijskem sistemu z jedrom Linux, katerim upravlja računske vire z nadzornimi skupinami in zagotavlja izolacijo virov z uporabo imenskih prostorov. Ob zagonu vsebnika se uporabi vsebniška slika (angl. container image) v kateri so zapisane informacije o izvajanju programske opreme in preko katere Docker tudi priklopi nov, prazen bralno-pisalni datotečni sloj. Slika se ustvari s postopkom gradnje, ki je zapisan v datoteki $Dockerfile$. 
+Vsebnik je skupina procesov v operacijskem sistemu z jedrom Linux, ki upravlja računske vire z nadzornimi skupinami in zagotavlja izolacijo virov z uporabo imenskih prostorov. Ob zagonu vsebnika se uporabi vsebniška slika (angl. container image), v kateri so zapisane informacije o izvajanju programske opreme in preko katere Docker tudi priklopi nov, prazen bralno-pisalni datotečni sloj. Slika se ustvari s postopkom gradnje, ki je zapisan v datoteki $Dockerfile$. 
 
 V kodi \ref{lst:dcb-snipet} je prikazan primer grajenja slike, ki smo jo uporabili pri razvoju zalednega dela naše aplikacije.
-\begin{lstlisting}[language=bash, style=mystyle,caption={Grajenje slike docker vmestnika},label=lst:dcb-snipet]
+\begin{lstlisting}[language=bash, style=mystyle,caption={Grajenje slike Docker vmesnika},label=lst:dcb-snipet]
 $ docker build .          
 [+] Building 69.1s (9/9)                             FINISHED
  => [internal] load build definition from Dockerfile    0.1s
@@ -631,7 +633,7 @@ Spletni strežnik (angl. Web Server) je računalniški sistem, ki obdeluje zahte
 
 Glavna naloga spletnega strežnika je prikazovanje vsebine spletne strani. Če spletni strežnik ni izpostavljen javnosti in se uporablja interno, se imenuje \sn{intranetni strežnik}. Strojna oprema spletnega strežnika je povezana z internetom in omogoča izmenjavo podatkov z drugimi povezanimi napravami, medtem ko programska oprema spletnega strežnika nadzoruje, kako uporabnik dostopa do gostiteljskih datotek.
 
-Do programske opreme spletnega strežnika se dostopa preko domenskih imen spletnih mest in zagotavlja dostavo vsebine spletnega mesta uporabniku, ki je poslal zahtevek. Strežnik HTTP lahko razume zahteve HTTP in povezave z enoličnimi krajevniki  virov (URLji). Kot strojna oprema je spletni strežnik računalnik, ki shranjuje programsko opremo spletnega strežnika in druge datoteke, povezane s spletnim mestom, kot so dokumenti HTML, slike in datoteke JavaScript.
+Do programske opreme spletnega strežnika se dostopa preko domenskih imen spletnih mest in zagotavlja dostavo vsebine spletnega mesta uporabniku, ki je poslal zahtevek. Strežnik HTTP lahko razume zahtevke HTTP in povezave z enoličnimi krajevniki  virov (URL-ji). Kot strojna oprema je spletni strežnik računalnik, ki shranjuje programsko opremo spletnega strežnika in druge datoteke, povezane s spletnim mestom, kot so dokumenti HTML, slike in datoteke JavaScript.
 
 % Dinamični spletni brskalniki poleg spletnega strežnika vključujejo tudi druge programske opreme, kot naprimer aplikacijski strežnik in podatkovno bazo podatkov. Šteje se za dinamično, ker je aplikacijski strežnik mogoče uporabiti za konstruiranje odgovorov na zahtevek, preden se pošljejo v brskalnik. Spletni strežnik lahko generira vsebino, ko je zahtevana iz baze podatkov. Čeprav je ta postopek bolj prilagodljiv, je tudi bolj zapleten.
 
@@ -639,21 +641,21 @@ Do programske opreme spletnega strežnika se dostopa preko domenskih imen spletn
 % #####################################################################
 \subsection{Programski jezik Go}
 
-\verb=Go= je odprtokodni programski jezik, razvit iz strani ameriške kooproracije Google. Pobudniki razvoja so bili Robert Griesemer, Ken Thomson, in Rob Pike. Sprva je bil uporabljen le za interno uporabo, leta 2009 pa so ga ponudili kot odprto kodni programski jezik širši publiki. 
+\verb=Go= je odprtokodni programski jezik, razvit iz strani ameriške korporacije Google. Pobudniki razvoja so bili Robert Griesemer, Ken Thomson in Rob Pike. Sprva je bil uporabljen le za interno uporabo, leta 2009 pa so ga ponudili širši publiki kot odprtokodni programski jezik. 
  
-Kljub temu, da je programski jezik Go namenjen splošni uporabi, je njegova primarna uporaba namenjena pisanju sistemskih orodij, spletnih storitev in programov, ki veliko komunicirajo preko  spletnega omrežja. Primeren je tudi za učenje prvega programskega jezika, zaradi njegove enostavnosti in pristopov. Definiranih, oziroma rezerviranih je le 25 ključnih besed, kar pomeni, da si je veliko lažje zapomniti jezik, in se je potrebno naučiti le konceptov.
+Kljub temu, da je programski jezik Go namenjen splošni uporabi, je njegova primarna uporaba namenjena pisanju sistemskih orodij, spletnih storitev in programov, ki veliko komunicirajo preko  spletnega omrežja. Zaradi njegove enostavnosti in pristopov je primeren tudi za učenje prvega programskega jezika. Definiranih, oziroma rezerviranih je le 25 ključnih besed, kar pomeni, da si je jezik veliko lažje zapomniti in se je potrebno naučiti le konceptov.
 
 Čeprav Go ni objektno usmerjen programski jezik, so njegovi vmesniki zelo vsestranski in omogočajo posnemanje nekaterih zmožnosti objektno usmerjenih jezikov, kot so polimorfizem, enkapsulacija in sestava.
 
 Go ima tudi zmožnosti sočasnosti z uporabo preprostega modela sočasnosti, ki se izvaja z uporabo go-rutin in kanalov. Go upravlja niti operacijskega sistema namesto nas in ima zmogljiv izvajalni čas. To omogoča ustvarjanje lahkih delovnih enot (ang. goroutine), ki med seboj komunicirajo s pomočjo kanalov.
  
 \subsection{Mikrostoritev}
-Arhitekturni koncept mikrostoritev je pristop k razvoju ene same aplikacije kot zbirke majhnih storitev, od katerih vsaka deluje v svojem procesu in komunicira z enostavnimi mehanizmi, kot je naprimer HTTP API. Te storitve so zgrajene na podlagi poslovnih zmogljivosti in jih je mogoče neodvisno uvesti s popolnoma avtomatiziranimi stroji za uvajanje. Obstaja minimalno centralizirano upravljanje teh storitev, ki so lahko napisane v različnih programskih jezikih in uporabljajo različne tehnologije za shranjevanje podatkov \cite{mfowler-microservices}. 
+Arhitekturni koncept mikrostoritev je pristop k razvoju ene same aplikacije kot zbirke majhnih storitev, od katerih vsaka deluje v svojem procesu in komunicira z enostavnimi mehanizmi, kot je na primer HTTP API. Te storitve so zgrajene na podlagi poslovnih zmogljivosti in jih je mogoče neodvisno uvesti s popolnoma avtomatiziranimi stroji za uvajanje. Obstaja minimalno centralizirano upravljanje teh storitev, ki so lahko napisane v različnih programskih jezikih in uporabljajo različne tehnologije za shranjevanje podatkov \cite{mfowler-microservices}. 
 
 
 % #####################################################################
 \subsection{Podatkovna baza}
-Za shranjevanje podatkov uporabljamo relacijsko podatkovno bazo \verb=PostgreSQL=. Relacijska podatkovna baza (Relational Database Management System - RDBMS) uporablja podatkovno strukturo, ki nam omogoča identifikacijo in dostop do podatkov preko relacije med dvema entitetama. Podatke v relacijski podatkovni bazi, si lahko predstavljamo kot tabele s stolpci in vrsticami \cite{oracle-rdbms}.
+Za shranjevanje podatkov uporabljamo relacijsko podatkovno bazo \verb=PostgreSQL=. Relacijska podatkovna baza (Relational Database Management System - RDBMS) uporablja podatkovno strukturo, ki nam omogoča identifikacijo in dostop do podatkov preko relacije med dvema entitetama. Podatke v relacijski podatkovni bazi si lahko predstavljamo kot tabele s stolpci in vrsticami \cite{oracle-rdbms}.
 
 
 % #####################################################################
@@ -661,7 +663,7 @@ Za shranjevanje podatkov uporabljamo relacijsko podatkovno bazo \verb=PostgreSQL
 PostgreSQL je zmogljiv, odprtokoden, objektno-relacijski sistem baz podatkov, ki uporablja in razširja jezik SQL v kombinaciji s številnimi funkcijami, ki varno shranjujejo in spreminjajo podatke. Začetki PostgreSQL segajo v leto 1986 kot del projekta POSTGRES na kalifornijski univerzi v Berkeleyju in ima več kot 30 let aktivnega razvoja na osnovni platformi.
 
 PostgreSQL si je prislužil močan sloves s svojo dokazano arhitekturo, zanesljivostjo, celovitostjo podatkov, robustnim naborom funkcij, razširljivostjo in predanostjo skupnosti odprte kode, ki stoji za programsko opremo, da dosledno zagotavlja zmogljive in inovativne rešitve. 
-PostgreSQL deluje na vseh večjih operacijskih sistemih in ima zmogljive dodatke, kot je naprimer priljubljena razširitev geoprostorske baze podatkov \verb=PostGIS= (ang. Geographic Information System) \cite{pg-database-postgis}.
+PostgreSQL deluje na vseh večjih operacijskih sistemih in ima zmogljive dodatke, kot je na primer priljubljena razširitev geoprostorske baze podatkov \verb=PostGIS= (ang. Geographic Information System) \cite{pg-database-postgis}.
 
 
 \subsubsection{UUID}
@@ -669,12 +671,12 @@ Za identifikacijo naših entitet smo uporabili enoličen univerzalen identifikat
 
 UUID je sestavljen iz 128 bitov (32 znakov). Vsak znak je predstavljen v šestnajstiškem (heksadecimalnem) zapisu, kar pomeni, da je znak lahko število od \verb=0= do \verb=9=, ali pa črka od \verb=a= do \verb=f= \cite{uuid-rfc}.
 
-Glede na ime bi lahko sklepali, da je UUID unikaten glede na čas in prostor. Vendar je končno število vseh kombinacij UUID-jev $n=2^{122}$. To pomeni, da je verjetnost, da naletimo na dva enako zgenerirana identifikatorja, zelo nizka.
-Pa vendar, če zgeneriramo množico UUIDjev ($r$), kjer je število generiranih identifikatorjev večje kot največje število vseh mogočih vrednosti ($r > n$), morajo v množici obstajati duplikati. Verjetnost, da se pojavijo duplikati je mogoče natančno izračunati na podlagi rojstnodnevnega paradoksa~\cite{birthday-problem-what-is}, ki ga je leta 1932 predstavil Von Mise \cite{birthday-problem-inventor}.
+Glede na ime bi lahko sklepali, da je UUID unikaten glede na čas in prostor. Vendar je končno število vseh kombinacij UUID-jev $n=2^{122}$. To pomeni, da je verjetnost, da naletimo na dva enako ustvarjena identifikatorja, zelo nizka.
+Pa vendar, če ustvarimo množico UUID-jev ($r$), kjer je število ustvarjenih identifikatorjev večje kot največje število vseh mogočih vrednosti ($r > n$), morajo v množici obstajati duplikati. Verjetnost, da se pojavijo duplikati je mogoče natančno izračunati na podlagi rojstnodnevnega paradoksa~\cite{birthday-problem-what-is}, ki ga je leta 1932 predstavil Von Mise \cite{birthday-problem-inventor}.
 
 \begin{izrek}
 \label{iz:1}
-Verjetnost unikatno generiranega UUIDja
+Verjetnost unikatno ustvarjenega UUID-ja
 \begin{equation}
 \mathtt{\frac{n!}{n^{r}(n-r)}}
 \label{eq:1}
@@ -682,11 +684,11 @@ Verjetnost unikatno generiranega UUIDja
 \end{izrek}
 
 \begin{dokaz}
-Število načinov, da nimamo dvojnikov je $n*(n-1)*(n-2)* …(n-(r-1))$. Kar pomeni, da je lahko prvi UUID katerakoli kombinacija od $n$ možnosti, drugi je lahko katera koli kombinacija od \verb=n=, razen prvega $(n-1)$, in tako naprej $(n-2)$... Skupno število načinov za generiranje $r$ UUID-jev je torej $n^r$, saj ima vsak, od $r$ UUIDjev $n$ različnih kombinacij.
+Število načinov, da nimamo dvojnikov je $n*(n-1)*(n-2)* …(n-(r-1))$. Kar pomeni, da je lahko prvi UUID katerakoli kombinacija od $n$ možnosti, drugi je lahko katera koli kombinacija od \verb=n=, razen prvega $(n-1)$, in tako naprej $(n-2)$... Skupno število načinov za ustvarjanje $r$ UUID-jev je torej $n^r$, saj ima vsak, od $r$ UUID-jev $n$ različnih kombinacij.
 S tem je dokaz Izreka~\ref{iz:1} zaključen.
 \end{dokaz}
 
-Če nadaljujemo računanje na podlagi rojstnodnevnega paradoksa, pridemo do rešitve, ki nam pove, da je vrjetnost resnično majhna. Da se pojavi duplikat, bi morali vsako sekundo zgenerirati miljardo vrednosti 85 zaporednih let. Datoteka z zgeneriranimi UUID-ji bi bila na koncu velika $45EB$ (Exabyte) ($45kb*1000^6$) \cite{uuid-collisions}
+Če nadaljujemo računanje na podlagi rojstnodnevnega paradoksa, pridemo do rešitve, ki nam pove, da je verjetnost resnično majhna. Da se pojavi duplikat, bi morali 85 zaporednih let vsako sekundo ustvariti milijardo vrednosti. Datoteka z ustvarjenimi UUID-ji bi bila na koncu velika $45EB$ (Exabyte) ($45kb*1000^6$) \cite{uuid-collisions}
 
 
 
@@ -701,7 +703,7 @@ S tem je dokaz Izreka~\ref{iz:1} zaključen.
 \label{minio-what}
 Minio je samostojna rešitev za izdelavo lastne hrambe objektov. Je alternativa za bolj poznani Amazonovi storitvi AWS S3.
 
-Programska oprema Minio je na voljo kot preprost binarni dokument in celo uradna dokumentacija kaže, da ga uporabljajo na tak način, namesto upravitelja paketov. Obstajajo tudi Dockerjeve slike katere je mogoče uporabiti za zagon Minio strežnika kot docker vsebnik.
+Programska oprema Minio je na voljo kot preprost binarni dokument in celo uradna dokumentacija kaže, da ga uporabljajo na tak način, namesto upravitelja paketov. Obstajajo tudi Dockerjeve slike, katere je mogoče uporabiti za zagon Minio strežnika kot Docker vsebnik.
 
 Minio je bolj primeren za shranjevanje nestrukturiranih podatkov kot so fotografije, videoposnetki, dnevniške datoteke, varnostne kopije in slike vsebnikov / VM. Velikost predmeta se lahko giblje od nekaj KB do največ 5 TB. Storitev uporabljamo za potrebe po shranjevanju datotek, ki jih urednik lahko pripne zraven publikacije.
 
@@ -711,11 +713,11 @@ Minio je bolj primeren za shranjevanje nestrukturiranih podatkov kot so fotograf
 % Skoraj vsaka aplikacija zahteva določeno raven sistema avtorizacije. V nekaterih primerih je dovolj, da potrdimo nabor uporabniškega imena/gesla z našo tabelo z uporabniki, vendar pogosto potrebujemo bolj natančen model dovoljenj, da nekaterim uporabnikom omogočimo dostop do določenih virov in jih omejimo pred ostalimi. 
 
 \subsubsection{Firebase}
-Firebase je BaaS (Backend as a Service) storitev, ki jo ponuja podjetje Google. Z orodji, ki jih zajema, je programerjem olajšano delo pri razvoju in pa tudi pri vzdrževanju aplikacije. Orodja ki jih nudijo so orodje za avtentikacijo, testiranje, za obveščanje strank in ostala infrastrukturna orodja kot naprimer podatkovna baza in gostovanje \cite{firebase-about}.
+Firebase je BaaS (Backend as a Service) storitev, ki jo ponuja podjetje Google. Z orodji, ki jih zajema, je programerjem olajšano delo pri razvoju in pa tudi pri vzdrževanju aplikacije. Orodja, ki jih nudijo, so orodje za avtentikacijo, testiranje, za obveščanje strank in ostala infrastrukturna orodja kot na primer podatkovna baza in gostovanje \cite{firebase-about}.
 
-Za potreboe naše aplikacije smo uporabili Firebase avtentikacijo. Avtentikacija temelji na žetonih, in zagotavlja izključene integracije z najpogostejšimi ponudniki, kot so Google, Facebook in Twitter, in ostali. Omogoča nam uporabo zahtevkov po meri, ki jih bomo izkoristili za izgradnjo prilagodljivega API-ja, ki temelji na vlogah. V zahtevke lahko nastavimo katero koli vrednost JSON (npr. \{ "vloga": 'administrator' \} ali \{ "vloga": 'urednik' \}). Nastavljeni zahtevki so zapisani v žetonu, ki ga zgenerira avtentikacijski servis.
+Za potrebe naše aplikacije smo uporabili Firebase avtentikacijo. Avtentikacija temelji na žetonih in zagotavlja izključene integracije z najpogostejšimi ponudniki, kot so Google, Facebook, Twitter in ostali. Omogoča nam uporabo zahtevkov po meri, ki jih bomo izkoristili za izgradnjo prilagodljivega API-ja, ki temelji na vlogah. V zahtevke lahko nastavimo katero koli vrednost JSON (npr. \{ "vloga": 'administrator' \} ali \{ "vloga": 'urednik' \}). Nastavljeni zahtevki so zapisani v žetonu, ki ga ustvari avtentikacijska storitev.
 
-Brezplačni plan omogoča kreiranje neomejenega števila uporabnikov. Omejeno je le število registriranih in izbrisanih uporabnikov v časovnem obdobju \cite{firebase-limits}:
+Brezplačni plan Firebase omogoča kreiranje neomejenega števila uporabnikov. Omejeno je le število registriranih in izbrisanih uporabnikov v časovnem obdobju \cite{firebase-limits}:
 
 
 \begin{itemize}
@@ -734,9 +736,9 @@ Vue.js ima postopoma prilagodljivo arhitekturo, ki se osredotoča na deklarativn
 
  \subsection{Tailwind}
 \label{tailwind-section}
-Tailwind je ogrodje, ki ponuja CSS gradnike za lažjo in hitrejšo izdelavo spletnih aplikacij. Temelji na slogovnem jeziku CSS oziroma kaskadnih stilskih podlogah (ang. cascading style sheets). Vsebuje številne elemente katere redno uporabljamo za oblikovanje HTML gradnikov, kot je osnovna razdelitev strani, posamezni gumbi, spustni meniji in ostali gradniki s katerim oblikujemo stran. Ogrodje samo po sebi poskrbi za prilagodljiv izgled na različnih napravah, kar ponavadi pri razvoju vzame veliko časa. 
+Tailwind je ogrodje, ki ponuja CSS gradnike za lažjo in hitrejšo izdelavo spletnih aplikacij. Temelji na slogovnem jeziku CSS oziroma kaskadnih stilskih podlogah (ang. cascading style sheets). Vsebuje številne elemente, katere redno uporabljamo za oblikovanje HTML gradnikov, kot so osnovna razdelitev strani, posamezni gumbi, spustni meniji in ostali gradniki s katerimi oblikujemo stran. Ogrodje samo po sebi poskrbi za prilagodljiv izgled na različnih napravah, kar ponavadi pri razvoju vzame veliko časa. 
 
-Ogrodje je napisano s pomočjo $PostCSS$ orodja kar nam omogoča enostavno konfiguriranje posameznih slogovnih elementov. 
+Ogrodje je napisano s pomočjo $PostCSS$ orodja, kar nam omogoča enostavno konfiguriranje posameznih slogovnih elementov. 
 
 % +++++++++++++++++++++++++++++++++++++++++++++
 % ++++++++ IMPLEMENTACIJA APLIKACIJE ++++++++++++
@@ -750,13 +752,13 @@ Najprej bomo opisali kako smo projekt zasnovali in vpeljali različne arhitektur
 \section{Zagon aplikacije v lokalnem okolju}
 Postavitev projekta je lahko včasih zelo zamudno delo, s katerim razvijalec izgubi veliko nepotrebnega časa. Za zagon projekta mora razvijalec imeti nameščena orodja \verb=Makefile=, \verb=Docker= (\ref{docker-section}) in \verb=Git= (\ref{version-control}). Z uporabo vsebnikov smo ustvarili okolje, katerega je enostavno zagnati ne glede na operacijski sistem, kjer želimo aplikacijo zaganjati.
 
-Za prenos projekta na svoj računalnik, mora razvijalec imeti dostop do \verb=Git= repozitorija, katerega gostimo na platformi \verb=GitHub=. Z ukazom (Ukaz \ref{lst:git-clone}), ki ga poženemo v ukazni vrstici poskrbimo, da so vse datoteke iz \verb=GitHub= repozitorija uspešno prenesene v direktorij na računalniku.
+Za prenos projekta na svoj računalnik mora razvijalec imeti dostop do \verb=Git= repozitorija, katerega gostimo na platformi \verb=GitHub=. Z ukazom (Ukaz \ref{lst:git-clone}), ki ga poženemo v ukazni vrstici poskrbimo, da so vse datoteke iz \verb=GitHub= repozitorija uspešno prenesene v direktorij na računalniku.
 
 \begin{lstlisting}[language=bash,style=mystyle,caption={Ukaz za prenos datotek iz GitHub repozitorija},label=lst:git-clone]
 $ git clone git@github.com:marolt/diploma.git
 \end{lstlisting}
 
-Da je postavitev projekta enostavna smo ukaze, ki so potrebni za zagon projekta ovili z orodjem \verb=Makefile=. S poganjanjem ukaza \verb=make start= se izvede zaporedje ukazov, ki poskrbijo, da so vsi potrebni vsebniki dosegljivi. Poskrbi, da sta koda odjemalca in koda strežnika zgenerirani na podlagi \verb=OpenApi= specifikacij, in da so vse zunanje knjižnice, katere aplikacija potrebuje pri delovanju uspešno nameščene. Vsebniki so skonfigurirani tako, da poslušajo spremembe v kodi, kar pomeni, da je vsaka sprememba takoj razvidna v aplikaciji. Ko se zagnan ukaz uspešno izvede, nam je aplikacija na voljo na spletnem naslovu \url{http://localhost}.
+Da je postavitev projekta enostavna, smo ukaze, ki so potrebni za zagon projekta, ovili z orodjem \verb=Makefile=. S poganjanjem ukaza \verb=make start= se izvede zaporedje ukazov, ki poskrbijo, da so vsi potrebni vsebniki dosegljivi. Poskrbi, da sta koda odjemalca in koda strežnika ustvarjeni na podlagi \verb=OpenApi= specifikacij, in da so vse zunanje knjižnice, ki jih aplikacija potrebuje pri delovanju, uspešno nameščene. Vsebniki so nastavljeni tako, da poslušajo spremembe v kodi, kar pomeni, da je vsaka sprememba takoj razvidna v aplikaciji. Ko se zagnan ukaz uspešno izvede, nam je aplikacija na voljo na spletnem naslovu \url{http://localhost}.
 
 
 \begin{lstlisting}[language=bash,style=mystyle,caption={Prikaz zagnanih vsebnikov.},label=lst:running-containers]
@@ -779,7 +781,7 @@ d_teus_1       /bin/prometheus --con... Up  9090/tcp
 \end{lstlisting}
 
 
-Z ukazom $\verb=docker-compose ps=$ (Koda \ref{lst:running-containers}) lahko razberemo, da se ob postavitvi projekta zažene devet vsebnikov. Ti poskrbijo za streženje vseh potrebnih datotek za popolno delovanje čelnega in zalednega dela aplikacije. Za lažjo predstavitev celotnega projekta ali zgradbe aplikacije je diagram celotne arhitekure prikazan na sliki \ref{final-arch}
+Z ukazom $\verb=docker-compose ps=$ (Koda \ref{lst:running-containers}) lahko razberemo, da se ob postavitvi projekta zažene devet vsebnikov. Ti poskrbijo za streženje vseh potrebnih datotek za popolno delovanje čelnega in zalednega dela aplikacije. Za lažjo predstavitev celotnega projekta ali zgradbe aplikacije je diagram celotne arhitekture prikazan na sliki \ref{final-arch}
 
 
 \begin{figure}[h]
