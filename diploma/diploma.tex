@@ -19,10 +19,10 @@
 \usepackage{comment}       % dodal Solina
 
 \usepackage[pdftex, colorlinks=true,
-						citecolor=black, filecolor=black, 
-						linkcolor=black, urlcolor=black,
-						pagebackref=false, 
-						pdfproducer={LaTeX}, pdfcreator={LaTeX}, hidelinks]{hyperref}
+citecolor=black, filecolor=black,
+linkcolor=black, urlcolor=black,
+pagebackref=false,
+pdfproducer={LaTeX}, pdfcreator={LaTeX}, hidelinks]{hyperref}
 
 \usepackage{color}       % dodal Solina
 \usepackage{soul}       % dodal Solina
@@ -49,22 +49,22 @@
 \definecolor{backcolour}{rgb}{0.97,0.97,0.97}
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
+backgroundcolor=\color{backcolour},
+commentstyle=\color{codegreen},
+keywordstyle=\color{magenta},
+numberstyle=\tiny\color{codegray},
+stringstyle=\color{codepurple},
+basicstyle=\ttfamily\footnotesize,
+breakatwhitespace=false,
+breaklines=true,
+captionpos=b,
+keepspaces=true,
+numbers=left,
+numbersep=5pt,
+showspaces=false,
+showstringspaces=false,
+showtabs=false,
+tabsize=2
 }
 
 
@@ -88,12 +88,12 @@
 \hypersetup{pdfauthor={\tauthor, zm1218@student.uni-lj.si}}
 \hypersetup{pdfkeywords=\tkeywordsEn}
 
- 
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % postavitev strani
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \addtolength{\marginparwidth}{-20pt} % robovi za tisk
 \addtolength{\oddsidemargin}{40pt}
@@ -105,7 +105,7 @@
 {\markboth{\MakeUppercase{\thechapter.\ #1}}{}} \renewcommand{\sectionmark}[1]%
 {\markright{\MakeUppercase{\thesection.\ #1}}} \renewcommand{\headrulewidth}{0.5pt} \renewcommand{\footrulewidth}{0pt}
 \fancyhf{}
-\fancyhead[LE,RO]{\sl \thepage} 
+\fancyhead[LE,RO]{\sl \thepage}
 \fancyhead[LO]{\sl \rightmark} \fancyhead[RE]{\sl \leftmark}
 % \fancyhead[RE]{\sc \tauthor}              % dodal Solina
 % \fancyhead[LO]{\sc Diplomska naloga}     % dodal Solina
@@ -115,7 +115,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % naslovi
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \newcommand{\autfont}{\Large}
@@ -125,7 +125,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % konstrukti
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newtheorem{izrek}{Izrek}[chapter]
 \newtheorem{trditev}{Trditev}[izrek]
 \newenvironment{dokaz}{\emph{Dokaz.}\ }{\hspace{\fill}{$\Box$}}
@@ -135,19 +135,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % define medatata
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\Title{\ttitle}
 \def\Author{\tauthor, matjaz.kralj@fri.uni-lj.si}
 \def\Subject{\ttitleEn}
 \def\Keywords{\tkeywordsEn}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \convertDate converts D:20080419103507+02'00' to 2008-04-19T10:35:07+02:00
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\convertDate{%
-    \getYear
+\getYear
 }
 
 {\catcode`\D=12
@@ -179,7 +179,7 @@
 % XMP data
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 \usepackage{xmpincl}
-\includexmp{pdfa-1b}
+% \includexmp{pdfa-1b}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % pdfInfo
@@ -206,18 +206,18 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %naslovnica
- \thispagestyle{empty}%
-  \begin{center}
-    {\large\sc Univerza v Ljubljani\\%
-      Fakulteta za računalništvo in informatiko}%
-    \vskip 10em%
-    {\autfont \tauthor\par}%
-    {\titfont \ttitle \par}%
-    {\vskip 3em \textsc{DIPLOMSKO DELO\\[5mm]       
-    VISOKOŠOLSKI STROKOVNI ŠTUDIJSKI PROGRAM\\ PRVE STOPNJE\\ RAČUNALNIŠTVO IN INFORMATIKA}\par}%
-    \vfill\null%
-    {\large \textsc{Mentor}: doc.\ dr.  Mira Trebar\par}%
-    {\vskip 2em \large Ljubljana, 2022 \par}%
+\thispagestyle{empty}%
+\begin{center}
+{\large\sc Univerza v Ljubljani\\%
+Fakulteta za računalništvo in informatiko}%
+\vskip 10em%
+{\autfont \tauthor\par}%
+{\titfont \ttitle \par}%
+{\vskip 3em \textsc{DIPLOMSKO DELO\\[5mm]
+VISOKOŠOLSKI STROKOVNI ŠTUDIJSKI PROGRAM\\ PRVE STOPNJE\\ RAČUNALNIŠTVO IN INFORMATIKA}\par}%
+\vfill\null%
+{\large \textsc{Mentor}: doc.\ dr.  Mira Trebar\par}%
+{\vskip 2em \large Ljubljana, 2022 \par}%
 \end{center}
 % prazna stran
 %\clearemptydoublepage      % dodal Solina (izjava o licencah itd. se izpiše na hrbtni strani naslovnice)
@@ -228,7 +228,7 @@
 \vspace*{8cm}
 
 \noindent
-{\sc Copyright}. 
+{\sc Copyright}.
 Rezultati diplomske naloge so intelektualna lastnina avtorja in Fakultete za računalništvo in informatiko Univerze v Ljubljani.
 Za objavo in koriščenje rezultatov diplomske naloge je potrebno pisno privoljenje avtorja, Fakultete za računalništvo in informatiko ter mentorja.
 
@@ -296,18 +296,18 @@ Zahvaljujem se mentorici doc. dr. Miri Trebar za vso pomoč in družini za podpo
 \chapter*{Seznam uporabljenih kratic}  % spremenil Solina, da predolge vrstice ne gredo preko desnega roba
 
 \noindent \begin{tabular}{p{0.2\textwidth}|p{.35\textwidth}|p{.35\textwidth}}    % po potrebi razširi prvo kolono tabele na račun drugih dveh!
-  {\bf kratica} & {\bf angleško}                             & {\bf slovensko} \\ \hline
-  {\bf API} & Application Programming Interface & aplikacijski programski vmesnik \\
-  {\bf CSS} & Cascading Style Sheets & predloge za izgled spletnih strani \\
-  {\bf ER diagram} & Entity Relationship Diagram & entitetno relacijski diagram \\
-  {\bf EB} & Exabyte & Eksabajt \\
-  {\bf HTML} & Hyper Text Markup Language & označevalni jezik za izdelavo spletnih strani \\
-  {\bf HTTP} & Hyper Text Transfer Protocol & komunikacijski spletni protokol \\
-  {\bf IAAA} & Identification, Authentication, Authorization and Accounting & varnostni koncepti: identifikacija, avtentikacija, avtorizacija in odgovornost \\
-  {\bf JSON} & JavaScript Object Notation & objektna notacija za JavaScript \\
-  {\bf REST} & Representational state transfer & predstavitveni prenos stanja \\
-  {\bf SQL} & Structured Query Language & strukturiran poizvedovalni jezik \\
-  {\bf URL} & Uniform Resource Locator & enolični krajevnik vira \\
+{\bf kratica} & {\bf angleško}                             & {\bf slovensko} \\ \hline
+{\bf API} & Application Programming Interface & aplikacijski programski vmesnik \\
+{\bf CSS} & Cascading Style Sheets & predloge za izgled spletnih strani \\
+{\bf ER diagram} & Entity Relationship Diagram & entitetno relacijski diagram \\
+{\bf EB} & Exabyte & Eksabajt \\
+{\bf HTML} & Hyper Text Markup Language & označevalni jezik za izdelavo spletnih strani \\
+{\bf HTTP} & Hyper Text Transfer Protocol & komunikacijski spletni protokol \\
+{\bf IAAA} & Identification, Authentication, Authorization and Accounting & varnostni koncepti: identifikacija, avtentikacija, avtorizacija in odgovornost \\
+{\bf JSON} & JavaScript Object Notation & objektna notacija za JavaScript \\
+{\bf REST} & Representational state transfer & predstavitveni prenos stanja \\
+{\bf SQL} & Structured Query Language & strukturiran poizvedovalni jezik \\
+{\bf URL} & Uniform Resource Locator & enolični krajevnik vira \\
 \end{tabular}
 
 
@@ -325,8 +325,8 @@ Zahvaljujem se mentorici doc. dr. Miri Trebar za vso pomoč in družini za podpo
 \noindent\textbf{Avtor:} \tauthor
 \bigskip
 
-%\noindent\textbf{Povzetek:} 
-\noindent Dandanes se na spletu pojavlja vedno več raziskovalnih metod iz področja analize in napovedovanja dobe uporabnosti hitro pokvarljivih živil. Vsaka raziskovalna metoda lahko pri raziskovanju uporablja različne parametre. Parametri se razlikujejo glede na format, strukturo ali pa samo vrsto podatkov. 
+%\noindent\textbf{Povzetek:}
+\noindent Dandanes se na spletu pojavlja vedno več raziskovalnih metod iz področja analize in napovedovanja dobe uporabnosti hitro pokvarljivih živil. Vsaka raziskovalna metoda lahko pri raziskovanju uporablja različne parametre. Parametri se razlikujejo glede na format, strukturo ali pa samo vrsto podatkov.
 
 Namen te diplomske naloge je izdelati spletno aplikacijo s primerno podatkovno shemo za pregled in urejanje publikacij. Preko nje je mogoče dodajati, urejati, brisati in iskati po vnesenih metodah in drugih podatkih. Dostop do posameznih delov aplikacije je dovoljen le določenim uporabnikom z ustreznimi uporabniškimi pravicami. Predstavljen je celoten proces načrtovanja in implementacije aplikacije, ki je zasnovana kot mikrostoritev v programskem jeziku Go. Podane so zahteve, ki jih je potrebno upoštevati pri zasnovi arhitekture spletne aplikacije iz vidika varnosti podatkov, hitrosti razvoja aplikacije in hitrosti same aplikacije. Aplikacija je predstavljena s primerom uporabe testnih podatkov.
 
@@ -348,7 +348,7 @@ Namen te diplomske naloge je izdelati spletno aplikacijo s primerno podatkovno s
 \noindent\textbf{Author:} \tauthor
 \bigskip
 
-%\noindent\textbf{Abstract:} 
+%\noindent\textbf{Abstract:}
 \noindent Nowadays, more and more research methods are appearing in the field of analysis and prediction of perishable foods shelf-life. Each research method may use different parameters in its research. The parameters vary according to format, structure or just the type of data.
 
 The aim of this thesis is to develop a web-based application with a suitable data structure to allow for reviewing and editing the publications. Through the application it is possible to add, edit, delete and search through the entered methods and other data. Access to individual parts of the application is restricted to specific users with the appropriate user rights. Presented here is the complete design process and implementation of the application, which is designed as a microservice in the Go programming language. Given are requirements to be taken into account in the design of the web application architecture in terms of data security, development time and the speed of the application itself. The application is presented with an example using test data.
@@ -371,7 +371,7 @@ Poleg splošnih informacij je eden od najpomembnejših podatkov, ki so na voljo 
 
 Iz dneva v dan nam je na voljo vedno več objavljenih raziskav iz področja ravnanja z živili v preskrbovalni verigi. Raziskave so objavljene v različnih virih, naj si bo to članek na svetovnem spletu, v reviji ali pa v znanstveni knjigi. Raziskovalci, ki prebirajo raziskave pogosto porabijo veliko časa, da pridobijo zanesljive vire in iz njih uspejo pridobiti pomembne in zanesljive informacije.
 
-Da bi poenostavili pridobivanje informacij, smo v diplomski nalogi zasnovali in implementirali aplikacijo za vnos in pregled raziskovalnih publikacij s področja analize in napovedovanja dobe uporabnosti hitro pokvarljivih živil. Aplikacija je zasnovana kot mikrostoritev. Za razvojno okolje je uporabljena Docker arhitektura, kar nam omogoča enostavno postavitev projekta, in pa tudi enostavno objavljanje projekta v izbranem okolju. 
+Da bi poenostavili pridobivanje informacij, smo v diplomski nalogi zasnovali in implementirali aplikacijo za vnos in pregled raziskovalnih publikacij s področja analize in napovedovanja dobe uporabnosti hitro pokvarljivih živil. Aplikacija je zasnovana kot mikrostoritev. Za razvojno okolje je uporabljena Docker arhitektura, kar nam omogoča enostavno postavitev projekta, in pa tudi enostavno objavljanje projekta v izbranem okolju.
 
 Ker se struktura podatkov razlikuje od raziskave do raziskave in od vira do vira, je pomembno, da podatkovno strukturo pravilno definiramo. Za dobro uporabniško izkušnjo mora biti vnos podatkov o raziskavah enostaven in dosleden, iskanje po le-teh pa mora biti hitro in uporabno. Definirali smo več vrst uporabnikov, ki imajo različne dostope do posameznih delov aplikacije.
 
@@ -388,68 +388,68 @@ V diplomski nalogi bomo predstavili kako smo pristopili k reševanju omenjenega 
 \chapter{Razvoj aplikacije}
 \label{pregled-podrocja-chapter}
 
-Pred izdelavo diplomskega dela smo najprej na spletu preverili ali obstajajo podobne rešitve na trgu. S tem smo razmislili ali je problem sploh smiseln in vreden razvoja. Med raziskavo smo odkrili nekaj orodij, ki so podobna naši aplikaciji. To so Food Safety Centre \cite{food-safety-centre}, Mendeley \cite{mendeley-manager} in pa Zotero \cite{zotero-manager}. Omenjena orodja nam do neke mere olajšajo delo z organizacijo publikacij, vendar pa nobeno popolnoma ne ustreza našim zahtevam. 
+Pred izdelavo diplomskega dela smo najprej na spletu preverili ali obstajajo podobne rešitve na trgu. S tem smo razmislili ali je problem sploh smiseln in vreden razvoja. Med raziskavo smo odkrili nekaj orodij, ki so podobna naši aplikaciji. To so Food Safety Centre \cite{food-safety-centre}, Mendeley \cite{mendeley-manager} in pa Zotero \cite{zotero-manager}. Omenjena orodja nam do neke mere olajšajo delo z organizacijo publikacij, vendar pa nobeno popolnoma ne ustreza našim zahtevam.
 
 
 % #####################################################################
 \section{Življenjski cikel razvoja }
 Razvoj programske opreme je proces, ki je sestavljen iz vrste načrtovanih dejavnosti ali sprememb. Življenjski cikel razvoja je drugačen za vsak projekt, zato je potrebno izbrati primeren model, ki omogoča boljši pregled nad samim procesom razvoja programske opreme, kot tudi testiranja in definiranja le-te.
 
-Za razvoj aplikacije smo uporabili \sn{slapovni model} (ang. waterfall model). Omenjena metodologija je linearni model, pri katerem napredek pretežno teče v eno smer navzdol skozi faze zbiranja potreb, analize, načrtovanja, razvoja, testiranja, uvajanja in vzdrževanja. Izraz je bil prvič uveden v dokumentu, ki ga je leta 1970 objavil dr. Winston W. Royce, in se še naprej uporablja v aplikacijah industrijskega oblikovanja \cite{waterfall-model}.
+Za razvoj aplikacije smo uporabili \sn{slapovni model} (ang. waterfall model). Omenjena metodologija je linearni model, pri katerem napredek pretež-\\no teče v eno smer navzdol skozi faze zbiranja potreb, analize, načrtovanja, razvoja, testiranja, uvajanja in vzdrževanja. Izraz je bil prvič uveden v dokumentu, ki ga je leta 1970 objavil dr. Winston W. Royce, in se še naprej uporablja v aplikacijah industrijskega oblikovanja \cite{waterfall-model}.
 
 Omenjeni model je definiran z zaporedjem posameznih faz, katerih število je lahko različno glede na izvedbo metodologije, giblje pa se med pet in sedem različnimi fazami (Slika \ref{waterfall-phases}). Izhod ene faze se uporablja kot vhod naslednje faze, torej mora biti vsaka faza zaključena, preden se lahko začne naslednja.
 
 \begin{description}
-    \item \textbf{Opis posameznih faz:}
-    \begin{enumerate}
-        \item \textbf{Zbiranje zahtev} – vse možne zahteve so zajete v dokumentih z opisom izdelka.
-        \item \textbf{Analiziranje} - pregled specifikacij in analiziranje le-teh. Z analiziranjem se definira poslovno logiko in pa tudi finančni plan projekta.
-        \item \textbf{Zasnova sistema} - glede na predhodno analizo se načrtuje arhitekturo programske opreme.
-        \item \textbf{Izvedba} - razvoj programske opreme v manjših enotah s funkcionalnim testiranjem.
-        \item \textbf{Integracija in testiranje} - integracija vsake enote, razvite v prejšnji fazi in po integraciji, katerim sledi testiranje celotnega sistema za morebitne napake.
-        \item \textbf{Uvedba sistema} – po opravljenih vseh funkcionalnih in nefunkcionalnih testiranjih izdelek deluje v proizvodnem okolju.
-        \item \textbf{Vzdrževanje} - odpravljanje težav in izdaja nove različice s popravki se izvaja po potrebi.
-    \end{enumerate}
+\item \textbf{Opis posameznih faz:}
+\begin{enumerate}
+\item \textbf{Zbiranje zahtev} – vse možne zahteve so zajete v dokumentih z opisom izdelka.
+\item \textbf{Analiziranje} - pregled specifikacij in analiziranje le-teh. Z analiziranjem se definira poslovno logiko in pa tudi finančni plan projekta.
+\item \textbf{Zasnova sistema} - glede na predhodno analizo se načrtuje arhitekturo programske opreme.
+\item \textbf{Izvedba} - razvoj programske opreme v manjših enotah s funkcionalnim testiranjem.
+\item \textbf{Integracija in testiranje} - integracija vsake enote, razvite v prejšnji fazi in po integraciji, katerim sledi testiranje celotnega sistema za morebitne napake.
+\item \textbf{Uvedba sistema} – po opravljenih vseh funkcionalnih in nefunkcionalnih testiranjih izdelek deluje v proizvodnem okolju.
+\item \textbf{Vzdrževanje} - odpravljanje težav in izdaja nove različice s popravki se izvaja po potrebi.
+\end{enumerate}
 \end{description}
 
 Zaradi medsebojne odvisnosti posameznih faz je model pri implementaciji zelo pregleden in jasen. Vendar ima nekaj pomanjkljivosti in je učinkovit le pri manjših projektih, kjer so zahteve zelo jasno definirane in kjer je predviden obseg dela manjši.
 Model ne dovoljuje spreminjanja specifikacij, oziroma je spreminjanje zahtev med samo implementacijo oteženo. Ko je izdelek v fazi testiranja, se je težko vrniti in spremeniti nekaj, kar je ostalo v fazi analize.
-To pomeni, da delujoč izdelek dobimo šele na koncu cikla omenjenega modela. 
+To pomeni, da delujoč izdelek dobimo šele na koncu cikla omenjenega modela.
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.9\textwidth]{slike/waterfall.png}
 \end{center}
-\caption{ Vizualizacija sedmih faz slapovnega modela }
+\caption{ Vizualizacija sedmih faz slapovnega modela. }
 \label{waterfall-phases}
 \end{figure}
 
 % #####################################################################
 \section{Pregled zahtev}
-Cilj izdelave spletne aplikacije je agregirati podatke iz različnih virov, kot so knjiga, spletni vir ali pa revija. Vnašanje omenjenih podatkov iz nedefiniranih virov je težko in zamudno opravilo. Aplikacija mora biti razvita z namenom, da je uporabniku, ki publikacije vnaša v sistem, delo olajšano. 
+Cilj izdelave spletne aplikacije je agregirati podatke iz različnih virov, kot so knjiga, spletni vir ali pa revija. Vnašanje omenjenih podatkov iz nedefiniranih virov je težko in zamudno opravilo. Aplikacija mora biti razvita z namenom, da je uporabniku, ki publikacije vnaša v sistem, delo olajšano.
 
-Aplikacija naj omogoča vnos novih in urejanje obstoječih publikacij. Vsak vnos mora biti pred objavo potrjen s strani administratorja. vnesene publikacije naj bodo primerno prikazane končnemu uporabniku, z možnostjo iskanja po posameznih zapisih. 
+Aplikacija naj omogoča vnos novih in urejanje obstoječih publikacij. Vsak vnos mora biti pred objavo potrjen s strani administratorja. vnesene publikacije naj bodo primerno prikazane končnemu uporabniku, z možnostjo iskanja po posameznih zapisih.
 
-% Urednikom in administratorjem mora biti omogočeno dodajanje novih parametrov za posamezno publikacijo, z možnostjo hitrega iskanja po vrednostih parametrov med samim dodajanjem publikacije. 
+% Urednikom in administratorjem mora biti omogočeno dodajanje novih parametrov za posamezno publikacijo, z možnostjo hitrega iskanja po vrednostih parametrov med samim dodajanjem publikacije.
 
-Aplikacija mora biti pregledna in enostavna za uporabo. Podpirati mora registracijo novih uporabnikov v aplikacijo in omejiti dostop do določene vsebine glede na vlogo uporabnika. Dostop do posameznih strani naj bo omogočen le prijavljenim uporabnikom z uporabniškim imenom in geslom ter primernim dostopom (Slika \ref{user-rights}). Definirani uporabniki so: 
+Aplikacija mora biti pregledna in enostavna za uporabo. Podpirati mora registracijo novih uporabnikov v aplikacijo in omejiti dostop do določene vsebine glede na vlogo uporabnika. Dostop do posameznih strani naj bo omogočen le prijavljenim uporabnikom z uporabniškim imenom in geslom ter primernim dostopom (Slika \ref{user-rights}). Definirani uporabniki so:
 \begin{itemize}
-    \item \textbf{Uporabnik} - omogočen je pregled objavljenih publikacij in pripadajočih vsebin.
-	\item \textbf{Urednik} - lahko ureja publikacije, vsebine ter parametre za posamezno publikacijo.
-	\item \textbf{Administrator} - ima polni nadzor aplikacije.
+\item \textbf{Uporabnik} - omogočen je pregled objavljenih publikacij in pripadajočih vsebin.
+\item \textbf{Urednik} - lahko ureja publikacije, vsebine ter parametre za posamezno publikacijo.
+\item \textbf{Administrator} - ima polni nadzor aplikacije.
 \end{itemize}
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.75\textwidth]{slike/user_hierarchy.png}
+\includegraphics[width=0.9\textwidth]{slike/user_hierarchy.png}
 \end{center}
-\caption{ Pregled dostopa do posameznih strani in akcij glede na vlogo uporabnika }
+\caption{ Pregled dostopa do posameznih strani in akcij glede na vlogo uporabnika. }
 \label{user-rights}
 \end{figure}
 
 Zaledni sistem naj bo zasnovan tako, da ga bo mogoče nadgraditi in kasneje uporabiti v mobilni aplikaciji. Uporabniški vmesnik aplikacije naj bo v angleščini, komunikacija med čelnim in zalednim sistemom pa naj bo ustrezno dokumentirana.
 
-% \section{Funkcionalnosti}
+\clearpage
 
 
 % prazna stran
@@ -458,12 +458,12 @@ Zaledni sistem naj bo zasnovan tako, da ga bo mogoče nadgraditi in kasneje upor
 % ===================
 \section{Načrtovanje aplikacije}
 \label{nacrtovanje}
-%% @ziga "razdelali strukturo strani" - nejasen pomen besede "strani" - manjka kak pridevnik?
-Na podlagi zahtev smo začeli z načrtovanjem aplikacije. Najprej smo popisali vse funkcionalnosti, katere mora aplikacija zajemati in razdelali strukturo strani. Glede na popisane funkcionalnosti smo se odločili kako bo projekt postavljen in definirali arhitekturo aplikacije. 
 
-Med načrtovanjem smo se odločili tudi kateri programski jezik bomo uporabili. Definirali smo kako bo potekala komunikacija med posameznimi internimi storitvami in komunikacijo med zalednim in čelnim delom. 
+Na podlagi zahtev smo začeli z načrtovanjem aplikacije. Najprej smo popisali vse funkcionalnosti, katere mora aplikacija zajemati in razdelali strukturo uporabniškega vmesnika. Glede na popisane funkcionalnosti smo se odločili kako bo projekt postavljen in definirali arhitekturo aplikacije.
 
-V nadaljevanju bomo spoznali posamezne tehnologije in metode, uporabljene pri razvoju aplikacije in čemu je katera tehnologija namenjena. 
+Med načrtovanjem smo se odločili tudi kateri programski jezik bomo uporabili. Definirali smo, kako bo potekala komunikacija med posameznimi internimi storitvami in komunikacijo med zalednim in čelnim delom.
+
+V nadaljevanju bomo spoznali posamezne tehnologije in metode, uporabljene pri razvoju aplikacije in čemu je katera tehnologija namenjena.
 
 % +++++++++++++++++++++++++++++++++++++++++++++
 \subsection{Funkcionalnosti in njihove povezave}
@@ -480,58 +480,58 @@ Aplikacija je sestavljena iz sklopov strani, do katerih lahko dostopamo iz razli
 
 
 \begin{description}
-        \item \textbf{Registracija}: ustvarjanje novega uporabnika
-		\item \textbf{Prijava}: obrazec za overjanje uporabnika
-		\item \textbf{Pozabljeno geslo}: nastavitev novega gesla uporabniku
-		\item \textbf{Uporabniki}: seznam vseh uporabnikov
-		\begin{itemize}
-		    \item urejanje: obrazec za urejanje uporabnika
-		    \item brisanje: deaktiviranje uporabnika
-		\end{itemize}
-		\item \textbf{Publikacije}: seznam vnesenih publikacij
-		\begin{itemize}
-		    \item urejanje: obrazec za urejanje obstoječe publikacije
-		    \item brisanje: odstranitev publikacije
-		    \item dodajanje: obrazec za kreiranje nove publikacije
-		    \item iskanje: iskanje po naslovu 
-		    \item prenos datoteke: prenos pripete datoteke k publikaciji
-		\end{itemize}
-		\item \textbf{Metode}: seznam vseh vnesenih metod
-		\begin{itemize}
-		    \item urejanje: obrazec za urejanje obstoječe metode
-		    \item brisanje: odstranitev metode
-		    \item dodajanje: obrazec za kreiranje nove metode
-		\end{itemize}
-		
-		\item \textbf{Viri}: seznam vseh dodanih virov
-		\begin{itemize}
-		    \item urejanje: obrazec za urejanje obstoječega vira
-		    \item brisanje: odstranitev vira
-		    \item dodajanje: obrazec za kreiranje novega vira
-		\end{itemize}
-		
-		\item \textbf{Živila}: seznam vseh dodanih živil
-		\begin{itemize}
-		    \item urejanje: obrazec za urejanje obstoječega živila
-		    \item brisanje: odstranitev živila
-		    \item dodajanje: obrazec za kreiranje novega živila
-		\end{itemize}
-		
-		\item \textbf{Avtorji}: seznam vseh dodanih avtorjev
-		\begin{itemize}
-		    \item urejanje: obrazec za urejanje obstoječega avtorja
-		    \item brisanje: odstranitev avtorja
-		    \item dodajanje: obrazec za kreiranje novega avtorja
-		\end{itemize}
-		
-		\item \textbf{Dinamični podatki}: seznam vseh definiranih dinamičnih podatkov
-		\begin{itemize}
-		    \item urejanje: obrazec za urejanje obstoječih podatkov
-		    \item brisanje: odstranitev podatka
-		    \item dodajanje: obrazec za kreiranje vnosa novih podatkov
-		\end{itemize}
-		
-		\item \textbf{Iskalnik}: stran za iskanje po publikacijah
+\item \textbf{Registracija}: ustvarjanje novega uporabnika
+\item \textbf{Prijava}: obrazec za overjanje uporabnika
+\item \textbf{Pozabljeno geslo}: nastavitev novega gesla uporabniku
+\item \textbf{Uporabniki}: seznam vseh uporabnikov
+\begin{itemize}
+\item urejanje: obrazec za urejanje uporabnika
+\item brisanje: deaktiviranje uporabnika
+\end{itemize}
+\item \textbf{Publikacije}: seznam vnesenih publikacij
+\begin{itemize}
+\item urejanje: obrazec za urejanje obstoječe publikacije
+\item brisanje: odstranitev publikacije
+\item dodajanje: obrazec za kreiranje nove publikacije
+\item iskanje: iskanje po naslovu
+\item prenos datoteke: prenos pripete datoteke k publikaciji
+\end{itemize}
+\item \textbf{Metode}: seznam vseh vnesenih metod
+\begin{itemize}
+\item urejanje: obrazec za urejanje obstoječe metode
+\item brisanje: odstranitev metode
+\item dodajanje: obrazec za kreiranje nove metode
+\end{itemize}
+
+\item \textbf{Viri}: seznam vseh dodanih virov
+\begin{itemize}
+\item urejanje: obrazec za urejanje obstoječega vira
+\item brisanje: odstranitev vira
+\item dodajanje: obrazec za kreiranje novega vira
+\end{itemize}
+
+\item \textbf{Živila}: seznam vseh dodanih živil
+\begin{itemize}
+\item urejanje: obrazec za urejanje obstoječega živila
+\item brisanje: odstranitev živila
+\item dodajanje: obrazec za kreiranje novega živila
+\end{itemize}
+
+\item \textbf{Avtorji}: seznam vseh dodanih avtorjev
+\begin{itemize}
+\item urejanje: obrazec za urejanje obstoječega avtorja
+\item brisanje: odstranitev avtorja
+\item dodajanje: obrazec za kreiranje novega avtorja
+\end{itemize}
+
+\item \textbf{Dinamični podatki}: seznam vseh definiranih dinamičnih podatkov
+\begin{itemize}
+\item urejanje: obrazec za urejanje obstoječih podatkov
+\item brisanje: odstranitev podatka
+\item dodajanje: obrazec za kreiranje vnosa novih podatkov
+\end{itemize}
+
+\item \textbf{Iskalnik}: stran za iskanje po publikacijah
 \end{description}
 
 \subsection{Postavitev spletne strani}
@@ -539,7 +539,7 @@ Osnovno postavitev posameznih strani smo najprej skicirali na list papirja. Odlo
 
 Na vrhu strani se nahaja navigacija, katere namen je premikanje med posameznimi sklopi. Na skrajnem levem delu se nahaja ime aplikacije \sn{Safe Food}. Na skrajnem desnem delu se nahaja gumb za nadzor nad uporabniškim delom. Na sredini navigacije pa se nahajajo povezave do posameznih sklopov aplikacije.
 
-Na strani, kjer uporabnik pregleduje in išče publikacije, smo se odločili, da stran razdelimo na dva dela. Na levem delu strani se nahaja nabor filtrov, na desnem delu pa prikaz publikacij (Slika \ref{wireframe}). 
+Na strani, kjer uporabnik pregleduje in išče publikacije, smo se odločili, da stran razdelimo na dva dela. Na levem delu strani se nahaja nabor filtrov, na desnem delu pa prikaz publikacij (Slika \ref{wireframe}).
 
 Vse strani uporabljajo enak koncept. Za enostavno premikanje med stranmi se na dnu nahaja paginacija. V primeru napake pri vnosu podatkov se ta prikaže poleg vnosnega polja. V primeru generalne napake, kot je na primer neuspešno poslan zahtevek na zaledni sistem, pa se ta izpiše na dnu strani v posebnem oknu.
 
@@ -564,31 +564,32 @@ V našem projektu smo se odločili uporabiti sistem za verzioniranje kode Git. J
 \begin{center}
 \includegraphics[width=1\textwidth]{slike/github.png}
 \end{center}
-\caption{ Prikaz GitHub repozitorija }
+\caption{ Prikaz GitHub repozitorija. }
 \label{github-project}
 \end{figure}
 
 % #####################################################################
 \subsection{Infrastruktura}
-Uporaba programske opreme je zapletena. Pred namestitvijo je potrebno razmisliti, kateri operacijski sistem se bo uporabljal, katera so orodja, ki jih programska oprema potrebuje in še vrsto drugih vprašanj. Večina računalnikov že ima nameščene in zagnane aplikacije, ki so odvisne od drugih aplikacij. V primeru, da nekatere aplikacije med seboj niso kompatibilne, lahko pride do težav, ki jih ni enostavno odpraviti. Stvari postanejo bolj zapletene, če si aplikacije med seboj delijo skupne vire. 
+Uporaba programske opreme je zapletena. Pred namestitvijo je potrebno razmisliti, kateri operacijski sistem se bo uporabljal, katera so orodja, ki jih programska oprema potrebuje in še vrsto drugih vprašanj. Večina računalnikov že ima nameščene in zagnane aplikacije, ki so odvisne od drugih aplikacij. V primeru, da nekatere aplikacije med seboj niso kompatibilne, lahko pride do težav, ki jih ni enostavno odpraviti. Stvari postanejo bolj zapletene, če si aplikacije med seboj delijo skupne vire.
 
 Na našem projektu smo se hoteli izogniti nevšečnostim s postavljanjem projekta, zato smo se odločili uporabiti orodje za izoliranje okolja. Virtualizacija je postopek, ki strojni ali programski vir preslika v navidezni vir, tega pa potem odjemalec koristi kot pravi vir. Pomembna prednost uporabe virtualizacije je prenosljivost. Z njo lahko dosežemo enake pogoje za izvajanje programske opreme na različnih strojnih opremah \cite{docker-in-action}.
 
-Orodje Docker zagotavlja tako imenovano abstrakcijo, ki nudi enako okolje vsem razvijalcem, ki razvijajo na istem projektu, ne glede na to, kateri operacijski sistem uporabljajo. Vsebniki (ang. containers) uporabljajo jedra operacijskega sistema in se obnašajo kot navadni programi, ki lahko uporabljajo vse sistemske vire, vendar omejijo dostop aplikacije samo na prostor v vsebnikih (Slika \ref{docker-vs-vm}). \clearpage
+Orodje Docker zagotavlja tako imenovano abstrakcijo, ki nudi enako okolje vsem razvijalcem, ki razvijajo na istem projektu, ne glede na to, kateri operacijski sistem uporabljajo. Vsebniki (ang. containers) uporabljajo jedra operacijskega sistema in se obnašajo kot navadni programi, ki lahko uporabljajo vse sistemske vire, vendar omejijo dostop aplikacije samo na prostor v vsebnikih. 
 
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=0.75\textwidth]{slike/docker-vs-vm.png}
-\end{center}
-\caption{ Prikaz razlike med virtualnim strojem in Docker vsebnikom. }
-\label{docker-vs-vm}
-\end{figure}
+\clearpage
+
+% \begin{figure}[h]
+% \begin{center}
+% \includegraphics[width=0.75\textwidth]{slike/docker-vs-vm.png}
+% \end{center}
+% \caption{ Prikaz razlike med virtualnim strojem in Docker vsebnikom. }
+% \label{docker-vs-vm}
+% \end{figure}
 
 % #####################################################################
 \subsubsection{Docker}
 \label{docker-section}
-Docker je trenutno najbolj priljubljena rešitev vsebnika. Ponuja številne funkcije in je podprt s strani ostalih sistemov, kot so na primer orodja za orkestracijo (ang. orchestration). V osnovi gre za izolacijo procesov in virtualizacijo virov, do katerih procesi dostopajo. Omogoča izoliranje aplikacije od infrastrukture, za hitro dostavljanje programske opreme \cite{linuxcontainers}. 
-%% @ziga "Omogoča izoliranje aplikacije od infrastrukture, za hitro dostavljanje programske opreme" - nejasno
+Docker je trenutno najbolj priljubljena rešitev vsebnika. Ponuja številne funkcije in je podprt s strani ostalih sistemov, kot so na primer orodja za orkestracijo (ang. orchestration). V osnovi gre za izolacijo procesov in virtualizacijo virov, do katerih procesi dostopajo. Omogoča izoliranje aplikacije od infrastrukture, kar olajša hitro dostavljanje programske opreme \cite{linuxcontainers}.
 
 Docker je odvisen od jedra Linuxa, kar pomeni, da ne deluje v sistemu Windows ali macOS. V tem primeru je potreben zagon v virtualnem stroju, ki vsebuje jedro Linuxa \cite{docker-in-action}.
 
@@ -598,38 +599,38 @@ Konfiguriranje slike vsebnika zahteva ustvarjanje konfiguracijske datoteke. Ta j
 \begin{center}
 \includegraphics[width=0.75\textwidth]{slike/docker-flow.png}
 \end{center}
-\caption{ Prikaz gradnje Docker vsebnikov }
+\caption{ Prikaz gradnje Docker vsebnikov. }
 \label{docker-flow}
 \end{figure}
 
-Vsebnik je skupina procesov v operacijskem sistemu z jedrom Linux, ki upravlja računske vire z nadzornimi skupinami in zagotavlja izolacijo virov z uporabo imenskih prostorov. Ob zagonu vsebnika se uporabi vsebniška slika (angl. container image), v kateri so zapisane informacije o izvajanju programske opreme in preko katere Docker tudi priklopi nov, prazen bralno-pisalni datotečni sloj. Slika se ustvari s postopkom gradnje, ki je zapisan v datoteki $Dockerfile$. 
+Vsebnik je skupina procesov v operacijskem sistemu z jedrom Linux, ki upravlja računske vire z nadzornimi skupinami in zagotavlja izolacijo virov z uporabo imenskih prostorov. Ob zagonu vsebnika se uporabi vsebniška slika (ang. container image), v kateri so zapisane informacije o izvajanju programske opreme in preko katere Docker tudi priklopi nov, prazen bralno-pisalni datotečni sloj. Slika se ustvari s postopkom gradnje, ki je zapisan v datoteki $Dockerfile$.
 
 V kodi \ref{lst:dcb-snipet} je prikazan primer grajenja slike, ki smo jo uporabili pri razvoju zalednega dela naše aplikacije.
-\begin{lstlisting}[language=bash, style=mystyle,caption={Grajenje slike Docker vmesnika},label=lst:dcb-snipet]
-$ docker build .          
+\begin{lstlisting}[language=bash, style=mystyle,caption={Grajenje slike Docker vmesnika.},label=lst:dcb-snipet]
+$ docker build .
 [+] Building 69.1s (9/9)                             FINISHED
- => [internal] load build definition from Dockerfile    0.1s
- => => transferring dockerfile: 180B                    0.0s
- => [internal] load .dockerignore                       0.0s
- => => transferring context: 2B                         0.0s
- => [internal] load metadata for golang:1.17            2.7s
- => [1/2] FROM golang:1.17@sha256:39953c7c7             60.0s
- => => resolve golang:1.17@sha256:39953c7c7             0.0s
- => => sha256:0e29546d54 54.92MB / 54.92MB              27.2s
- => => extracting sha256:0e29546d541                    4.5s
- => => sha256:6432567af305a4304605a3 154B / 154B        34.4s
- => [internal] load build context                       0.0s
- => => transferring context: 121B                       0.0s
- => [2/2] COPY start.sh /                               0.0s 
- => exporting to image                                  0.2s 
- => => exporting layers                                 0.2s 
- => => writing image sha256:96d781a9030                 0.0s 
+=> [internal] load build definition from Dockerfile    0.1s
+=> => transferring dockerfile: 180B                    0.0s
+=> [internal] load .dockerignore                       0.0s
+=> => transferring context: 2B                         0.0s
+=> [internal] load metadata for golang:1.17            2.7s
+=> [1/2] FROM golang:1.17@sha256:39953c7c7             60.0s
+=> => resolve golang:1.17@sha256:39953c7c7             0.0s
+=> => sha256:0e29546d54 54.92MB / 54.92MB              27.2s
+=> => extracting sha256:0e29546d541                    4.5s
+=> => sha256:6432567af305a4304605a3 154B / 154B        34.4s
+=> [internal] load build context                       0.0s
+=> => transferring context: 121B                       0.0s
+=> [2/2] COPY start.sh /                               0.0s
+=> exporting to image                                  0.2s
+=> => exporting layers                                 0.2s
+=> => writing image sha256:96d781a9030                 0.0s
 \end{lstlisting}
 
-% ##################################################################### 
+% #####################################################################
 \subsection{Spletni strežnik}
 
-Spletni strežnik (angl. Web Server) je računalniški sistem, ki obdeluje zahteve preko protokola \verb=HTTP=. Izraz spletni strežnik se lahko nanaša na celoten sistem ali posebej na programsko opremo, ki sprejema in nadzira zahteve HTTP. Primarna funkcija spletnega strežnika je shranjevanje, obdelava in pošiljanje spletnih strani odjemalcem. Predložene strani so najpogosteje dokumenti HTML, ki poleg besedilne vsebine vključujejo tudi slike, CSS predloge in skripte. 
+Spletni strežnik (ang. Web Server) je računalniški sistem, ki obdeluje zahteve preko protokola \verb=HTTP=. Izraz spletni strežnik se lahko nanaša na celoten sistem ali posebej na programsko opremo, ki sprejema in nadzira zahteve HTTP. Primarna funkcija spletnega strežnika je shranjevanje, obdelava in pošiljanje spletnih strani odjemalcem. Predložene strani so najpogosteje dokumenti HTML, ki poleg besedilne vsebine vključujejo tudi slike, CSS predloge in skripte.
 
 Glavna naloga spletnega strežnika je prikazovanje vsebine spletne strani. Če spletni strežnik ni izpostavljen javnosti in se uporablja interno, se imenuje \sn{intranetni strežnik}. Strojna oprema spletnega strežnika je povezana z internetom in omogoča izmenjavo podatkov z drugimi povezanimi napravami, medtem ko programska oprema spletnega strežnika nadzoruje, kako uporabnik dostopa do gostiteljskih datotek.
 
@@ -641,33 +642,33 @@ Do programske opreme spletnega strežnika se dostopa preko domenskih imen spletn
 % #####################################################################
 \subsection{Programski jezik Go}
 
-\verb=Go= je odprtokodni programski jezik, razvit iz strani ameriške korporacije Google. Pobudniki razvoja so bili Robert Griesemer, Ken Thomson in Rob Pike. Sprva je bil uporabljen le za interno uporabo, leta 2009 pa so ga ponudili širši publiki kot odprtokodni programski jezik. 
- 
+\verb=Go= je odprtokodni programski jezik, razvit iz strani ameriške korporacije Google. Pobudniki razvoja so bili Robert Griesemer, Ken Thomson in Rob Pike. Sprva je bil uporabljen le za interno uporabo, leta 2009 pa so ga ponudili širši publiki kot odprtokodni programski jezik.
+
 Kljub temu, da je programski jezik Go namenjen splošni uporabi, je njegova primarna uporaba namenjena pisanju sistemskih orodij, spletnih storitev in programov, ki veliko komunicirajo preko  spletnega omrežja. Zaradi njegove enostavnosti in pristopov je primeren tudi za učenje prvega programskega jezika. Definiranih, oziroma rezerviranih je le 25 ključnih besed, kar pomeni, da si je jezik veliko lažje zapomniti in se je potrebno naučiti le konceptov.
 
-Čeprav Go ni objektno usmerjen programski jezik, so njegovi vmesniki zelo vsestranski in omogočajo posnemanje nekaterih zmožnosti objektno usmerjenih jezikov, kot so polimorfizem, enkapsulacija in sestava.
+Čeprav Go ni objektno usmerjen programski jezik, so njegovi vmesniki zelo vsestranski in omogočajo posnemanje nekaterih zmožnosti objektno us-\\merjenih jezikov, kot so polimorfizem, enkapsulacija in sestava.
 
-Go ima tudi zmožnosti sočasnosti z uporabo preprostega modela sočasnosti, ki se izvaja z uporabo go-rutin in kanalov. Go upravlja niti operacijskega sistema namesto nas in ima zmogljiv izvajalni čas. To omogoča ustvarjanje lahkih delovnih enot (ang. goroutine), ki med seboj komunicirajo s pomočjo kanalov.
- 
+Go ima tudi zmožnosti sočasnosti z uporabo preprostega modela sočasnos-\\ti, ki se izvaja z uporabo go-rutin in kanalov. Go upravlja niti operacijskega sistema namesto nas in ima zmogljiv izvajalni čas. To omogoča ustvarjanje lahkih delovnih enot (ang. goroutine), ki med seboj komunicirajo s pomočjo kanalov.
+
 \subsection{Mikrostoritev}
-Arhitekturni koncept mikrostoritev je pristop k razvoju ene same aplikacije kot zbirke majhnih storitev, od katerih vsaka deluje v svojem procesu in komunicira z enostavnimi mehanizmi, kot je na primer HTTP API. Te storitve so zgrajene na podlagi poslovnih zmogljivosti in jih je mogoče neodvisno uvesti s popolnoma avtomatiziranimi stroji za uvajanje. Obstaja minimalno centralizirano upravljanje teh storitev, ki so lahko napisane v različnih programskih jezikih in uporabljajo različne tehnologije za shranjevanje podatkov \cite{mfowler-microservices}. 
+Arhitekturni koncept mikrostoritev je pristop k razvoju ene same aplikacije kot zbirke majhnih storitev, od katerih vsaka deluje v svojem procesu in komunicira z enostavnimi mehanizmi, kot je na primer HTTP API. Te storitve so zgrajene na podlagi poslovnih zmogljivosti in jih je mogoče neodvisno uvesti s popolnoma avtomatiziranimi stroji za uvajanje. Obstaja minimalno centralizirano upravljanje teh storitev, ki so lahko napisane v različnih programskih jezikih in uporabljajo različne tehnologije za shranjevanje podatkov \cite{mfowler-microservices}.
 
 
 % #####################################################################
 \subsection{Podatkovna baza}
-Za shranjevanje podatkov uporabljamo relacijsko podatkovno bazo \verb=PostgreSQL=. Relacijska podatkovna baza (Relational Database Management System - RDBMS) uporablja podatkovno strukturo, ki nam omogoča identifikacijo in dostop do podatkov preko relacije med dvema entitetama. Podatke v relacijski podatkovni bazi si lahko predstavljamo kot tabele s stolpci in vrsticami \cite{oracle-rdbms}.
+Za shranjevanje podatkov smo se odločili za relacijsko podatkovno bazo \verb=PostgreSQL=. Relacijska podatkovna baza (ang. Relational Database Management System - RDBMS) uporablja podatkovno strukturo, ki nam omogoča identifikacijo in dostop do podatkov preko relacije med dvema entitetama. Podatke v relacijski podatkovni bazi si lahko predstavljamo kot tabele s stolpci in vrsticami \cite{oracle-rdbms}.
 
 
 % #####################################################################
 \subsubsection{PostgreSQL}
 PostgreSQL je zmogljiv, odprtokoden, objektno-relacijski sistem baz podatkov, ki uporablja in razširja jezik SQL v kombinaciji s številnimi funkcijami, ki varno shranjujejo in spreminjajo podatke. Začetki PostgreSQL segajo v leto 1986 kot del projekta POSTGRES na kalifornijski univerzi v Berkeleyju in ima več kot 30 let aktivnega razvoja na osnovni platformi.
 
-PostgreSQL si je prislužil močan sloves s svojo dokazano arhitekturo, zanesljivostjo, celovitostjo podatkov, robustnim naborom funkcij, razširljivostjo in predanostjo skupnosti odprte kode, ki stoji za programsko opremo, da dosledno zagotavlja zmogljive in inovativne rešitve. 
+PostgreSQL si je prislužil močan sloves s svojo dokazano arhitekturo, zanesljivostjo, celovitostjo podatkov, robustnim naborom funkcij, razširljivostjo in predanostjo skupnosti odprte kode, ki stoji za programsko opremo, da dosledno zagotavlja zmogljive in inovativne rešitve.
 PostgreSQL deluje na vseh večjih operacijskih sistemih in ima zmogljive dodatke, kot je na primer priljubljena razširitev geoprostorske baze podatkov \verb=PostGIS= (ang. Geographic Information System) \cite{pg-database-postgis}.
 
 
 \subsubsection{UUID}
-Za identifikacijo naših entitet smo uporabili enoličen univerzalen identifikator - \verb=UUID= (angl. "Universally Unique Identifier"). To je standardna identifikacijska koda, ki se uporablja v postopku izdelave programske opreme. Uporablja se za generiranje univerzalnih unikatnih identifikatorjev, ki omogočajo prepoznavanje in razlikovanje predmeta znotraj sistema ali istega predmeta v različnih kontekstih.
+Za identifikacijo naših entitet smo uporabili enoličen univerzalen identifikator - \verb=UUID= (ang. "Universally Unique Identifier"). To je standardna identifikacijska koda, ki se uporablja v postopku izdelave programske opreme. Uporablja se za generiranje univerzalnih unikatnih identifikatorjev, ki omogočajo prepoznavanje in razlikovanje predmeta znotraj sistema ali istega predmeta v različnih kontekstih.
 
 UUID je sestavljen iz 128 bitov (32 znakov). Vsak znak je predstavljen v šestnajstiškem (heksadecimalnem) zapisu, kar pomeni, da je znak lahko število od \verb=0= do \verb=9=, ali pa črka od \verb=a= do \verb=f= \cite{uuid-rfc}.
 
@@ -710,7 +711,7 @@ Minio je bolj primeren za shranjevanje nestrukturiranih podatkov kot so fotograf
 
 % #####################################################################
 % \subsection{Varnost}
-% Skoraj vsaka aplikacija zahteva določeno raven sistema avtorizacije. V nekaterih primerih je dovolj, da potrdimo nabor uporabniškega imena/gesla z našo tabelo z uporabniki, vendar pogosto potrebujemo bolj natančen model dovoljenj, da nekaterim uporabnikom omogočimo dostop do določenih virov in jih omejimo pred ostalimi. 
+% Skoraj vsaka aplikacija zahteva določeno raven sistema avtorizacije. V nekaterih primerih je dovolj, da potrdimo nabor uporabniškega imena/gesla z našo tabelo z uporabniki, vendar pogosto potrebujemo bolj natančen model dovoljenj, da nekaterim uporabnikom omogočimo dostop do določenih virov in jih omejimo pred ostalimi.
 
 \subsubsection{Firebase}
 Firebase je BaaS (Backend as a Service) storitev, ki jo ponuja podjetje Google. Z orodji, ki jih zajema, je programerjem olajšano delo pri razvoju in pa tudi pri vzdrževanju aplikacije. Orodja, ki jih nudijo, so orodje za avtentikacijo, testiranje, za obveščanje strank in ostala infrastrukturna orodja kot na primer podatkovna baza in gostovanje \cite{firebase-about}.
@@ -721,24 +722,24 @@ Brezplačni plan Firebase omogoča kreiranje neomejenega števila uporabnikov. O
 
 
 \begin{itemize}
-	\item \textbf{Število registriranih uporabnikov} - neomejeno
-	\item \textbf{Hitrost brisanja uporabnikov} - 10 uporabnikov/sekundo
-	\item \textbf{Hitrost kreiranja uporabnikov} - 100 uporabnikov/IP/uro
+\item \textbf{Število registriranih uporabnikov} - neomejeno
+\item \textbf{Hitrost brisanja uporabnikov} - 10 uporabnikov/sekundo
+\item \textbf{Hitrost kreiranja uporabnikov} - 100 uporabnikov/IP/uro
 \end{itemize}
 
 
 % #####################################################################
 \subsection{Vue.js}
 \label{vue-js-section}
-Vue je odprtokodno, progresivno \verb=JavaScript= ogrodje (angl. framework), namenjeno izdelavi uporabniških vmesnikov in enostranskih aplikacij.
+Vue je odprtokodno, progresivno \verb=JavaScript= ogrodje (ang. framework), namenjeno izdelavi uporabniških vmesnikov in enostranskih aplikacij.
 
 Vue.js ima postopoma prilagodljivo arhitekturo, ki se osredotoča na deklarativno upodabljanje in sestavo komponent. Jedrna knjižnica je osredotočena samo na vizualni sloj. Napredne funkcije, potrebne za zapletene aplikacije, kot so usmerjanje, upravljanje stanja in orodja za gradnjo, so na voljo prek uradno vzdrževanih podpornih knjižnic in paketov \cite{vue-js-what-is}.
 
- \subsection{Tailwind}
+\subsection{Tailwind}
 \label{tailwind-section}
-Tailwind je ogrodje, ki ponuja CSS gradnike za lažjo in hitrejšo izdelavo spletnih aplikacij. Temelji na slogovnem jeziku CSS oziroma kaskadnih stilskih podlogah (ang. cascading style sheets). Vsebuje številne elemente, katere redno uporabljamo za oblikovanje HTML gradnikov, kot so osnovna razdelitev strani, posamezni gumbi, spustni meniji in ostali gradniki s katerimi oblikujemo stran. Ogrodje samo po sebi poskrbi za prilagodljiv izgled na različnih napravah, kar ponavadi pri razvoju vzame veliko časa. 
+Tailwind je ogrodje, ki ponuja CSS gradnike za lažjo in hitrejšo izdelavo spletnih aplikacij. Temelji na slogovnem jeziku CSS oziroma kaskadnih stilskih podlogah (ang. cascading style sheets). Vsebuje številne elemente, katere redno uporabljamo za oblikovanje HTML gradnikov, kot so osnovna razdelitev strani, posamezni gumbi, spustni meniji in ostali gradniki s katerimi oblikujemo stran. Ogrodje samo po sebi poskrbi za prilagodljiv izgled na različnih napravah, kar ponavadi pri razvoju vzame veliko časa.
 
-Ogrodje je napisano s pomočjo $PostCSS$ orodja, kar nam omogoča enostavno konfiguriranje posameznih slogovnih elementov. 
+Ogrodje je napisano s pomočjo $PostCSS$ orodja, kar nam omogoča enostavno konfiguriranje posameznih slogovnih elementov.
 
 % +++++++++++++++++++++++++++++++++++++++++++++
 % ++++++++ IMPLEMENTACIJA APLIKACIJE ++++++++++++
@@ -746,7 +747,7 @@ Ogrodje je napisano s pomočjo $PostCSS$ orodja, kar nam omogoča enostavno konf
 \chapter{Implementacija}
 V tem poglavju bomo spoznali vpeljavo spletnih in drugih tehnologij ter si pogledali kako je zgrajen strežniški del in nato še uporabniški del naše aplikacije. Strežniški del skrbi za obdelavo podatkov, uporabniški del pa uporabniku omogoča enostaven vnos in prikaz podatkov.
 
-Najprej bomo opisali kako smo projekt zasnovali in vpeljali različne arhitekturne koncepte in vzorce. Nato bomo opisali kako poteka komunikacija med uporabniškim in strežniškim delom aplikacije. Na koncu pa bomo spoznali še kako so posamezni podatki predstavljeni in shranjeni v ustreznih podatkovnih bazah. 
+Najprej bomo opisali kako smo projekt zasnovali in vpeljali različne arhitekturne koncepte in vzorce. Nato bomo opisali kako poteka komunikacija med uporabniškim in strežniškim delom aplikacije. Na koncu pa bomo spoznali še kako so posamezni podatki predstavljeni in shranjeni v ustreznih podatkovnih bazah.
 
 % #####################################################################
 \section{Zagon aplikacije v lokalnem okolju}
@@ -754,7 +755,7 @@ Postavitev projekta je lahko včasih zelo zamudno delo, s katerim razvijalec izg
 
 Za prenos projekta na svoj računalnik mora razvijalec imeti dostop do \verb=Git= repozitorija, katerega gostimo na platformi \verb=GitHub=. Z ukazom (Ukaz \ref{lst:git-clone}), ki ga poženemo v ukazni vrstici poskrbimo, da so vse datoteke iz \verb=GitHub= repozitorija uspešno prenesene v direktorij na računalniku.
 
-\begin{lstlisting}[language=bash,style=mystyle,caption={Ukaz za prenos datotek iz GitHub repozitorija},label=lst:git-clone]
+\begin{lstlisting}[language=bash,style=mystyle,caption={Ukaz za prenos datotek iz GitHub repozitorija.},label=lst:git-clone]
 $ git clone git@github.com:marolt/diploma.git
 \end{lstlisting}
 
@@ -768,22 +769,21 @@ Name           Command                State  Ports
 ------------------------------------------------------------
 d_web_1        /run.sh.                 Up   :80->80/tcp
 d_app_1        reflex -c /reflex.conf   Up   :3002->80/tcp
-d_users_1      reflex -c /reflex.conf   Up   :3001->80/tcp 
-d_firestore_1  dockerize -template=/... Up   :9099->9099/tcp             
-                                             8787/tcp
-d_minio_1      /usr/bin/docker-entry... Up   9000/tcp     
-d_memcached_1  docker-entrypoint.sh ... Up   11211/tcp     
-d_postgres_1   docker-entrypoint.sh ... Up   :5433->5432/tcp       
-d_trace_1      /go/bin/all-in-one-linux Up   14250/tcp 
-                                            :14268->14268/tcp
-                                            :16686->16686/tcp
-d_teus_1       /bin/prometheus --con... Up  9090/tcp     
+d_users_1      reflex -c /reflex.conf   Up   :3001->80/tcp
+d_firestore_1  dockerize -template=/... Up   :9099->9099/tcp
+8787/tcp
+d_minio_1      /usr/bin/docker-entry... Up   9000/tcp
+d_memcached_1  docker-entrypoint.sh ... Up   11211/tcp
+d_postgres_1   docker-entrypoint.sh ... Up   :5433->5432/tcp
+d_trace_1      /go/bin/all-in-one-linux Up   14250/tcp
+:14268->14268/tcp
+:16686->16686/tcp
+d_teus_1       /bin/prometheus --con... Up  9090/tcp
 \end{lstlisting}
 
 
 Z ukazom $\verb=docker-compose ps=$ (Koda \ref{lst:running-containers}) lahko razberemo, da se ob postavitvi projekta zažene devet vsebnikov. Ti poskrbijo za streženje vseh potrebnih datotek za popolno delovanje čelnega in zalednega dela aplikacije. Za lažjo predstavitev celotnega projekta ali zgradbe aplikacije je diagram celotne arhitekture prikazan na sliki \ref{final-arch}
 
-%% @ziga napaka v diagramu: "VMESTNIK" -> "VMESNIK"
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.75\textwidth]{slike/arch-done.png}
@@ -801,47 +801,46 @@ Arhitekturna zasnova močno vpliva na delovanje in razvoj aplikacije. Vsak arhit
 
 V aplikaciji smo definirali dve mikrostoritvi (Slika \ref{app-architecture}). Ena storitev skrbi za delo s publikacijami, druga pa za delo z uporabniki. Storitvi med seboj komunicirata s protokolom \verb=HTTP=.
 
-%% @ziga napaka v diagramu: "VMESTNIK" -> "VMESNIK"
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.5\textwidth]{slike/architecture.png}
+\includegraphics[width=0.5\textwidth]{slike/arhitecture.png}
 \end{center}
-\caption{ Arhitektura mikrostoritev naše aplikacije }
+\caption{ Arhitektura mikrostoritev naše aplikacije. }
 \label{app-architecture}
 \end{figure}
 
-% Z vpeljavo raznih vzorcev, smo definirali arhitekturni koncept, ki se izkaže kot dobra praksa. Uporabili smo vzorec repozitorija, s katerim smo ločili kodo, ki skrbi za pridobivanje in shranjevanje podatkov 
+% Z vpeljavo raznih vzorcev, smo definirali arhitekturni koncept, ki se izkaže kot dobra praksa. Uporabili smo vzorec repozitorija, s katerim smo ločili kodo, ki skrbi za pridobivanje in shranjevanje podatkov
 
-% Arhitekturni koncept kode sledi uporabi dobre prakse. Kodo, ki skrbi za pridobivanje in shranjevanje podatkov smo ločili 
+% Arhitekturni koncept kode sledi uporabi dobre prakse. Kodo, ki skrbi za pridobivanje in shranjevanje podatkov smo ločili
 
-Koncept kode sledi heksagonalni arhitekturi. Z omenjeno arhitekturo zagotovimo, da je domenska logika neodvisna od trenutne infrastrukture. Uporabljamo vzorec repozitorija s katerim ločimo poslovno kodo od kode, ki skrbi za pridobivanje in shranjevanje podatkov. Za vsako zbirko podatkov smo definirali vmesnik (ang. Interface). Vmesnik definira metode, ki so lahko različno implementirane glede na infrastrukturo. Ta način nam omogoča enostavno spreminjanje implementacije v primeru, ko hočemo zamenjati infrastrukturo podatkovne baze. 
+Koncept kode sledi heksagonalni arhitekturi (ang. hexagonal architecture). Z omenjeno arhitekturo zagotovimo, da je domenska logika neodvisna od trenutne infrastrukture. Uporabljamo vzorec repozitorija s katerim ločimo poslovno kodo od kode, ki skrbi za pridobivanje in shranjevanje podatkov. Za vsako zbirko podatkov smo definirali vmesnik (ang. Interface). Vmesnik definira metode, ki so lahko različno implementirane glede na infrastrukturo. Ta način nam omogoča enostavno spreminjanje implementacije v primeru, ko hočemo zamenjati infrastrukturo podatkovne baze.
 
-Za potrebe aplikacije smo vmesnike implementirali s $PostgreSQL$ podatkovno baze (Koda \ref{lst:article-repository}). 
-\begin{lstlisting}[language=go, style=mystyle,caption={Vmesnik, ki definira repozitorij za publikacije},label=lst:article-repository]
+Za potrebe aplikacije smo vmesnike implementirali s $PostgreSQL$ podatkovno baze (Koda \ref{lst:article-repository}).
+\begin{lstlisting}[language=go, style=mystyle,caption={Vmesnik, ki definira repozitorij za publikacije.},label=lst:article-repository]
 // ArticleRepository defines the datastore handling persisting Article records.
 type ArticleRepository interface {
-	Create(ctx context.Context, article *Article, callback ArticleCallbackFn) (*Article, error)
-	Delete(ctx context.Context, id utils.BINARY16) error
-	Find(ctx context.Context, id utils.BINARY16) (*Article, error)
-	Update(ctx context.Context, article *Article, callback ArticleCallbackFn) (*Article, error)
+Create(ctx context.Context, article *Article, callback ArticleCallbackFn) (*Article, error)
+Delete(ctx context.Context, id utils.BINARY16) error
+Find(ctx context.Context, id utils.BINARY16) (*Article, error)
+Update(ctx context.Context, article *Article, callback ArticleCallbackFn) (*Article, error)
 }
 
 // ArticleSearchRepository defines the datastore handling searching Article records.
 type ArticleSearchRepository interface {
-	Search(ctx context.Context, args SearchParams) (SearchResults, error)
+Search(ctx context.Context, args SearchParams) (SearchResults, error)
 }
 \end{lstlisting}
 
 % #####################################################################
 \section{Komunikacija in dokumentacija}
-Za komunikacijo z zalednim delom aplikacije uporabljamo protokol \verb=HTTP= (Hypertext Transfer Protocol). \verb=HTTP= je brezstanjski protokol aplikacijskega sloja, ki skrbi za komunikacijo med odjemalcem in strežnikom. Deluje po protokolu \verb=zahteva-odgovor= (angl. request–response ali request–reply) v modelu odjemalec-strežnik (Slika \ref{communication-flow}). Zahtevki se izvajajo sinhrono, kar pomeni, da je povezava med odjemalcem in strežnikom odprta toliko časa, dokler strežnik ne odgovori s podatki, oziroma do neke časovne omejitve \cite{http-rfc}. 
+Za komunikacijo z zalednim delom aplikacije uporabljamo protokol \verb=HTTP= (Hypertext Transfer Protocol). \verb=HTTP= je brezstanjski protokol aplikacijskega sloja, ki skrbi za komunikacijo med odjemalcem in strežnikom. Deluje po protokolu \verb=zahteva-odgovor= (ang. request–response ali request–reply) v modelu odjemalec-strežnik (Slika \ref{communication-flow}). Zahtevki se izvajajo sinhrono, kar pomeni, da je povezava med odjemalcem in strežnikom odprta toliko časa, dokler strežnik ne odgovori s podatki, oziroma do neke časovne omejitve \cite{http-rfc}.
 
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.9\textwidth]{slike/communication.png}
 \end{center}
-\caption{ Prikaz komunikacije po protokolu zahteva-odgovor }
+\caption{ Prikaz komunikacije po protokolu zahteva-odgovor. }
 \label{communication-flow}
 \end{figure}
 
@@ -849,19 +848,19 @@ Za komunikacijo z zalednim delom aplikacije smo definirali aplikacijski programs
 
 Primer definiranih virov za pridobivanje, urejanje, brisanje in kreiranje publikacij v sistemu:
 \begin{description}
-   
+
 \begin{itemize}
-    \item \textbf{GET /articles/list} - Vrni seznam publikacij
-    \item \textbf{POST /articles/add} - Shrani novo publikacijo
-    \item \textbf{GET /articles/:uuid/get} - Vrni publikacijo za dodeljen ID 
-    \item \textbf{DELETE /articles/:uuid/delete} - Izbriši publikacijo za dodeljen ID
-    \item \textbf{PUT /articles/:uuid/update} - Osveži obstoječo publikacijo
-    \item \textbf{POST /articles/:uuid/upload-files} - Pripni datoteko k publikaciji
-    \item \textbf{DELETE /articles/:uuid/files/:file-uuid} - Odstrani datoteko publikacije
+\item \textbf{GET /articles/list} - Vrni seznam publikacij
+\item \textbf{POST /articles/add} - Shrani novo publikacijo
+\item \textbf{GET /articles/:uuid/get} - Vrni publikacijo za dodeljen ID
+\item \textbf{DELETE /articles/:uuid/delete} - Izbriši publikacijo za dodeljen ID
+\item \textbf{PUT /articles/:uuid/update} - Osveži obstoječo publikacijo
+\item \textbf{POST /articles/:uuid/upload-files} - Pripni datoteko k publikaciji
+\item \textbf{DELETE /articles/:uuid/files/:file-uuid} - Odstrani datoteko publikacije
 \end{itemize}
 \end{description}
 
-Pri definiranju komunikacijskega vmesnika smo sledili znanemu standardu \verb=OpenApi 3.0=. Ustvarili smo specifikacijske datoteke, kjer je definiran vsak klic, ki ga je mogoče izvesti na zaledni del. Te specifikacije nam pomagajo pri grajenju dokumentacije (Slika \ref{swagger-docs}), v našem primeru pa na podlagi API specifikacij tudi generiramo kodo, katera skrbi za komunikacijo med odjemalcem in strežnikom. Generirana koda je enostavna za uporabo in je postala dobra praksa saj s tem tudi zagotovimo, da je dokumentacija komunikacijskega vmesnika ves čas pravilna. 
+Pri definiranju komunikacijskega vmesnika smo sledili znanemu standardu \verb=OpenApi 3.0=. Ustvarili smo specifikacijske datoteke, kjer je definiran vsak klic, ki ga je mogoče izvesti na zaledni del. Te specifikacije nam pomagajo pri grajenju dokumentacije (Slika \ref{swagger-docs}), v našem primeru pa na podlagi API specifikacij tudi generiramo kodo, katera skrbi za komunikacijo med odjemalcem in strežnikom. Generirana koda je enostavna za uporabo in je postala dobra praksa saj s tem tudi zagotovimo, da je dokumentacija komunikacijskega vmesnika ves čas pravilna.
 
 \newpage
 \begin{figure}[h]
@@ -875,41 +874,41 @@ Pri definiranju komunikacijskega vmesnika smo sledili znanemu standardu \verb=Op
 
 
 Da je delo enostavno, smo naredili skripto, ki poskrbi da se generira željena koda odjemalca in strežnika (Koda \ref{lst:generator-script}).
-\begin{lstlisting}[language=bash, style=mystyle, caption={Skripta, ki poskrbi za generiranje kode za posamezno storitev},label=lst:generator-script]
+\begin{lstlisting}[language=bash, style=mystyle, caption={Skripta, ki poskrbi za generiranje kode za posamezno storitev.},  label=lst:generator-script]
 #!/bin/bash
 set -e
 
 readonly service="$1"
-
 readonly docker_image="openapitools/openapi-generator-cli:v5.3.0"
 
-docker run --rm --env "JAVA_OPTS=-Dlog.level=error" -v "${PWD}:/local" \
+docker run --rm --env "JAVA_OPTS=-Dlog.level=error"
+  -v "${PWD}:/local" \
   "$docker_image" generate \
   -i "/local/api/openapi/$service.yml" \
   -g javascript \
   -o "/local/web/src/services/clients/$service"
 \end{lstlisting}
-    
 
-\clearpage
-Za zaledni del uporabimo generator \verb=Swagger=, s katerim pridobimo osnovno kodo za strežnik HTTP, ki posreduje podatke odjemalcem. Omogoča nam osnovno validacijo podatkov, ki so poslani v zahtevku in le-te pretvori v primerno strukturo, s katero je enostavno manipulirati dalje v aplikaciji. 
+
+Za zaledni del uporabimo generator \verb=Swagger=, s katerim pridobimo osnov-\\no kodo za strežnik HTTP, ki posreduje podatke odjemalcem. Omogoča nam osnovno validacijo podatkov, ki so poslani v zahtevku in le-te pretvori v primerno strukturo, s katero je enostavno manipulirati dalje v aplikaciji.
 
 Za čelni del generiramo odjemalce JavaScript z \verb=OpenApi= generatorjem, ki poskrbijo za komunikacijo s strežnikom na zalednem delu. S tem nam ni potrebno skrbeti, da bi skonstruirali zahtevek v napačni obliki.
 
+Za izmenjavo podatkov med odjemalcem in strežnikom pa uporabljamo strukturo JSON (ang. JavaScript Object Notation), ki je preprosta oblika za izmenjavo podatkov in je neodvisna od programskega jezika (Koda \ref{lst:api-call-example}). Zaradi besedne zasnove je enostaven za branje in pisanje tako ljudem kot tudi računalnikom \cite{json-rfc}.
 
-Za izmenjavo podatkov med odjemalcem in strežnikom uporabljamo strukturo JSON (angl. JavaScript Object Notation), ki je preprosta oblika za izmenjavo podatkov in je neodvisna od programskega jezika. Zaradi besedne zasnove je enostaven za branje in pisanje tako ljudem kot tudi računalnikom \cite{json-rfc}.
+\clearpage
 
-\begin{lstlisting}[language=bash, style=mystyle,caption={Primer izvedbe API klica in odgovora},label=lst:api-call-example]
- curl --request POST \
- --url https://localhost:3001/api/authors/{authorID}/update \
- --header 'Authorization: Bearer ==token==' \
- --header 'Content-Type: application/json' \
- --data '{
-    "name": "John Doe"
- }'
+\begin{lstlisting}[language=bash, style=mystyle,caption={Primer izvedbe API klica.},label=lst:api-call-example]
+curl --request POST \
+--url https://localhost:3001/api/authors/{authorID}/update \
+--header 'Authorization: Bearer ==token==' \
+--header 'Content-Type: application/json' \
+--data '{
+"name": "John Doe"
+}'
 \end{lstlisting}
 
-Komunikacija je lahko uspešna ali ne, zato je potrebno odjemalcu odgovoriti z ustrezno kodo, kot je definirano v protokolu HTTP. Statuse lahko razdelimo v različne skupine, ki predstavljajo napake storjene na strani odjemalca (4xx), napake, storjene na strani strežnika (5xx) in uspešno obdelane zahtevke (2xx). V tabeli ~\ref{table:http-codes} so prikazane vse napake, ki jih aplikacija lahko vrne. 
+Komunikacija je lahko uspešna ali ne, zato je potrebno odjemalcu odgovoriti z ustrezno kodo, kot je definirano v protokolu HTTP. Statuse lahko razdelimo v različne skupine, ki predstavljajo napake, storjene na strani odjemalca (4xx), napake, ugotovljene na strani strežnika (5xx) in uspešno obdelane zahtevke (2xx). V tabeli ~\ref{table:http-codes} so prikazane vse napake, ki jih aplikacija lahko vrne.
 \begin{table}[h]
 \begin{tabular}{ll}
 \textbf{Koda napake} & \textbf{Pomen}                                                    \\
@@ -922,7 +921,7 @@ Komunikacija je lahko uspešna ali ne, zato je potrebno odjemalcu odgovoriti z u
 429                  & \begin{tabular}[c]{@{}l@{}}$Too Many Requests$ - Narejenih preveč zahtevkov v \\ časovnem obdobju\end{tabular} \\
 500, 502, 503, 504   & $Internal Server Error$ - Napaka na zalednem sistemu
 \end{tabular}
-\caption{Seznam napak, ki jih vrača strežnik}
+\caption{Seznam napak, ki jih vrača strežnik.}
 \label{table:http-codes}
 \end{table}
 
@@ -938,82 +937,74 @@ Odjemalec v glavi zahtevka pošlje \verb=Bearer= žeton s katerim identificira u
 \begin{center}
 \includegraphics[width=0.9\textwidth]{slike/token-flow.png}
 \end{center}
-\caption{ Diagram prikazuje komunikacijo z uporabo žetona (JWT) }
+\caption{ Diagram prikazuje komunikacijo z uporabo žetona (JWT). }
 \label{token-flow}
 \end{figure}
 
-Strežnik, ki žeton prebere na podlagi skrivnega ključa, preveri, če je žeton veljaven. Uporabljen skrivni ključ je enak kot ključ s katerim je bil žeton ustvarjen. S tem zagotovimo, da se podatki vmes niso spremenili.
-
-V zalednem sistemu se ob vsakem zahtevku sproži akcija za overjanje. Napisali smo funkcijo poznano kot \verb=middleware= (Koda \ref{lst:auth-middleware}), ki na podlagi skrivnega ključa preveri, če je žeton veljaven. Uporabljen skrivni ključ je enak kot ključ s katerim je bil žeton ustvarjen. S tem zagotovimo, da se podatki vmes niso spremenili. V primeru, da žeton ni veljaven, odgovorimo z ustreznim odgovorom \verb=401 - Unauthorized=. 
-%% @ziga tukaj se ti del besedila ponavlja
-
-\begin{lstlisting}[style=mystyle,caption={Izsek kode za nastavljanje žetona posameznemu odjemalcu},label=lst:auth-set-token]
+\begin{lstlisting}[style=mystyle,caption={Izsek kode za nastavljanje žetona posameznemu odjemalcu.},label=lst:auth-set-token]
 export function setApiClientsAuth(idToken) {
-    users.authentications.bearerAuth.accessToken = idToken;
-    fields.authentications.bearerAuth.accessToken = idToken;
-    ...
+  users.authentications.bearerAuth.accessToken = idToken;
+  fields.authentications.bearerAuth.accessToken = idToken;
+  ...
 }
 \end{lstlisting}
 
-V primeru, da je žeton veljaven, preberemo vrednost žetona, ki vsebuje identifikator uporabnika, uporabniško ime, elektronski naslov in vlogo (ang. role) uporabnika. S prebranimi vrednostmi kreiramo objekt uporabnika in nadaljujemo s procesiranjem zahtevka.
+V zalednem sistemu se ob vsakem zahtevku sproži akcija za preverjanje dostopa uporabnika. Na podlagi skrivnega ključa, strežnik preveri, če je poslan žeton veljaven (Koda \ref{lst:auth-middleware}). Uporabljen skrivni ključ mora biti enak kot ključ s katerim je bil žeton ustvarjen. S tem zagotovimo, da se podatki vmes niso spremenili. 
 
-  \begin{lstlisting}[language=go,style=mystyle,caption={Izsek kode za preverjanje pristnosti uporabnika},label=lst:auth-middleware]
+\begin{lstlisting}[language=go,style=mystyle,caption={Izsek kode za preverjanje pristnosti uporabnika.},label=lst:auth-middleware]
 func UserMiddleware(ctx context.Context, authService Service) MiddlewareFunc {
-	return func(authToken string) (*User, error) {
-			if !strings.HasPrefix(authToken, "Bearer ") {
-			return nil, apierrors.Forbidden()
-		}
-
-		authToken = strings.TrimSpace(strings.Replace(authToken, "Bearer", "", 1))
-		if authToken == "" {
-			return nil, apierrors.Unauthorized()
-		}
-
-		token, err := authService.VerifyToken(ctx, authToken)
-		if err != nil {
-			return nil, apierrors.Unauthorized()
-		}
-		
-		return &User{
-			UID:         UID(token.UID),
-			Email:       token.Claims["email"].(string),
-			Role:        token.Claims["role"].(string),
-			DisplayName: token.Claims["name"].(string),
-		}, nil
-	}
+  return func(authToken string) (*User, error) {
+    if !strings.HasPrefix(authToken, "Bearer ") {
+      return nil, apierrors.Forbidden()
+    }
+    
+    if authToken == "" {
+      return nil, apierrors.Unauthorized()
+    }
+    token, err := authService.VerifyToken(ctx, authToken)
+    if err != nil {
+      return nil, apierrors.Unauthorized()
+    }
+    
+    return &User{
+      UID:         UID(token.UID),
+      Email:       token.Claims["email"].(string),
+      Role:        token.Claims["role"].(string),
+      DisplayName: token.Claims["name"].(string),
+    }, nil
+  }
 }
 \end{lstlisting}
+
+V primeru, da je žeton veljaven, preberemo vrednost žetona, ki vsebuje identifikator uporabnika, uporabniško ime, elektronski naslov in vlogo (ang. role) uporabnika. S prebranimi vrednostmi kreiramo objekt uporabnika in nadaljujemo s procesiranjem zahtevka. V nasprotnem primeru, ko žeton ni veljaven pa odgovorimo z ustreznim odgovorom \verb=401 - Unauthorized=. 
 
 Preverjanje pravic se preveri v kodi, ki vsebuje logiko, kaj naj se zgodi z zahtevkom (Koda \ref{lst:auth-check-role}). Najprej preverimo, če je zahtevek od uporabnika, ki ima zadostne pravice za izvajanje tega zahtevka. V primeru, da uporabnik nima zadostnih pravic, mu odgovorimo z odgovorom \verb=403 - Forbidden=. Če uporabnik pravice ima, se procesiranje zahtevka nadaljuje.
 
-\clearpage
-\begin{lstlisting}[language=go,style=mystyle,caption={Izsek kode za preverjanje pravic uporabnika},label=lst:auth-check-role]
+\begin{lstlisting}[language=go,style=mystyle,caption={Izsek kode za preverjanje pravic uporabnika.},label=lst:auth-check-role]
 // DeleteUserHandler handles the delete user request
 func (h *HttpHandler) DeleteUserHandler() users.DeleteUserHandlerFunc {
-	return func(params users.DeleteUserParams, user *auth.User) middleware.Responder {
+  return func(params users.DeleteUserParams, user *auth.User) middleware.Responder {
+    // check if user has rights to perform this action
+    if user.Role != string(domain.AdminRole) {
+      return users.NewDeleteUserHandlerForbidden()
+    }
+    uuid, err := utils.StringToUUID(string(params.UserID))
+    if err != nil {
+      return h.returnError(err)
+    }
+    u, err := h.app.Commands.DeleteUser.Handle(
+      params.HTTPRequest.Context(), 
+      command.DeleteParamsCmd{UserUUID: uuid},
+    )
 
-		// check if user has rights to perform this action
-		if user.Role != string(domain.AdminRole) {
-			return users.NewDeleteUserHandlerForbidden()
-		}
-
-		uuid, err := utils.StringToBinary16(string(params.UserID))
-		if err != nil {
-			return h.returnError(err)
-		}
-		u, err := h.app.Commands.DeleteUser.Handle(params.HTTPRequest.Context(), command.DeleteParamsCmd{
-			UserUUID: uuid,
-		})
-
-		if err != nil {
-			return h.returnError(err)
-		}
-
-		return users.NewUpdateUserNoContent()
-	}
+    if err != nil {
+      return h.returnError(err)
+    }
+    return users.NewUpdateUserNoContent()
+  }
 }
 \end{lstlisting}
-\clearpage
+
 \section{Podatkovna baza }
 
 % #####################################################################
@@ -1027,19 +1018,19 @@ V aplikaciji uporabljamo programsko orodje \verb=go-migrate=. Omogoča izvajanje
 -- Table Definition
 CREATE TABLE "articles"
 (
-    "uuid"            uuid      NOT NULL PRIMARY KEY,
-    "source_uuid"     uuid      NOT NULL REFERENCES sources (uuid) ON DELETE CASCADE,
-    "title"           text      NOT NULL,
-    "url"             text      NOT NULL DEFAULT '',
-    "year"            int,
-    "comment"         text      NOT NULL DEFAULT '',
-    "temperature_min" int       NOT NULL DEFAULT 0,
-    "temperature_max" int       NOT NULL DEFAULT 0,
-    "file_uuid"       uuid,
-    "approved_by"     uuid,
-    "released_at"     timestamp          DEFAULT null,
-    "created_at"      timestamp NOT NULL DEFAULT now(),
-    "updated_at"      timestamp NOT NULL DEFAULT now()
+"uuid"            uuid      NOT NULL PRIMARY KEY,
+"source_uuid"     uuid      NOT NULL REFERENCES sources (uuid) ON DELETE CASCADE,
+"title"           text      NOT NULL,
+"url"             text      NOT NULL DEFAULT '',
+"year"            int,
+"comment"         text      NOT NULL DEFAULT '',
+"temperature_min" int       NOT NULL DEFAULT 0,
+"temperature_max" int       NOT NULL DEFAULT 0,
+"file_uuid"       uuid,
+"approved_by"     uuid,
+"released_at"     timestamp          DEFAULT null,
+"created_at"      timestamp NOT NULL DEFAULT now(),
+"updated_at"      timestamp NOT NULL DEFAULT now()
 );
 \end{lstlisting}
 
@@ -1047,18 +1038,18 @@ CREATE TABLE "articles"
 \subsubsection{ Struktura podatkov }
 Z migracijami smo definirali celotno strukturo podatkovne baze, ki jo potrebujemo. Definirali smo 13 tabel, ki skrbijo, da so podatki pravilno shranjeni. Vizualni prikaz tabel in medsebojnih relacij je viden na sliki ~\ref{database-diagram-er}. Opis posameznih tabel:
 \begin{description}
-\item[gomigrate]: Tabela vsebuje informacije o stanju migracij. Ob vsakem izvajanju migracij se v tabelo zapiše identifikator migracije, glede na katerega se izvajajo nadaljnje migracije za podatkovno shemo. 
+\item[gomigrate]: Tabela vsebuje informacije o stanju migracij. Ob vsakem izvajanju migracij se v tabelo zapiše identifikator migracije, glede na katerega se izvajajo nadaljnje migracije za podatkovno shemo.
 
-\item[users]: Tabela vsebuje informacije o uporabnikih, ki so registrirani v sistem. Uporabniki se v aplikaciji razlikujejo glede na enoličen identifikator UUID in unikaten e-poštni naslov (``email``). 
+\item[users]: Tabela vsebuje informacije o uporabnikih, ki so registrirani v sistem. Uporabniki se v aplikaciji razlikujejo glede na enoličen identifikator UUID in unikaten e-poštni naslov (``email``).
 
-\item[articles]: Tabela vsebuje informacije o publikacijah, vnesenih s strani uporabnika. Vsebuje informacije, kot so naslov, leto izdaje, komentar, najvišja in najnižja temperatura. Poleg informacij, ki jih vnese uporabnik, imamo tudi evidenco o tem, kdo je potrdil publikacijo. Tabela vsebuje tudi relacije z ostalimi entitetami, za povezavo z metodami, avtorji, viri, dinamičnimi podatki in živili. Ena publikacija lahko ima le en vir, zato je ta relacija definirana s tujim ključem v isti tabeli, prav tako velja za pripeto datoteko. 
+\item[articles]: Tabela vsebuje informacije o publikacijah, vnesenih s strani uporabnika. Vsebuje informacije, kot so naslov, leto izdaje, komentar, najvišja in najnižja temperatura. Poleg informacij, ki jih vnese uporabnik, imamo tudi evidenco o tem, kdo je potrdil publikacijo. Tabela vsebuje tudi relacije z ostalimi entitetami, za povezavo z metodami, avtorji, viri, dinamičnimi podatki in živili. Ena publikacija lahko ima le en vir, zato je ta relacija definirana s tujim ključem v isti tabeli, prav tako velja za pripeto datoteko.
 
 Ostale relacije, kot so živila, pa so definirana kot mnogo-proti-mnogo, kar pomeni, da potrebujemo medsebojne tabele za povezovanje entitet.
 \begin{itemize}
-    \item article\_methods: tabela za povezovanje publikacij in metod
-    \item article\_foodstuffs: tabela za povezovanje živil in publikacij
-    \item article\_authors: tabela za povezavo publikacij in avtorjev
-    \item article\_fields: tabela za povezavo dinamičnih podatkov s publikacijami
+\item article\_methods: tabela za povezovanje publikacij in metod
+\item article\_foodstuffs: tabela za povezovanje živil in publikacij
+\item article\_authors: tabela za povezavo publikacij in avtorjev
+\item article\_fields: tabela za povezavo dinamičnih podatkov s publikacijami
 \end{itemize}
 
 \item[authors]: Tabela vsebuje informacije o avtorjih, katerih publikacije so vnesene v naši aplikaciji. Za povezavo se uporablja medsebojna tabela $article\_authors$.
@@ -1076,46 +1067,46 @@ CREATE TYPE source_type AS ENUM ('web','book','magazine')
 
 \item[fields]: Tabela vsebuje informacije o vseh dinamično definiranih podatkih v aplikaciji. Podatki se razlikujejo glede na tip. Vsebujejo lahko enega ali več vrednosti. V primeru, da je podatek sestavljen iz večih vrednosti, uporabimo relacijsko tabelo $field\_values$, kjer so zapisane vrednosti za posamezen podatek.
 
-\item[article\_fields]: Tabela vsebuje relacijo med dinamičnimi podatki in njihovimi vrednostmi. Za potrebe optimalnega iskanja hrani različne tipe vrednosti: 
+\item[article\_fields]: Tabela vsebuje relacijo med dinamičnimi podatki in njihovimi vrednostmi. Za potrebe optimalnega iskanja hrani različne tipe vrednosti:
 \begin{itemize}
-    \item value\_varchar: hrani tekstovno vrednost 
-    \item value\_date: hrani časovno vrednost
-    \item value\_number: hrani numerično vrednost
+\item value\_varchar: hrani tekstovno vrednost
+\item value\_date: hrani časovno vrednost
+\item value\_number: hrani numerično vrednost
 \end{itemize}
 \end{description}
 
 \subsubsection{Shranjevanje podatkov}
-Potrebno je poskrbeti, da so podatki shranjeni v popolni obliki. V primeru, da pri shranjevanju pride do napake, jo je potrebno ustrezno rešiti. Da so podatki shranjeni v popolni obliki, uporabljamo transakcije. Transakcija je atomična enota, s čimer zagotovimo, da so vse poizvedbe izvedene uspešno. V primeru, da ena poizvedba ni bila uspešno izvedena, se vse poizvedbe, storjene v isti transakciji, povrnejo v stanje pred izvedbo. 
+Potrebno je poskrbeti, da so podatki shranjeni v popolni obliki. V primeru, da pri shranjevanju pride do napake, jo je potrebno ustrezno rešiti. Da so podatki shranjeni v popolni obliki, uporabljamo transakcije. Transakcija je atomična enota, s čimer zagotovimo, da so vse poizvedbe izvedene uspešno. V primeru, da ena poizvedba ni bila uspešno izvedena, se vse poizvedbe, storjene v isti transakciji, povrnejo v stanje pred izvedbo.
 
 Posamezna metoda v repozitoriju poleg ostalih parametrov prejme še funkcijo, katera se izvede znotraj transakcije (Koda \ref{lst:transaction-call}). V primeru, da funkcija vrne napako, se transakcija resetira in povrne podatkovno bazo v stanje pred shranjevanjem.
 
-\begin{lstlisting}[language=go,style=mystyle,caption={ Prikaz shranjevanja publikacije },label=lst:transaction-call]
+\begin{lstlisting}[language=go,style=mystyle,caption={ Prikaz shranjevanja publikacije. },label=lst:transaction-call]
 func (h AddArticleHandler) Handle(ctx context.Context, cmd AddArticleParamsCmd) (res *domain.Article, err error) {
-	res, err = h.repo.Create(ctx, article, func(ctx context.Context, a *domain.Article) error {
-		return h.repo.AssignAuthors(ctx, a, cmd.Authors, func(ctx context.Context, a *domain.Article) error {
-			return h.repo.AssignFoodstuffs(ctx, a, cmd.Foodstuffs, func(ctx context.Context, a *domain.Article) error {
-				return h.repo.AssignMethods(ctx, a, cmd.Methods, func(ctx context.Context, a *domain.Article) error {
-					return h.repo.AddExtraFields(ctx, a, fields)
-				})
-			})
-		})
-	})
-	
-	if err != nil {
-		return res, errors.WrapErrorf(err, errors.ErrorCodeUnknown, "AddArticleHandler.repo")
-	}
-	
-	return res, nil
+  res, err = h.repo.Create(ctx, article, func(ctx context.Context, a *domain.Article) error {
+    return h.repo.AssignAuthors(ctx, a, cmd.Authors, func(ctx context.Context, a *domain.Article) error {
+      return h.repo.AssignFoodstuffs(ctx, a, cmd.Foodstuffs, func(ctx context.Context, a *domain.Article) error {
+        return h.repo.AssignMethods(ctx, a, cmd.Methods, func(ctx context.Context, a *domain.Article) error {
+          return h.repo.AddExtraFields(ctx, a, fields)
+        })
+      })
+    })
+  })
+
+  if err != nil {
+    return res, errors.WrapErrorf(err, errors.ErrorCodeUnknown, "AddArticleHandler.repo")
+  }
+
+  return res, nil
 }
 \end{lstlisting}
 
 Datotek, pripetih k publikacijam, ne shranjujemo v relacijsko podatkovno bazo. Definirali smo vmesnik, ki nam pove, katere metode moramo implementirati za pravilno delovanje (Koda \ref{lst:file-interface}). Implementirali smo repozitorij, ki uporablja S3 kompatibilnega odjemalca. Za hrambo teh datotek uporabljamo storitev Minio (\ref{minio-what}).
 
-\begin{lstlisting}[language=go,style=mystyle,caption={Prikaz vmesnika za shranjevanje in branje datotek},label=lst:file-interface]
+\begin{lstlisting}[language=go,style=mystyle,caption={Prikaz vmesnika za shranjevanje in branje datotek.},label=lst:file-interface]
 // FileRepository provides functions to uplaod and read file
 FileRepository interface {
-	UploadFile(ctx context.Context, rc io.ReadCloser, size int64) (*utils.BINARY16, error)
-	GetFile(ctx context.Context, uuid utils.BINARY16) (io.ReadCloser, error)
+  UploadFile(ctx context.Context, rc io.ReadCloser, size int64) (*utils.BINARY16, error)
+  GetFile(ctx context.Context, uuid utils.BINARY16) (io.ReadCloser, error)
 }
 \end{lstlisting}
 
@@ -1124,20 +1115,20 @@ FileRepository interface {
 \begin{center}
 \includegraphics[width=1\textwidth]{slike/database-structure.png}
 \end{center}
-\caption{ Predstavitev podatkovne sheme z ER diagramom }
+\caption{ Predstavitev podatkovne sheme z ER diagramom. }
 \label{database-diagram-er}
 \end{figure}
 
 % #####################################################################
 \subsubsection{Branje podatkov}
-V aplikaciji smo poskrbeli, da do težave z izvajanjem poizvedb po nepotrebnem ne bo prišlo. Pri poizvedovanju podatkov o publikacijah iz podatkovne baze je potrebno biti pozoren na število izvedenih klicev. Če nismo pazljivi, lahko pridemo do težave s poizvedbo \verb=n+1=. Ta se zgodi, ko del aplikacije izvede \verb=n= dodatnih poizvedb, da bi pridobil iste podatke, ki bi jih bilo mogoče pridobiti pri izvajanju primarne poizvedbe SQL. Večja kot je vrednost \verb=n=, več poizvedb bo izvedenih, večji je vpliv na zmogljivost. 
+V aplikaciji smo poskrbeli, da do težave z izvajanjem poizvedb po nepotrebnem ne bo prišlo. Pri poizvedovanju podatkov o publikacijah iz podatkovne baze je potrebno biti pozoren na število izvedenih klicev. Če nismo pazljivi, lahko pridemo do težave s poizvedbo \verb=n+1=. Ta se zgodi, ko del aplikacije izvede \verb=n= dodatnih poizvedb, da bi pridobil iste podatke, ki bi jih bilo mogoče pridobiti pri izvajanju primarne poizvedbe SQL. Večja kot je vrednost \verb=n=, več poizvedb bo izvedenih, večji je vpliv na zmogljivost.
 
 \clearpage
 % #####################################################################
 \section{Čelni del aplikacije}
-Čelni del aplikacije uporablja ogrodje \verb=Vue.js= (\ref{vue-js-section}). Je zelo enostavno \verb=JavaScript= ogrodje s številnimi orodji in knjižnicami, s katerimi si poenostavimo in pohitrimo razvoj. Knjižnice, ki jih aplikacija potrebuje, so navedene v datoteki \verb=package.js= (Koda \ref{lst:pkg-snippet}). V omenjeni datoteki so navedeni tudi ukazi, s katerimi prožimo določene akcije, kot so gradnja statičnih paketov, postavitev spletnega strežnika za streženje datotek in gradnja CSS datotek s pomočjo knjižnice \verb=tailwind=. Za nadzor nad uporabljenimi knjižnicami skrbi orodje \verb=NPM= (angl. Node Package Manager).
+Čelni del aplikacije uporablja ogrodje \verb=Vue.js= (\ref{vue-js-section}). Je zelo enostavno \verb=JavaScript= ogrodje s številnimi orodji in knjižnicami, s katerimi si poenostavimo in pohitrimo razvoj. Knjižnice, ki jih aplikacija potrebuje, so navedene v datoteki \verb=package.js= (Koda \ref{lst:pkg-snippet}). V omenjeni datoteki so navedeni tudi ukazi, s katerimi prožimo določene akcije, kot so gradnja statičnih paketov, postavitev spletnega strežnika za streženje datotek in gradnja CSS datotek s pomočjo knjižnice \verb=tailwind=. Za nadzor nad uporabljenimi knjižnicami skrbi orodje \verb=NPM= (ang. Node Package Manager).
 
-\begin{lstlisting}[language=php, style=mystyle,caption={Izsek naštetih knjižnic in ukazov v datoteki package.json},label=lst:pkg-snippet]
+\begin{lstlisting}[language=php, style=mystyle,caption={Izsek naštetih knjižnic in ukazov v datoteki package.json.},label=lst:pkg-snippet]
 {
   "name": "diploma",
   "version": "1.0.0",
@@ -1164,21 +1155,20 @@ V aplikaciji smo poskrbeli, da do težave z izvajanjem poizvedb po nepotrebnem n
     "vue-toast-notification": "^2.0.1"
   },
   "devDependencies": {
-     ...
+    ...
     "sass": "^1.32.5",
     "sass-loader": "^10.1.1",
     "tailwindcss": "^2.2.19"
   }
 }
-
 \end{lstlisting}
 
 % V tem delu bomo spoznali kako je zasnovan čelni del naše aplikacije in kako komunicira z zalednim sistemom. Pri razvoju tega dela aplikacije je potrebno biti pozoren na kar nekaj stvari, kot je naprimer zasnova na videz lepega, vendar uporabnega grafičnega vmestnika, preko katerega uporabnik varno komunicira z našim zalednim sistemom. Med samo uporabo in komunikacijo ne smemo pozabiti na ustrezno prikazovanje napak uporabniku, da sam uporabnik ve kdaj je do napake prišlo in kako jo odpraviti.
 
 
-Ogrodje je odvisno od \verb=node.js= programskih datotek, zatorej moramo v sliko vsebnika namestiti potrebne stvari za delovanje tega ogrodja. Uporabimo obstoječo sliko vsebnika \texttt{node:17.3.0-alpine3.14}, ki že ima nameščena orodja kot so \texttt{node.js} in upravljalec paketkov \texttt{npm}. Ker je vsebnik uporabljen v razvojnem okolju, definiramo vrednost \texttt{NODE\_ENV} na vrednost \texttt{development}. Skripta \texttt{run.sh} je skopirana v sliko z dodatnimi pravicami za zagon. Na koncu se skipto sproži v izvajanje (Koda \ref{lst:dcf-node}).
+Ogrodje je odvisno od \verb=node.js= programskih datotek, zatorej moramo v sliko vsebnika namestiti potrebne stvari za delovanje tega ogrodja. Uporabimo obstoječo sliko vsebnika \texttt{node:17.3.0-alpine3.14}, ki že ima nameš-\\čena orodja kot so \texttt{node.js} in upravljalec paketkov \texttt{npm}. Ker je vsebnik uporabljen v razvojnem okolju, definiramo vrednost \texttt{NODE\_ENV} na vrednost \texttt{development}. Skripta \texttt{run.sh} je skopirana v sliko z dodatnimi pravicami za zagon. Na koncu se skipto sproži v izvajanje (Koda \ref{lst:dcf-node}).
 
-\begin{lstlisting}[,style=mystyle,caption={Dockerfile datoteka za razvijanje Vue aplikacije},label=lst:dcf-node]
+\begin{lstlisting}[,style=mystyle,caption={Dockerfile datoteka za razvijanje Vue aplikacije.},label=lst:dcf-node]
 FROM node:17.3.0-alpine3.14
 
 ENV NODE_ENV development
@@ -1191,14 +1181,14 @@ CMD ["/run.sh"]
 
 V datoteki $start.sh$ (Koda \ref{lst:dcf-run}) so navedeni ukazi, ki se zgodijo ob vsakem zagonu vsebnika. Ukaz \texttt{npm install} namesti vse potrebne knjižnice, ki jih v aplikaciji uporabljamo. Ukaz \texttt{npm serve} pa zažene spletni strežnik, ki streže vsebino aplikacije iz trenutnega direktorija.
 
-\begin{lstlisting}[language=bash,style=mystyle,caption={Ukazna datoteka, ki naloži potrebne knjižnice in streže aplikacijo},label=lst:dcf-run]
+\begin{lstlisting}[language=bash,style=mystyle,caption={Ukazna datoteka, ki naloži potrebne knjižnice in streže aplikacijo.},label=lst:dcf-run]
 set -e
 
 npm install
 npm serve
 \end{lstlisting}
 
-Pomembno je tudi poudariti, da je aplikacija enostranska (angl. single-page), kar pomeni, da deluje znotraj brskalnika in ne potrebuje ponovnega nalaganja strani med svojim delovanjem. Je le ena sama stran, ki jo obiščemo in na kateri se nato naloži vso ostalo vsebino s pomočjo kode JavaScripta.
+Pomembno je tudi poudariti, da je aplikacija enostranska (ang. single-page), kar pomeni, da deluje znotraj brskalnika in ne potrebuje ponovnega nalaganja strani med svojim delovanjem. Je le ena sama stran, ki jo obiščemo in na kateri se nato naloži vso ostalo vsebino s pomočjo kode JavaScripta.
 
 Kot je razvidno iz prikaza zagnanih vsebnikov (Koda: \ref{lst:running-containers}), ima čelni del odprta vrata 80, kar pomeni, da je stran dostopna na lokalnem spletnem naslovu \url{http://localhost:80/}. 
 
@@ -1214,40 +1204,32 @@ Za potrebe aplikacije smo razvili popolnoma dinamičen način za dodajanje novih
 \label{fields-list}
 \end{figure}
 
-Zaradi potrebe po razlikovanju po različnih tipih podatkov smo definirali več podatkovnih tipov, ki predstavljajo posamezne podatke. Zaradi raznolikosti med podatki vseh podatkov ne moremo predstaviti enako. Podatek, predstavljen kot številka, se ne odraža enako kot podatek, ki je predstavljen kot tekstovno polje. Katere tipe podatkov aplikacija podpira, je definirano v zalednem sistemu in je dostopno preko aplikacijskega programskega vmesnika (Koda \ref{lst:supported-fields}). 
+Zaradi potrebe po razlikovanju po različnih tipih podatkov smo definirali več podatkovnih tipov, ki predstavljajo posamezne podatke. Zaradi raznolikosti med podatki vseh podatkov ne moremo predstaviti enako. Podatek, predstavljen kot številka, se ne odraža enako kot podatek, ki je predstavljen kot tekstovno polje. Katere tipe podatkov aplikacija podpira, je definirano v zalednem sistemu in je dostopno preko aplikacijskega programskega vmesnika (Koda \ref{lst:supported-fields}).
 
 \begin{figure}[h]
-    \centering
-    \begin{lstlisting}[language=bash, style=mystyle,caption={Izsek aplikacijskega vmesnika za pridobitev vseh podprtih podatkovnih tipov v aplikaciji},label=lst:supported-fields]
+\centering
+\begin{lstlisting}[language=bash, style=mystyle,caption={Izsek aplikacijskega vmesnika za pridobitev vseh podprtih podatkovnih tipov v aplikaciji.},label=lst:supported-fields]
 curl --request GET \
   --url https://localhost:3001/api/fields/types \
   --header 'Authorization: Bearer ==token==' \
   --header 'Content-Type: application/json'
-{
-  "types": [
-    {
-      "name": "select",
-      "has_values": true,
-      "settings": [
-        {
-          "name": "string",
-          "type": "number",
-          "default_value": "string"
-        }
-      ]
-    }
-  ]
-}
+  {
+    "types": [
+      {
+        "name": "select",
+        "has_values": true,
+        "settings": [
+          {
+            "name": "string",
+            "type": "number",
+            "default_value": "string"
+          }
+        ]
+      }
+    ]
+  }
 \end{lstlisting}
 \end{figure}
-
-% \begin{figure}[h]
-% \begin{center}
-% \includegraphics[width=1\textwidth]{slike/select_example_usage.png}
-% \end{center}
-% \caption{ Prikaz uporabe dinamično definiranega parametra, tipa select, z možnostjo izbere enega ali več podatkov. }
-% \label{field-usage-example-select}
-% \end{figure}
 
 
 % % #####################################################################
@@ -1255,7 +1237,7 @@ curl --request GET \
 
 % #####################################################################
 \subsubsection{Vnosno polje}
-Vnosno polje predstavlja podatek, ki ga je potrebno vnesti vsakič znova in nima definirane nobene vnaprej določene vrednosti. Vnosno polje je lahko predstavljeno kot številčna vrednost, ali pa kot tekstovno polje. 
+Vnosno polje predstavlja podatek, ki ga je potrebno vnesti vsakič znova in nima definirane nobene vnaprej določene vrednosti. Vnosno polje je lahko predstavljeno kot številčna vrednost, ali pa kot tekstovno polje.
 Za ta podatek imamo možnost vnosa mnogih vrednosti, tako da definiramo podatek kot ponavljajoč podatek - \verb=repeatable=. To je uporabno za primere, ko hočemo dodati zraven publikacije enega ali več spletnih virov.
 
 \begin{figure}[h]
@@ -1266,7 +1248,7 @@ Za ta podatek imamo možnost vnosa mnogih vrednosti, tako da definiramo podatek 
 \label{type-input}
 \end{figure}
 
-Na sliki \ref{type-input} je razvidno, kako se definira podatek imenovan \sn{Spletna povezava}. Vrednost spletne povezava je tekstovnega tipa, zato smo za vrednost izbrali \verb=text=. Izbrali smo tudi vrednost \verb=repeatable=, ker želimo omogočiti več vnosov spletnih povezav. Dodan parameter se lahko pojavi in je na voljo med urejanjem publikacije. 
+Na sliki \ref{type-input} je razvidno, kako se definira podatek imenovan \sn{Spletna povezava}. Vrednost spletne povezava je tekstovnega tipa, zato smo za vrednost izbrali \verb=text=. Izbrali smo tudi vrednost \verb=repeatable=, ker želimo omogočiti več vnosov spletnih povezav. Dodan parameter se lahko pojavi in je na voljo med urejanjem publikacije.
 
 Na dnu se nam prikaže vnosno polje, za katerega lahko izberemo in definiramo njegovo vrednost (Slika \ref{fields-usage}). Ker je parameter definiran tako, da je lahko predstavljen z več kot eno vrednostjo, se nam ponudi gumb za dodajanje nove vrednosti.
 
@@ -1277,11 +1259,11 @@ Ta podatek predstavlja podobne vrednosti, kot vnosno polje \sn{Input}, z razliko
 
 \begin{description}
 \item[Opis posameznih opcij, med samim definiranjem parametra]:
-	\begin{itemize}
-		\item \textbf{taggable} - omogoča dodajanje novih vrednosti med samim urejanjem
-		\item \textbf{multiple} - omogoča izbiro več kot ene vrednosti
-		\item \textbf{searchable} - omogoča iskanje po vnesenih vrednostih
-	\end{itemize}
+\begin{itemize}
+\item \textbf{taggable} - omogoča dodajanje novih vrednosti med samim urejanjem
+\item \textbf{multiple} - omogoča izbiro več kot ene vrednosti
+\item \textbf{searchable} - omogoča iskanje po vnesenih vrednostih
+\end{itemize}
 \end{description}
 
 \begin{figure}[h]
@@ -1308,7 +1290,7 @@ Ta predstavlja podatek, katere vrednosti so statične in vnaprej definirane. Vno
 
 % #####################################################################
 \subsubsection{Polje za izbiranje časovnega podatka (datum)}
-Predstavlja podatek, ki ima časovno vrednost. Uporabniku je omogočeno definiranje podatka z izbiro datuma in časa na koledarju (Slika \ref{type-date}). 
+Predstavlja podatek, ki ima časovno vrednost. Uporabniku je omogočeno definiranje podatka z izbiro datuma in časa na koledarju (Slika \ref{type-date}).
 
 Uporabili smo minimalistično knjižnico \verb=Day.js=, ki z enostavnim aplikacijskim vmesnikom razčlenjuje, preverja, manipulira in prikazuje datume in ure za sodobne brskalnike. Ponuja tudi podporo z ostalimi knjižnicami, kot je na primer bolj priznana knjižnica \verb=Moment.js=.
 
@@ -1330,9 +1312,8 @@ Ta komponenta nam omogoča nalaganje datoteke za posamezno publikacijo. Na voljo
 % ++++++++ PREDSTAVITEV APLIKACIJE ++++++++++++
 % +++++++++++++++++++++++++++++++++++++++++++++
 \chapter{Predstavitev aplikacije}
-% V prejšnjih poglavjih smo spoznali terminologijo, tehnologije in implementacijo teh tehnologij v našo aplikacijo. V tem poglavju pa bomo spoznali uporabo aplikacije, ki smo jo izdelali.
 
-Aplikacija, ki smo jo poimenovali \sn{Safe Food} je sestavljena iz zalednega in čelnega dela. Zaledni del vključuje več komponent, ki sledijo arhitekturni postavitvi mikrostoritev. Čelni del pa je enostavna aplikacija, napisana v programskem ogrodju \verb=Vue.js=. Namenjena je uporabniku, zato je pomembno, da je na videz enostavna in pregledna, hkrati pa tudi hitra in funkcionalna. 
+Aplikacija, ki smo jo poimenovali \sn{Safe Food} je sestavljena iz zalednega in čelnega dela. Zaledni del vključuje več komponent, ki sledijo arhitekturni postavitvi mikrostoritev. Čelni del pa je enostavna aplikacija, napisana v programskem ogrodju \verb=Vue.js=. Namenjena je uporabniku, zato je pomembno, da je na videz enostavna in pregledna, hkrati pa tudi hitra in funkcionalna.
 
 
 % #####################################################################
@@ -1351,17 +1332,13 @@ S klikom na gumb \sn{Vstopi v aplikacijo}, nadaljujemo v aplikacijo. V primeru, 
 \end{figure}
 
 
-
 % #####################################################################
 \newpage
 % #####################################################################
 \section{Prijava uporabnika }
 \label{sign-in-page}
-Obstoječi uporabnik se lahko prijavi z uporabniškim imenom in geslom (Slika \ref{login-form}. Če je uporabnik presegel določeno število neuspešnih poizkusov prijave, mu je dostop do strani začasno omejen in prijava onemogočena. Na vrhu obrazca se izpiše ustrezna napaka, ki podaja razlog napake in navodila za njeno odpravljanje. Poleg tega lahko uporabnik spodaj klikne \sn{Forgot password}, če je pozabil geslo, ali \sn{Create new account}, če še ni prijavljen. 
+Obstoječi uporabnik se lahko prijavi z uporabniškim imenom in geslom (Slika \ref{login-form}. Če je uporabnik presegel določeno število neuspešnih poizkusov prijave, mu je dostop do strani začasno omejen in prijava onemogočena. Na vrhu obrazca se izpiše ustrezna napaka, ki podaja razlog napake in navodila za njeno odpravljanje. Poleg tega lahko uporabnik spodaj klikne \sn{Forgot password}, če je pozabil geslo, ali \sn{Create new account}, če še ni prijavljen.
 
-
-% V primeru pozabljenega gesla, lahko s klikom na \sn{Pozabljeno geslo} nadaljujemo na stran, kjer se odpre stran, z obrazcem za ponastavitev gesla (Poglavje \ref{forgotten-form}). 
-% Implementirali smo tudi varnostni mehanizem, ki preprečuje uporabniku ugibati gesla. 
 
 \begin{figure}[h]
 \begin{center}
@@ -1374,9 +1351,11 @@ Obstoječi uporabnik se lahko prijavi z uporabniškim imenom in geslom (Slika \r
 % #####################################################################
 \subsection{Pozabljeno geslo}
 \label{forgotten-form}
-V primeru, da izgubimo ali pozabimo geslo za prijavo v aplikacijo, na prijavni strani izberemo \sn{Forgot password}. S klikom na gumb se odpre spletni obrazec (Slika \ref{password-reset-form}), kjer vnesemo e-poštni naslov, s katerim smo identificirani v aplikaciji. Na ta naslov prejmemo sporočilo, ki zajema unikatno ustvarjeno URL povezavo do aplikacije. S klikom na povezavo se odpre stran za vnos novega gesla. Ob uspešni nastavitvi gesla je uporabnik preusmerjen na prijavno stran, kjer se mora prijaviti z novim geslom. 
+V primeru, da izgubimo ali pozabimo geslo za prijavo v aplikacijo, na prijavni strani izberemo \sn{Forgot password}. S klikom na gumb se odpre spletni obrazec (Slika \ref{password-reset-form}), kjer vnesemo e-poštni naslov, s katerim smo identificirani v aplikaciji. Na ta naslov prejmemo sporočilo, ki zajema unikatno ustvarjeno URL povezavo do aplikacije. S klikom na povezavo se odpre stran za vnos novega gesla. Ob uspešni nastavitvi gesla je uporabnik preusmerjen na prijavno stran, kjer se mora prijaviti z novim geslom.
 
 V primeru, da aplikacijo uporabljamo na različnih napravah, nam bo odvzet dostop iz vseh ostalih naprav, kar pomeni, da bo na vseh potrebna ponovna prijava.
+
+\clearpage
 
 \begin{figure}[h]
 \begin{center}
@@ -1400,79 +1379,82 @@ Za uporabo aplikacije je potrebna registracija. Uporabniki, ki še niso registri
 \label{signup-form}
 \end{figure}
 
-Ob kliku na gumb \sn{Create account} se sproži validacija, ki preveri, ali vneseni podatki ustrezajo zahtevam aplikacije. V primeru vnosa napačnega uporabniškega imena, elektronskega naslova ali gesla, se pod posameznim vnosnim poljem izpiše ustrezno opozorilo o napaki. Validacija se izvaja tako na čelnem kot tudi na zalednem delu aplikacije (Koda \ref{lst:validation}). 
+Ob kliku na gumb \sn{Create account} se sproži validacija, ki preveri, ali vneseni podatki ustrezajo zahtevam aplikacije. V primeru vnosa napačnega uporabniškega imena, elektronskega naslova ali gesla, se pod posameznim vnosnim poljem izpiše ustrezno opozorilo o napaki. Validacija se izvaja tako na čelnem kot tudi na zalednem delu aplikacije (Koda \ref{lst:validation}).
 
+Ob registraciji prejme uporabnik novo sporočilo za potrditev uporabniš-\\kega računa. Potrditveno sporočilo je namenjeno zagotavljanju verodostojnosti uporabnika. V primeru, da uporabnik ne potrdi svojega e-poštnega naslova v roku enega dneva, mu je dostop do aplikacije onemogočen, vse dokler ga uporabnik ne potrdi.
 
-\begin{lstlisting}[language=java, style=mystyle,caption={Primer validacijske funkcije za preverjanje uporabniškega imena z uporabo regularnega izraza},label=lst:validation]
+Nepotrjen uporabnik nima dostopa do dela aplikacije, kjer so prikazane publikacije. Pokaže se mu le stran z navodili, kako potrditi e-poštni naslov. V primeru, da uporabnik ni prejel potrditvenega sporočila, lahko klikne na gumb in sproži ponovno pošiljanje potrditvenega sporočila. Sporočilo bo ponovno ustvarjeno le v primeru, da je minila vsaj ena ura od zadnjega poizkusa pošiljanja tega sporočila.
+
+\clearpage
+
+\begin{lstlisting}[language=java, style=mystyle, 
+    caption={Primer validacijske funkcije za preverjanje uporabniškega imena z uporabo regularnega izraza.},label=lst:validation]
 function validateUsername(uname) {
   /*
-    Uporabnisko ime, ne sme biti krajse od treh znakov
+     Uporabnisko ime, ne sme biti krajse od treh znakov
   */
   if(uname.length < 3) {
     return false;
   }
 
-  /* 
-    Vsebuje lahko le: 
-    - male crke (a-z) 
-    - stevilke (0-9)
-    - pike (.)
-    - podcrtaje (_)
+  /*
+     Vsebuje lahko le:
+     - male crke (a-z)
+     - stevilke (0-9)
+     - pike (.)
+     - podcrtaje (_)
   */
   const match = /^[a-z0-9_\.]+$/.exec(uname);
-  
+
   // veljavno ali ne
   return Boolean(rezultat);
 }
 \end{lstlisting}
 
-Ob registraciji prejme uporabnik novo sporočilo za potrditev uporabniškega računa. Potrditveno sporočilo je namenjeno zagotavljanju verodostojnosti uporabnika. V primeru, da uporabnik ne potrdi svojega e-poštnega naslova v roku enega dneva, mu je dostop do aplikacije onemogočen, vse dokler ga uporabnik ne potrdi.
-
-Nepotrjen uporabnik nima dostopa do dela aplikacije, kjer so prikazane publikacije. Pokaže se mu le stran z navodili, kako potrditi e-poštni naslov. V primeru, da uporabnik ni prejel potrditvenega sporočila, lahko klikne na gumb in sproži ponovno pošiljanje potrditvenega sporočila. Sporočilo bo ponovno ustvarjeno le v primeru, da je minila vsaj ena ura od zadnjega poizkusa pošiljanja tega sporočila.
-
 Vsak uporabnik je ob registraciji le navaden uporabnik. Vlogo uporabnika lahko spremeni le administrator, v administracijskem delu aplikacije. O tem bomo govorili v poglavju \sn{Administracija uporabnikov} (Poglavje \ref{administracija-uporabnikov}).
 
-V elektronskem sporočilu, ki ga uporabnik prejme na svoj naslov, je navedena povezava do aplikacije. Generirana povezava vsebuje parameter \verb="method"=, ki pove, katera akcija se mora izvesti, ko uporabnik odpre stran. Komponenta prebere parameter $url$ in glede na prebran parameter sproži ustrezno akcijo na storitev za njegovo preverjanje. 
+V elektronskem sporočilu, ki ga uporabnik prejme na svoj naslov, je navedena povezava do aplikacije. Generirana povezava vsebuje parameter \verb="method"=, ki pove, katera akcija se mora izvesti, ko uporabnik odpre stran. Komponenta prebere parameter $url$ in glede na prebran parameter sproži ustrezno akcijo na storitev za njegovo preverjanje.
 
 V primeru, da je uporabniški račun uspešno potrjen, je preusmerjen na začetno stran aplikacije, kjer lahko pregleduje objavljene publikacije s pripadajočimi podatki. Zgodi pa se lahko tudi, da elektronski naslov ni uspešno potrjen (Koda \ref{lst:verify-username}). To se lahko zgodi v naslednjih primerih:
 \begin{itemize}
-  \item potrditvena koda je potekla
-  \item potrditvena koda ni veljavna
-  \item uporabniški račun je izbrisan
-  \item uporabniški račun je onemogočen.
+\item potrditvena koda je potekla
+\item potrditvena koda ni veljavna
+\item uporabniški račun je izbrisan
+\item uporabniški račun je onemogočen.
 \end{itemize}
 
 % // http://localhost:8080/auth/firebase?mode=resetPassword&oobCode={code}
 \begin{lstlisting}[language=bash, style=mystyle,caption={Primer kode, za preverjanje uporabnika.}, label=lst:verify-username]
-  mounted() {
-    this.mode = queryParams.mode;
-    this.oobCode = queryParams.oobCode;
-
-    if (this.mode === "verifyEmail") {
-      verifyAccount(this.oobCode).then(() => {
-          this.$toast.success("Email verified");
-          this.$router.push("home");
-        }, (error) => {
-          switch (error.code) {
-            case 'auth/expired-action-code':
-              this.$toast.error('Code expired!')
-              break;
-            case 'auth/invalid-action-code':
-              this.$toast.error('The code is not valid.')
-              break
-            case 'auth/user-disabled':
-              this.$toast.error('Account is disabled, please contact us at support@example.com')
-              break
-            case 'auth/user-not-found':
-              this.$toast.error('Your account has been removed')
-              break
-            default:
-              this.$toast.error('Email verification failed!')
-          }
-        });
-    }
+mounted() {
+  this.mode = queryParams.mode;
+  this.oobCode = queryParams.oobCode;
+    
+  if (this.mode === "verifyEmail") {
+    verifyAccount(this.oobCode).then(() => {
+      this.$toast.success("Email verified");
+      this.$router.push("home");
+    }, (error) => {
+      switch (error.code) {
+        case 'auth/expired-action-code':
+          this.$toast.error('Code expired!')
+          break;
+        case 'auth/invalid-action-code':
+          this.$toast.error('The code is not valid.')
+          break
+        case 'auth/user-disabled':
+          this.$toast.error('Account is disabled.')
+          break
+        case 'auth/user-not-found':
+          this.$toast.error('Your account has been removed.')
+          break
+        default:
+          this.$toast.error('Email verification failed!')
+      }
+    });
   }
+}
 \end{lstlisting}
+\clearpage
 % #####################################################################
 
 
@@ -1489,7 +1471,7 @@ Administrator ima možnost pregledovanja in urejanja uporabnikov v aplikaciji. N
 \label{users-list-page}
 \end{figure}
 
-S klikom na ikono za urejanje se odpre stran za urejanje izbranega uporabnika. Na voljo je spreminjanje uporabniškega imena, e-poštnega naslova in ostalih informacij uporabnika, kot sta ime in priimek (Slika \ref{users-edit-page}). 
+S klikom na ikono za urejanje se odpre stran za urejanje izbranega uporabnika. Na voljo je spreminjanje uporabniškega imena, e-poštnega naslova in ostalih informacij uporabnika, kot sta ime in priimek (Slika \ref{users-edit-page}).
 
 Administratorju je tudi na voljo spreminjanje vrste uporabnika, torej lahko nekemu uporabniku doda pravice za urednika, ga dodeli kot administratorja, ali pa kot navadnega uporabnika, ki lahko pregleduje vnesene publikacije.
 
@@ -1506,7 +1488,7 @@ Administratorju je tudi na voljo spreminjanje vrste uporabnika, torej lahko neke
 % #####################################################################
 % #####################################################################
 \section{Vnos publikacije}
-Uredniki s pravicami urejanja ali dodajanja publikacij imajo dostop do strani \sn{Articles}. Na njej je prikazan seznam vseh vnesenih publikacij. Ker je vsako publikacijo mogoče urediti ali izbrisati, se na desni strani nahaja polje z ikonama za urejanje in brisanje posamezne publikacije. 
+Uredniki s pravicami urejanja ali dodajanja publikacij imajo dostop do strani \sn{Articles}. Na njej je prikazan seznam vseh vnesenih publikacij. Ker je vsako publikacijo mogoče urediti ali izbrisati, se na desni strani nahaja polje z ikonama za urejanje in brisanje posamezne publikacije.
 
 V primeru, da je vnesenih publikacij veliko, je na dnu seznama na voljo paginacija, s katero se pomikamo med stranmi. Na vrhu seznama imamo tudi možnost iskanja po naslovu publikacije. Seznam publikacij je prikazan z novejšimi publikacijami na vrhu (Slika \ref{list-articles}). Na strani se nahaja tudi gumb za dodajanje nove publikacije (+Add).
 
@@ -1528,79 +1510,79 @@ S klikom na ikono za urejanje se odpre stran z izpolnjenim spletnim obrazcem s p
 \label{edit-articles}
 \end{figure}
 
-V primeru urejanja, se v naslovu URL nahaja identifikator publikacije, ki jo urejamo. Z njegovo uporabo pošljemo zahtevek na zaledni sistem, kjer dobimo vse potrebne informacije, ki so bile vnesene za dano publikacijo. Ob nalaganju spletnega obrazca moramo zagotoviti še ostale podatke kot so avtorji, metode, živila, viri, in dinamični podatki, katere je uporabnik definiral naknadno. Za vse te podatke imamo na voljo posamezne vire API, na katere pošljemo zahtevek za pridobitev teh podatkov. 
+V primeru urejanja, se v naslovu URL nahaja identifikator publikacije, ki jo urejamo. Z njegovo uporabo pošljemo zahtevek na zaledni sistem, kjer dobimo vse potrebne informacije, ki so bile vnesene za dano publikacijo. Ob nalaganju spletnega obrazca moramo zagotoviti še ostale podatke kot so avtorji, metode, živila, viri, in dinamični podatki, katere je uporabnik definiral naknadno. Za vse te podatke imamo na voljo posamezne vire API, na katere pošljemo zahtevek za pridobitev teh podatkov.
 
 \clearpage
 Na spletnem obrazcu je mogoče dodajati in urejati naslednje podatke:
 
 \begin{description}
-    \item \textbf{Datum objave} - polje za vpis datuma, ki določa kdaj naj bo publikacija na voljo ostalim uporabnikom. Ta parameter je na voljo le administratorjem.
-    
-    \item \textbf{Vir} - izbirno polje za izbiro vira, na katerega se nanaša publikacija. S klikom na polje se odpre spustno okno z vnaprej vnesenimi viri. Imamo tudi možnost iskanja vira po njegovem naslovu. V primeru, da vir še ne obstaja, imamo na voljo gumb za dodajanje (+) novega vira. S klikom na gumb se odpre okno za kreiranje novega vira (Slika \ref{add-source}). Ob shranjevanju vira se samodejno izpolni polje z virom, ki je bil na novo vnesen.
-    
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.75\textwidth]{slike/add-source.png}
-        \end{center}
-        \caption{ Obrazec za dodajanje novega vira. }
-        \label{add-source}
-    \end{figure}
-    
-    \item \textbf{Naslov} - tekstovno polje, ki vsebuje naslov publikacije.
-    
-    \item \textbf{Leto} - numerično polje, ki vsebuje leto izdaje publikacije.
-    
-    \item \textbf{Spletni vir} - povezava na vir, kjer lahko pridobimo več informacij o publikaciji.
-    
-    \item \textbf{Avtorji} - izbirno polje za izbiro enega ali več avtorjev. Ob kliku na polje se odpre spustni meni s seznamom avtorjev po katerih lahko izvajamo iskanje. V primeru, da avtor ne obstaja, imamo možnost dodajanja novega avtorja z vpisom njegovega imena. Ob potrditvi bo avtor avtomatsko dodan v zalednem sistemu in izbran v izbirnem polju.
-    
-    \item \textbf{Metode} - uporablja se enaka komponenta kot pri polju za izbiro avtorjev, le da se v tem primeru izbirajo metode. 
-    
-    \item \textbf{Živila} - uporablja se enaka komponenta kot pri polju za izbiro avtorjev, le da se v tem primeru izbirajo živila (Slika \ref{multiselect}).
-    
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.5\textwidth]{slike/multiselect.png}
-        \end{center}
-        \caption{ Spustni meni s predlaganimi vrednostmi. }
-        \label{multiselect}
-    \end{figure}
-    
-    \item \textbf{Temperaturno območje} - predstavlja območje dveh števil, katerega je mogoče izbrati s horizontalnim drsnikom, ali pa z vpisom vrednosti v posamezna polja (minimalno in maksimalno vrednost v °C) (Slika  \ref{type-range}).
-    
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=1\textwidth]{slike/type_range.png}
-        \end{center}
-        \caption{ Komponenta za določanje vrednosti v območju. }
-        \label{type-range}
-    \end{figure}
-    
-    \item \textbf{Komentar} - tekstovno polje, kjer je mogoče vnesti daljše besedilo, do 255 znakov.
-    
-    \item \textbf{Priponka} - polje za odlaganje datoteke. Na voljo je izbira datotek, ki se pripne k publikaciji. Prikaže se znotraj komponente in jo je mogoče odstraniti (Slika  \ref{type-fileupload}).
-    
-    \begin{figure}[h]
-    \begin{center}
-        \includegraphics[width=1\textwidth]{slike/upload_file_zone.png}
-        \includegraphics[width=1\textwidth]{slike/upload_file_list.png}
-        \end{center}
-        \caption{ Komponenta za nalaganje datotek. }
-        \label{type-fileupload}
-    \end{figure}
-  
-    \item \textbf{Dodatna polja} - seznam dodatnih polj, ki jih želimo dodati k publikaciji. Ob kliku nanje se pojavi možnost za definiranje vrednosti tega podatka. Vnosno polje se prikaže različno glede na tip podatka, ki ga izberemo (Slika \ref{fields-usage}).
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=1\textwidth]{slike/fields_usage.png}
-        \end{center}
-        \caption{ Prikaz uporabe dodanega parametra, med urejanjem publikacije. }
-        \label{fields-usage}
-    \end{figure}
-   
+\item \textbf{Datum objave} - polje za vpis datuma, ki določa kdaj naj bo publikacija na voljo ostalim uporabnikom. Ta parameter je na voljo le administratorjem.
+
+\item \textbf{Vir} - izbirno polje za izbiro vira, na katerega se nanaša publikacija. S klikom na polje se odpre spustno okno z vnaprej vnesenimi viri. Imamo tudi možnost iskanja vira po njegovem naslovu. V primeru, da vir še ne obstaja, imamo na voljo gumb za dodajanje (+) novega vira. S klikom na gumb se odpre okno za kreiranje novega vira (Slika \ref{add-source}). Ob shranjevanju vira se samodejno izpolni polje z virom, ki je bil na novo vnesen.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{slike/add-source.png}
+\end{center}
+\caption{ Obrazec za dodajanje novega vira. }
+\label{add-source}
+\end{figure}
+
+\item \textbf{Naslov} - tekstovno polje, ki vsebuje naslov publikacije.
+
+\item \textbf{Leto} - numerično polje, ki vsebuje leto izdaje publikacije.
+
+\item \textbf{Spletni vir} - povezava na vir, kjer lahko pridobimo več informacij o publikaciji.
+
+\item \textbf{Avtorji} - izbirno polje za izbiro enega ali več avtorjev. Ob kliku na polje se odpre spustni meni s seznamom avtorjev po katerih lahko izvajamo iskanje. V primeru, da avtor ne obstaja, imamo možnost dodajanja novega avtorja z vpisom njegovega imena. Ob potrditvi bo avtor avtomatsko dodan v zalednem sistemu in izbran v izbirnem polju.
+
+\item \textbf{Metode} - uporablja se enaka komponenta kot pri polju za izbiro avtorjev, le da se v tem primeru izbirajo metode.
+
+\item \textbf{Živila} - uporablja se enaka komponenta kot pri polju za izbiro avtorjev, le da se v tem primeru izbirajo živila (Slika \ref{multiselect}).
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{slike/multiselect.png}
+\end{center}
+\caption{ Spustni meni s predlaganimi vrednostmi. }
+\label{multiselect}
+\end{figure}
+
+\item \textbf{Temperaturno območje} - predstavlja območje dveh števil, katerega je mogoče izbrati s horizontalnim drsnikom, ali pa z vpisom vrednosti v posamezna polja (minimalno in maksimalno vrednost v °C) (Slika  \ref{type-range}).
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1\textwidth]{slike/type_range.png}
+\end{center}
+\caption{ Komponenta za določanje vrednosti v območju. }
+\label{type-range}
+\end{figure}
+
+\item \textbf{Komentar} - tekstovno polje, kjer je mogoče vnesti daljše besedilo, do 255 znakov.
+
+\item \textbf{Priponka} - polje za odlaganje datoteke. Na voljo je izbira datotek, ki se pripne k publikaciji. Prikaže se znotraj komponente in jo je mogoče odstraniti (Slika  \ref{type-fileupload}).
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1\textwidth]{slike/upload_file_zone.png}
+\includegraphics[width=1\textwidth]{slike/upload_file_list.png}
+\end{center}
+\caption{ Komponenta za nalaganje datotek. }
+\label{type-fileupload}
+\end{figure}
+
+\item \textbf{Dodatna polja} - seznam dodatnih polj, ki jih želimo dodati k publikaciji. Ob kliku nanje se pojavi možnost za definiranje vrednosti tega podatka. Vnosno polje se prikaže različno glede na tip podatka, ki ga izberemo (Slika \ref{fields-usage}).
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1\textwidth]{slike/fields_usage.png}
+\end{center}
+\caption{ Prikaz uporabe dodanega parametra, med urejanjem publikacije. }
+\label{fields-usage}
+\end{figure}
+
 \end{description}
 
-S klikom na gumb \sn{Save}, ki se nahaja spodaj desno, sprožimo zahtevek za shranjevanje vnesenih podatkov. Osnovna validacija se izvaja že med samim vnosom podatkov na čelnem delu. V primeru napačnega vnosa podatkov se na obrazcu poleg posameznih vnosnih polj prikaže sporočilo z opisom napake. Ob uspešnem shranjevanju se pokaže sporočilo, da je bila publikacija uspešno shranjena. 
+S klikom na gumb \sn{Save}, ki se nahaja spodaj desno, sprožimo zahtevek za shranjevanje vnesenih podatkov. Osnovna validacija se izvaja že med samim vnosom podatkov na čelnem delu. V primeru napačnega vnosa podatkov se na obrazcu poleg posameznih vnosnih polj prikaže sporočilo z opisom napake. Ob uspešnem shranjevanju se pokaže sporočilo, da je bila publikacija uspešno shranjena.
 
 
 % #####################################################################
@@ -1609,7 +1591,7 @@ S klikom na gumb \sn{Save}, ki se nahaja spodaj desno, sprožimo zahtevek za shr
 \section{Prikaz publikacije}
 Publikacija je na strani vizualno predstavljena z vso vneseno vsebino. Na vrhu je napisan naslov publikacije, ki je podan kot odebeljeno besedilo, saj je najbolj pomemben podatek za uporabnika. Pod naslovom so izpisani vsi avtorji, ki so sodelovali pri publikaciji. Vsak podatek je predstavljen z imenom in nato s svojo vrednostjo (Slika \ref{publicitation-info}).
 
-Sledijo podatki o sami publikaciji. Vir je predstavljen s tipom, imenom in povezavo, če jo ima. V primeru, da spletna povezava ni bila vnesena le-ta ni prikazana. Ker je lahko vnesenih metod in živil za posamezno publikacijo mnogo, so prikazane kot vrednosti, ločene z vejico. Na skrajno desni strani je predstavljena vrednost temperature, v primeru, da je ta definirana za posamezno publikacijo. 
+Sledijo podatki o sami publikaciji. Vir je predstavljen s tipom, imenom in povezavo, če jo ima. V primeru, da spletna povezava ni bila vnesena le-ta ni prikazana. Ker je lahko vnesenih metod in živil za posamezno publikacijo mnogo, so prikazane kot vrednosti, ločene z vejico. Na skrajno desni strani je predstavljena vrednost temperature, v primeru, da je ta definirana za posamezno publikacijo.
 
 Publikacija lahko vsebuje tudi komentar, ki je prikazan kot daljše tekstovno polje. Poleg komentarja se nahajajo še ostale povezave do zunanjih virov, če so bili vneseni med samim vnosom publikacije. V primeru, da ima publikacija pripete datoteke, se prikažejo kot ikona datoteke. S klikom na ikono se nam odpre novo okno s povezavo do datoteke. Datoteka je posredovana preko zalednega sistema in jo je mogoče prenesti v samem brskalniku.
 
@@ -1630,13 +1612,13 @@ Publikacija lahko vsebuje tudi komentar, ki je prikazan kot daljše tekstovno po
 % #####################################################################
 \section{Iskanje publikacij}
 \label{filters-page}
-Vse vnesene publikacije so uporabniku prijazno prikazane na eni strani. Za pregledovanje ima na voljo številne filtre, kar mu omogoča, da s tem hitreje najde publikacijo, ki jo išče. Iskanje je omogočeno po vseh možnih podatkih, vnesenih za posamezno publikacijo. 
+Vse vnesene publikacije so uporabniku prijazno prikazane na eni strani. Za pregledovanje ima na voljo številne filtre, kar mu omogoča, da s tem hitreje najde publikacijo, ki jo išče. Iskanje je omogočeno po vseh možnih podatkih, vnesenih za posamezno publikacijo.
 
 
 Stran je razdeljena na dva dela. Na levem delu so uporabniku na voljo filtri, katere lahko uporabi za iskanje po publikacijah, na desnem delu pa se uporabniku te publikacije prikažejo. V primeru, da je najdenih publikacij za izbrane filtre veliko, imamo na dnu možnost sprehajanja med posameznimi stranmi, na vrhu pa se izpiše število vseh publikacij, ki ustrezajo izbranim filtrom.
 
 
-Uporaba filtrov je enostavna. Na levem delu so izpisani vsi podatki, po katerih je mogoče iskati. Ob kliku na filter se prikaže nabor vrednosti, katere lahko uporabnik izbira, in s tem vklopi ali izklopi filter. V zgornjem delu strani je na voljo tudi iskanje po tekstovnem nizu besed, kjer uporabnik vnese niz za izvedbo filtriranja. Vsebina na strani se samodejno osveži in prikaže publikacije, ki ustrezajo izbranim filtrom. 
+Uporaba filtrov je enostavna. Na levem delu so izpisani vsi podatki, po katerih je mogoče iskati. Ob kliku na filter se prikaže nabor vrednosti, katere lahko uporabnik izbira, in s tem vklopi ali izklopi filter. V zgornjem delu strani je na voljo tudi iskanje po tekstovnem nizu besed, kjer uporabnik vnese niz za izvedbo filtriranja. Vsebina na strani se samodejno osveži in prikaže publikacije, ki ustrezajo izbranim filtrom.
 
 
 \begin{figure}[h]
@@ -1647,7 +1629,7 @@ Uporaba filtrov je enostavna. Na levem delu so izpisani vsi podatki, po katerih 
 \label{seach-example}
 \end{figure}
 
-Na sliki \ref{seach-example} je prikazana praktična uporaba filtrov. V njihovi kombinaciji smo dobili rezultat, ki upošteva vse naštete filtre. 
+Na sliki \ref{seach-example} je prikazana praktična uporaba filtrov. V njihovi kombinaciji smo dobili rezultat, ki upošteva vse naštete filtre.
 
 % #####################################################################
 % ############ Sklepne ugotovitve #####################################
@@ -1655,19 +1637,12 @@ Na sliki \ref{seach-example} je prikazana praktična uporaba filtrov. V njihovi 
 
 % #####################################################################
 \chapter{Sklepne ugotovitve}
-% Sklepne ugotovitve lahko zaˇcnete z enim odstavkom opisa, kaj je bilo v
-% diplomski nalogi narejenega in kaj so bili njeni glavni prispevki. Sledi naj
-% nekaj odstavkov, kjer opiˇsete, zakaj so ti prispevki lahko pomembni, kakˇsna
-% je njihova moˇzna uporaba in kaj bi bilo moˇzno v zvezi z zastavljenimi cilji
-% v diplomi ˇse storiti oz. izboljˇsati. Ce se razvito delo ˇze uporablja, to nujno ˇ
-% omenite v tem poglavju in morda opiˇsite, kakˇsni so odzivi oziroma izkuˇsnje
-% uporabnikov
 
-Med razvojem aplikacije, ki smo jo opisali skozi celotno diplomsko delo, sem se hotel naučiti čim več. Spoznal sem nov programski jezik - \verb=Go= in nov arhitekturni koncept mikrostoritev (angl. microservice). Omenjeni dve stvari sta me dodatno spodbudili k delu in spoznavanju novih stvari na področju razvoja programske opreme in pa tudi same organizacije dela.
+Med razvojem aplikacije, ki smo jo opisali skozi celotno diplomsko delo, sem se hotel naučiti čim več. Spoznal sem nov programski jezik - \verb=Go= in nov arhitekturni koncept mikrostoritev (ang. microservice). Omenjeni dve stvari sta me dodatno spodbudili k delu in spoznavanju novih stvari na področju razvoja programske opreme in pa tudi same organizacije dela.
 
-Z vpeljavo arhitekturnega koncepta mikrostoritev je bila izdelana spletna aplikacija. Pri izdelavi diplomske naloge je bil upoštevan celoten postopek, od ideje in načrtovanja, do same izvedbe in testiranja aplikacije. Pri njenem razvoju in izvedbi smo se soočili z različnimi omejitvami in težavami, katere smo uspešno odpravili in zagotovili, da aplikacija deluje hitro in brez napak. 
+Z vpeljavo arhitekturnega koncepta mikrostoritev je bila izdelana spletna aplikacija. Pri izdelavi diplomske naloge je bil upoštevan celoten postopek, od ideje in načrtovanja, do same izvedbe in testiranja aplikacije. Pri njenem razvoju in izvedbi smo se soočili z različnimi omejitvami in težavami, katere smo uspešno odpravili in zagotovili, da aplikacija deluje hitro in brez napak.
 
-Nadaljnji razvoj aplikacije bi lahko potekal v smeri brezglavega urejevalnika vsebin, kar pomeni, da bi zasnovali aplikacijski vmesnik za dinamično urejanje podatkov. Zaradi arhitekturne zasnove je enostavno izluščiti del dinamičnega dodajanja podatkov. Z novo storitvijo, ki bi skrbela za definiranje, shranjevanje, urejanje in brisanje dinamičnih podatkov bi prišli do rešitve, ki bi podpirala uporabo za različne vrste podatkov, ne samo za naš trenutni primer, to je za vnašanje publikacij. 
+Nadaljnji razvoj aplikacije bi lahko potekal v smeri brezglavega urejevalnika vsebin, kar pomeni, da bi zasnovali aplikacijski vmesnik za dinamično urejanje podatkov. Zaradi arhitekturne zasnove je enostavno izluščiti del dinamičnega dodajanja podatkov. Z novo storitvijo, ki bi skrbela za definiranje, shranjevanje, urejanje in brisanje dinamičnih podatkov bi prišli do rešitve, ki bi podpirala uporabo za različne vrste podatkov, ne samo za naš trenutni primer, to je za vnašanje publikacij.
 
 Razvili bi lahko tudi novo storitev s katero bi avtomatizirali vnašanje podatkov v aplikacijo. Ta bi skrbela za pridobivanje publikacij iz različnih virov (API) in jih preko aplikacijskega vmesnika vnašala v našo aplikacijo. Dodali bi lahko še izvoz in generiranje ustreznega dokumenta za publikacijo.
 
@@ -1675,7 +1650,7 @@ Razvili bi lahko tudi novo storitev s katero bi avtomatizirali vnašanje podatko
 % \\
 \clearpage
 \addcontentsline{toc}{chapter}{Literatura}
-\bibliographystyle{plain}
+\bibliographystyle{ieeetr}
 \bibliography{diploma}
 
 
