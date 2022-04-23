@@ -1,7 +1,290 @@
 
 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % datoteka diploma.tex
+
+% \documentclass[a4paper, 12pt]{book}
+% %\documentclass[a4paper, 12pt, draft]{book}  Nalogo preverite tudi z opcijo draft, ki vam bo pokazala, katere vrstice so predolge!
+
+
+
+% \usepackage[utf8x]{inputenc}   % omogoča uporabo slovenskih črk kodiranih v formatu UTF-8
+% \usepackage[slovene,english]{babel}    % naloži, med drugim, slovenske delilne vzorce
+% \usepackage[pdftex]{graphicx}  % omogoča vlaganje slik različnih formatov
+% \usepackage{fancyhdr}          % poskrbi, na primer, za glave strani
+% \usepackage{amssymb}           % dodatni simboli
+% \usepackage{amsmath}           % eqref, npr.
+% %\usepackage{hyperxmp}
+% \usepackage[hyphens]{url}  % dodal Solina
+% \usepackage{comment}       % dodal Solina
+
+% \usepackage[pdftex, colorlinks=true,
+% citecolor=black, filecolor=black,
+% linkcolor=black, urlcolor=black,
+% pagebackref=false,
+% pdfproducer={LaTeX}, pdfcreator={LaTeX}, hidelinks]{hyperref}
+
+% \usepackage{color}       % dodal Solina
+% \usepackage{soul}       % dodal Solina
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %	CUSTOME
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{array}
+% \usepackage{tabularx}
+% \usepackage{listings}
+% \usepackage{xcolor}
+
+
+% \renewcommand{\lstlistingname}{Koda}
+% \renewcommand{\lstlistlistingname}{Seznam kod}
+
+% \newcolumntype{b}{X}
+% \newcolumntype{s}{>{\hsize=.9\hsize}X}
+% \newcolumntype{z}{>{\hsize=.2\hsize}X}
+
+% \definecolor{codegreen}{rgb}{0,0.6,0}
+% \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+% \definecolor{codepurple}{rgb}{0.20,0,0.82}
+% \definecolor{backcolour}{rgb}{0.97,0.97,0.97}
+
+% \lstdefinestyle{mystyle}{
+% backgroundcolor=\color{backcolour},
+% commentstyle=\color{codegreen},
+% keywordstyle=\color{magenta},
+% numberstyle=\tiny\color{codegray},
+% stringstyle=\color{codepurple},
+% basicstyle=\ttfamily\footnotesize,
+% breakatwhitespace=false,
+% breaklines=true,
+% captionpos=b,
+% keepspaces=true,
+% numbers=left,
+% numbersep=5pt,
+% showspaces=false,
+% showstringspaces=false,
+% showtabs=false,
+% tabsize=2
+% }
+
+
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %	DIPLOMA INFO
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newcommand{\ttitle}{Spletni pregled in urejanje raziskovalnih in drugih publikacij}
+% \newcommand{\ttitleEn}{Online review and editing of research and other publications}
+% \newcommand{\tsubject}{\ttitle}
+% \newcommand{\tsubjectEn}{\ttitleEn}
+% \newcommand{\tauthor}{Žiga Marolt}
+% \newcommand{\tkeywords}{spletna aplikacija, publikacije, Vue.js, docker, OpenApi}
+% \newcommand{\tkeywordsEn}{web application, publications, Vue.js, docker, OpenApi}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %	HYPERREF SETUP
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \hypersetup{pdftitle={\ttitle}}
+% \hypersetup{pdfsubject=\ttitleEn}
+% \hypersetup{pdfauthor={\tauthor, zm1218@student.uni-lj.si}}
+% \hypersetup{pdfkeywords=\tkeywordsEn}
+
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % postavitev strani
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \addtolength{\marginparwidth}{-20pt} % robovi za tisk
+% \addtolength{\oddsidemargin}{40pt}
+% \addtolength{\evensidemargin}{-40pt}
+
+% \renewcommand{\baselinestretch}{1.3} % ustrezen razmik med vrsticami
+% \setlength{\headheight}{15pt}        % potreben prostor na vrhu
+% \renewcommand{\chaptermark}[1]%
+% {\markboth{\MakeUppercase{\thechapter.\ #1}}{}} \renewcommand{\sectionmark}[1]%
+% {\markright{\MakeUppercase{\thesection.\ #1}}} \renewcommand{\headrulewidth}{0.5pt} \renewcommand{\footrulewidth}{0pt}
+% \fancyhf{}
+% \fancyhead[LE,RO]{\sl \thepage}
+% \fancyhead[LO]{\sl \rightmark} \fancyhead[RE]{\sl \leftmark}
+% % \fancyhead[RE]{\sc \tauthor}              % dodal Solina
+% % \fancyhead[LO]{\sc Diplomska naloga}     % dodal Solina
+
+
+% \newcommand{\BibTeX}{{\sc Bib}\TeX}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % naslovi
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \newcommand{\autfont}{\Large}
+% \newcommand{\titfont}{\LARGE\bf}
+% \newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+% \setcounter{tocdepth}{2}	      % globina kazala
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % konstrukti
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newtheorem{izrek}{Izrek}[chapter]
+% \newtheorem{trditev}{Trditev}[izrek]
+% \newenvironment{dokaz}{\emph{Dokaz.}\ }{\hspace{\fill}{$\Box$}}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% PDF-A
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % define medatata
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \def\Title{\ttitle}
+% \def\Author{\tauthor, zm1218@student.uni-lj.si}
+% \def\Subject{\ttitleEn}
+% \def\Keywords{\tkeywordsEn}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % \convertDate converts D:20080419103507+02'00' to 2008-04-19T10:35:07+02:00
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \def\convertDate{%
+% \getYear
+% }
+
+% {\catcode`\D=12
+%  \gdef\getYear D:#1#2#3#4{\edef\xYear{#1#2#3#4}\getMonth}
+% }
+% \def\getMonth#1#2{\edef\xMonth{#1#2}\getDay}
+% \def\getDay#1#2{\edef\xDay{#1#2}\getHour}
+% \def\getHour#1#2{\edef\xHour{#1#2}\getMin}
+% \def\getMin#1#2{\edef\xMin{#1#2}\getSec}
+% \def\getSec#1#2{\edef\xSec{#1#2}\getTZh}
+% \def\getTZh +#1#2{\edef\xTZh{#1#2}\getTZm}
+% \def\getTZm '#1#2'{%
+%     \edef\xTZm{#1#2}%
+%     \edef\convDate{\xYear-\xMonth-\xDay T\xHour:\xMin:\xSec+\xTZh:\xTZm}%
+% }
+
+% \expandafter\convertDate\pdfcreationdate 
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % get pdftex version string
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% \newcount\countA
+% \countA=\pdftexversion
+% \advance \countA by -100
+% \def\pdftexVersionStr{pdfTeX-1.\the\countA.\pdftexrevision}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % XMP data
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+% \usepackage{xmpincl}
+% \includexmp{pdfa-1b}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % pdfInfo
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+% \pdfinfo{%
+%     /Title    (\ttitle)
+%     /Author   (\tauthor, zm1218@student.uni-lj.si)
+%     /Subject  (\ttitleEn)
+%     /Keywords (\tkeywordsEn)
+%     /ModDate  (\pdfcreationdate)
+%     /Trapped  /False
+% }
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{document}
+% \selectlanguage{slovene}
+% \frontmatter
+% \setcounter{page}{1} %
+% \renewcommand{\thepage}{}       % preprecimo težave s številkami strani v kazalu
+% \newcommand{\sn}[1]{"`#1"'}                    % dodal Solina (slovenski narekovaji)
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %naslovnica
+% \thispagestyle{empty}%
+% \begin{center}
+% {\large\sc Univerza v Ljubljani\\%
+% Fakulteta za računalništvo in informatiko}%
+% \vskip 10em%
+% {\autfont \tauthor\par}%
+% {\titfont \ttitle \par}%
+% {\vskip 3em \textsc{DIPLOMSKO DELO\\[5mm]
+% VISOKOŠOLSKI STROKOVNI ŠTUDIJSKI PROGRAM\\ PRVE STOPNJE\\ RAČUNALNIŠTVO IN INFORMATIKA}\par}%
+% \vfill\null%
+% {\large \textsc{Mentor}: doc.\ dr.  Mira Trebar\par}%
+% {\vskip 2em \large Ljubljana, 2022 \par}%
+% \end{center}
+% % prazna stran
+% %\clearemptydoublepage      % dodal Solina (izjava o licencah itd. se izpiše na hrbtni strani naslovnice)
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %copyright stran
+% \thispagestyle{empty}
+% \vspace*{8cm}
+
+% \noindent
+% {\sc Copyright}.
+% Rezultati diplomske naloge so intelektualna lastnina avtorja in Fakultete za računalništvo in informatiko Univerze v Ljubljani.
+% Za objavo in koriščenje rezultatov diplomske naloge je potrebno pisno privoljenje avtorja, Fakultete za računalništvo in informatiko ter mentorja.
+
+% \begin{center}
+% \mbox{}\vfill
+% \emph{Besedilo je oblikovano z urejevalnikom besedil \LaTeX.}
+% \end{center}
+% % prazna stran
+% \clearemptydoublepage
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % stran 3 med uvodnimi listi
+% % \thispagestyle{empty}
+% % \vspace*{4cm}
+
+% % \noindent
+% % Fakulteta za računalništvo in informatiko izdaja naslednjo nalogo:
+% % \medskip
+% % \begin{tabbing}
+% % \hspace{32mm}\= \hspace{6cm} \= \kill
+
+% % Tematika naloge:
+% % \end{tabbing}
+% % Kandidat naj v diplomskem delu implementira spletno rešitev za vnos različ-\\nih publikacij in dodatnih vsebin z namenom urejanja in pregledovanja pomembnih informacij. Predlagana rešitev naj bo zasnovana tako, da imajo prijavljeni uporabniki dostop do podatkov, urednik skrbi za vnos in urejanje, administrator pa ima celovit nadzor nad delovanjem. Uporaba aplikacije naj bo predstavljena za objavljene publikacije in pomembne podatke s področja živil.
+% % \vspace{15mm}
+
+
+% % \vspace{2cm}
+
+
+
+% \vfill
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% datoteka diploma.tex
+% datoteka diploma-vzorec.tex
+%
+% vzorčna datoteka za pisanje diplomskega dela v formatu LaTeX
+% na UL Fakulteti za računalništvo in informatiko
+%
+% vkup spravil Gašper Fijavž, december 2010
+% 
+%
+%
+% verzija 12. februar 2014 (besedilo teme, seznam kratic, popravki Gašper Fijavž)
+% verzija 10. marec 2014 (redakcijski popravki Zoran Bosnić)
+% verzija 11. marec 2014 (redakcijski popravki Gašper Fijavž)
+% verzija 15. april 2014 (pdf/a 1b compliance, not really - just claiming, Damjan Cvetan, Gašper Fijavž)
+% verzija 23. april 2014 (privzeto cc licenca)
+% verzija 16. september 2014 (odmiki strain od roba)
+% verzija 28. oktober 2014 (odstranil vpisno številko)
+% verija 5. februar 2015 (Literatura v kazalu, online literatura)
+% verzija 25. september 2015 (angl. naslov v izjavi o avtorstvu)
+% verzija 26. februar 2016 (UL izjava o avtorstvu)
+% verzija 16. april 2016 (odstranjena izjava o avtorstvu)
+% verzija 5. junij 2016 (Franc Solina dodal vrstice, ki jih je označil s svojim imenom)
+
 
 \documentclass[a4paper, 12pt]{book}
 %\documentclass[a4paper, 12pt, draft]{book}  Nalogo preverite tudi z opcijo draft, ki vam bo pokazala, katere vrstice so predolge!
@@ -19,17 +302,18 @@
 \usepackage{comment}       % dodal Solina
 
 \usepackage[pdftex, colorlinks=true,
-citecolor=black, filecolor=black,
-linkcolor=black, urlcolor=black,
-pagebackref=false,
-pdfproducer={LaTeX}, pdfcreator={LaTeX}, hidelinks]{hyperref}
+						citecolor=black, filecolor=black, 
+						linkcolor=black, urlcolor=black,
+						pagebackref=false, 
+						pdfproducer={LaTeX}, pdfcreator={LaTeX}, hidelinks]{hyperref}
 
 \usepackage{color}       % dodal Solina
 \usepackage{soul}       % dodal Solina
+\usepackage[numbers]{natbib}  % dodal Solina
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	CUSTOME
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %	CUSTOM
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{listings}
@@ -67,17 +351,16 @@ showtabs=false,
 tabsize=2
 }
 
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %	DIPLOMA INFO
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %	DIPLOMA INFO
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\ttitle}{Spletni pregled in urejanje raziskovalnih in drugih publikacij}
 \newcommand{\ttitleEn}{Online review and editing of research and other publications}
 \newcommand{\tsubject}{\ttitle}
 \newcommand{\tsubjectEn}{\ttitleEn}
 \newcommand{\tauthor}{Žiga Marolt}
 \newcommand{\tkeywords}{spletna aplikacija, publikacije, Vue.js, docker, OpenApi}
-\newcommand{\tkeywordsEn}{web application, publicitations, Vue.js, docker, OpenApi}
+\newcommand{\tkeywordsEn}{web application, publications, Vue.js, docker, OpenApi}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -89,11 +372,9 @@ tabsize=2
 \hypersetup{pdfkeywords=\tkeywordsEn}
 
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % postavitev strani
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 
 \addtolength{\marginparwidth}{-20pt} % robovi za tisk
 \addtolength{\oddsidemargin}{40pt}
@@ -105,27 +386,27 @@ tabsize=2
 {\markboth{\MakeUppercase{\thechapter.\ #1}}{}} \renewcommand{\sectionmark}[1]%
 {\markright{\MakeUppercase{\thesection.\ #1}}} \renewcommand{\headrulewidth}{0.5pt} \renewcommand{\footrulewidth}{0pt}
 \fancyhf{}
-\fancyhead[LE,RO]{\sl \thepage}
-\fancyhead[LO]{\sl \rightmark} \fancyhead[RE]{\sl \leftmark}
-% \fancyhead[RE]{\sc \tauthor}              % dodal Solina
-% \fancyhead[LO]{\sc Diplomska naloga}     % dodal Solina
+\fancyhead[LE,RO]{\sl \thepage} 
+%\fancyhead[LO]{\sl \rightmark} \fancyhead[RE]{\sl \leftmark}
+\fancyhead[RE]{\sc \tauthor}              % dodal Solina
+\fancyhead[LO]{\sc Diplomska naloga}     % dodal Solina
 
 
 \newcommand{\BibTeX}{{\sc Bib}\TeX}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % naslovi
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 
 
 \newcommand{\autfont}{\Large}
 \newcommand{\titfont}{\LARGE\bf}
 \newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
-\setcounter{tocdepth}{2}	      % globina kazala
+\setcounter{tocdepth}{1}	      % globina kazala
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % konstrukti
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 \newtheorem{izrek}{Izrek}[chapter]
 \newtheorem{trditev}{Trditev}[izrek]
 \newenvironment{dokaz}{\emph{Dokaz.}\ }{\hspace{\fill}{$\Box$}}
@@ -135,19 +416,19 @@ tabsize=2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % define medatata
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \def\Title{\ttitle}
 \def\Author{\tauthor, matjaz.kralj@fri.uni-lj.si}
 \def\Subject{\ttitleEn}
 \def\Keywords{\tkeywordsEn}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % \convertDate converts D:20080419103507+02'00' to 2008-04-19T10:35:07+02:00
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \def\convertDate{%
-\getYear
+    \getYear
 }
 
 {\catcode`\D=12
@@ -179,7 +460,7 @@ tabsize=2
 % XMP data
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 \usepackage{xmpincl}
-% \includexmp{pdfa-1b}
+\includexmp{pdfa-1b}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % pdfInfo
@@ -204,20 +485,20 @@ tabsize=2
 \renewcommand{\thepage}{}       % preprecimo težave s številkami strani v kazalu
 \newcommand{\sn}[1]{"`#1"'}                    % dodal Solina (slovenski narekovaji)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%naslovnica
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %naslovnica
 \thispagestyle{empty}%
-\begin{center}
-{\large\sc Univerza v Ljubljani\\%
-Fakulteta za računalništvo in informatiko}%
-\vskip 10em%
-{\autfont \tauthor\par}%
-{\titfont \ttitle \par}%
-{\vskip 3em \textsc{DIPLOMSKO DELO\\[5mm]
-VISOKOŠOLSKI STROKOVNI ŠTUDIJSKI PROGRAM\\ PRVE STOPNJE\\ RAČUNALNIŠTVO IN INFORMATIKA}\par}%
-\vfill\null%
-{\large \textsc{Mentor}: doc.\ dr.  Mira Trebar\par}%
-{\vskip 2em \large Ljubljana, 2022 \par}%
+    \begin{center}
+    {\large\sc Univerza v Ljubljani\\%
+    Fakulteta za računalništvo in informatiko}%
+    \vskip 10em%
+    {\autfont \tauthor\par}%
+    {\titfont \ttitle \par}%
+    {\vskip 3em \textsc{DIPLOMSKO DELO\\[5mm]
+    VISOKOŠOLSKI STROKOVNI ŠTUDIJSKI PROGRAM\\ PRVE STOPNJE\\ RAČUNALNIŠTVO IN INFORMATIKA}\par}%
+    \vfill\null%
+    {\large \textsc{Mentor}: doc.\ dr.  Mira Trebar\par}%
+    {\vskip 2em \large Ljubljana, 2022 \par}%
 \end{center}
 % prazna stran
 %\clearemptydoublepage      % dodal Solina (izjava o licencah itd. se izpiše na hrbtni strani naslovnice)
@@ -228,9 +509,9 @@ VISOKOŠOLSKI STROKOVNI ŠTUDIJSKI PROGRAM\\ PRVE STOPNJE\\ RAČUNALNIŠTVO IN I
 \vspace*{8cm}
 
 \noindent
-{\sc Copyright}.
-Rezultati diplomske naloge so intelektualna lastnina avtorja in Fakultete za računalništvo in informatiko Univerze v Ljubljani.
-Za objavo in koriščenje rezultatov diplomske naloge je potrebno pisno privoljenje avtorja, Fakultete za računalništvo in informatiko ter mentorja.
+{\sc Copyright}. 
+Rezultati diplomske naloge so intelektualna lastnina avtorja in matične fakultete Univerze v Ljubljani.
+Za objavo in koriščenje rezultatov diplomske naloge je potrebno pisno privoljenje avtorja, fakultete ter mentorja.
 
 \begin{center}
 \mbox{}\vfill
@@ -242,21 +523,36 @@ Za objavo in koriščenje rezultatov diplomske naloge je potrebno pisno privolje
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % stran 3 med uvodnimi listi
 \thispagestyle{empty}
-\vspace*{4cm}
+\
+\vfill
 
-\noindent
-Fakulteta za računalništvo in informatiko izdaja naslednjo nalogo:
-\medskip
-\begin{tabbing}
-\hspace{32mm}\= \hspace{6cm} \= \kill
+\bigskip
+\noindent\textbf{Kandidat:} \tauthor\\
+\noindent\textbf{Naslov:} \ttitle\\
+% vstavite ustrezen naziv študijskega programa!
+\noindent\textbf{Vrsta naloge:} Diplomska naloga na visokošolskem strokovnem programu
+prve stopnje Računalništvo in informatika\\
+% izberite pravi habilitacijski naziv mentorja!
+\noindent\textbf{Mentor:} doc.\ dr.  Mira Trebar\\
+%\noindent\textbf{Somentor:} isto kot za mentorja
 
-Tematika naloge:
-\end{tabbing}
-Kandidat naj v diplomskem delu implementira spletno rešitev za vnos različ-\\nih publikacij in dodatnih vsebin z namenom urejanja in pregledovanja pomembnih informacij. Predlagana rešitev naj bo zasnovana tako, da imajo prijavljeni uporabniki dostop do podatkov, urednik skrbi za vnos in urejanje, administrator pa ima celovit nadzor nad delovanjem. Uporaba aplikacije naj bo predstavljena za objavljene publikacije in pomembne podatke s področja živil.
-\vspace{15mm}
+\bigskip
+\noindent\textbf{Opis:}\\
+Kandidat naj v diplomskem delu implementira spletno rešitev za vnos razli-\\čnih publikacij in dodatnih vsebin z namenom urejanja in pregledovanja pomembnih informacij. Predlagana rešitev naj bo zasnovana tako, da imajo prijavljeni uporabniki dostop do podatkov, urednik skrbi za vnos in urejanje, administrator pa ima celovit nadzor nad delovanjem. Uporaba aplikacije naj bo predstavljena za objavljene publikacije in pomembne podatke s področja živil.
+
+\bigskip
+\noindent\textbf{Title:} \ttitleEn
+
+\bigskip
+\noindent\textbf{Description:}\\
+In the diploma thesis, the candidate should implement a web solution for inserting various publications and additional content to edit and review important information. The proposed solution should be designed for registered users to have access to data, the editor takes care of input and editing, and the administrator has comprehensive control over the operation. The use of the application should be presented for publications and important data in the field of food.
+
+\vfill
+
 
 
 \vspace{2cm}
+
 
 % prazna stran
 \clearemptydoublepage
@@ -326,9 +622,9 @@ Zahvaljujem se mentorici doc. dr. Miri Trebar za vso pomoč in družini za podpo
 \bigskip
 
 %\noindent\textbf{Povzetek:}
-\noindent Dandanes se na spletu pojavlja vedno več raziskovalnih metod iz področja analize in napovedovanja dobe uporabnosti hitro pokvarljivih živil. Vsaka raziskovalna metoda lahko pri raziskovanju uporablja različne parametre. Parametri se razlikujejo glede na format, strukturo ali pa samo vrsto podatkov.
+\noindent Dandanes se na spletu pojavlja vedno več raziskovalnih metod iz področja analize in napovedovanja dobe uporabnosti hitro pokvarljivih živil. Vsaka raziskovalna metoda lahko pri raziskovanju uporablja različne parametre, ki se razlikujejo glede na format, strukturo ali pa samo vrsto podatkov.
 
-Namen te diplomske naloge je izdelati spletno aplikacijo s primerno podatkovno shemo za pregled in urejanje publikacij. Preko nje je mogoče dodajati, urejati, brisati in iskati po vnesenih metodah in drugih podatkih. Dostop do posameznih delov aplikacije je dovoljen le določenim uporabnikom z ustreznimi uporabniškimi pravicami. Predstavljen je celoten proces načrtovanja in implementacije aplikacije, ki je zasnovana kot mikrostoritev v programskem jeziku Go. Podane so zahteve, ki jih je potrebno upoštevati pri zasnovi arhitekture spletne aplikacije iz vidika varnosti podatkov, hitrosti razvoja aplikacije in hitrosti same aplikacije. Aplikacija je predstavljena s primerom uporabe testnih podatkov.
+Namen te diplomske naloge je izdelati spletno aplikacijo s primerno podatkovno shemo za pregled in urejanje publikacij. Preko nje je mogoče dodajati, urejati, brisati in iskati po vnesenih metodah in drugih podatkih. Dostop do posameznih delov aplikacije je dovoljen le določenim uporabnikom z ustreznimi uporabniškimi pravicami. Predstavljen je celoten proces načrtovanja in implementacije aplikacije, ki je zasnovana kot mikrostoritev v programskem jeziku Go. Podane so zahteve, ki jih je potrebno upoštevati pri zasnovi arhitekture spletne aplikacije iz vidika varnosti podatkov, hitrosti razvoja in hitrosti aplikacije. Predstavljena je s primerom uporabe testnih podatkov za publikacije s področja hladne verige.
 
 \bigskip
 
@@ -349,9 +645,9 @@ Namen te diplomske naloge je izdelati spletno aplikacijo s primerno podatkovno s
 \bigskip
 
 %\noindent\textbf{Abstract:}
-\noindent Nowadays, more and more research methods are appearing in the field of analysis and prediction of perishable foods shelf-life. Each research method may use different parameters in its research. The parameters vary according to format, structure or just the type of data.
+\noindent Nowadays, more and more research methods are appearing in the field of analysis and prediction of perishable foods shelf-life. Each research method may use different parameters in its research, which often vary according to format, structure or just the type of data.
 
-The aim of this thesis is to develop a web-based application with a suitable data structure to allow for reviewing and editing the publications. Through the application it is possible to add, edit, delete and search through the entered methods and other data. Access to individual parts of the application is restricted to specific users with the appropriate user rights. Presented here is the complete design process and implementation of the application, which is designed as a microservice in the Go programming language. Given are requirements to be taken into account in the design of the web application architecture in terms of data security, development time and the speed of the application itself. The application is presented with an example using test data.
+The aim of this thesis is to develop a web-based application with a suitable data structure for reviewing and editing the publications. Through the application it is possible to add, edit, delete and search through the entered methods and other data. Access to individual parts of the application is restricted to specific users with the appropriate user rights. Presented is the complete design process and implementation of the application, which is designed as a microservice in the Go programming language. Given are requirements to be taken into account in the design of the web application architecture in terms of data security, development time and the speed of the application itself. The application is presented with an example of test data for publications in the field of cold chain.
 \bigskip
 
 \noindent\textbf{Keywords:} \tkeywordsEn.
@@ -402,13 +698,13 @@ Omenjeni model je definiran z zaporedjem posameznih faz, katerih število je lah
 \begin{description}
 \item \textbf{Opis posameznih faz:}
 \begin{enumerate}
-\item \textbf{Zbiranje zahtev} – vse možne zahteve so zajete v dokumentih z opisom izdelka.
-\item \textbf{Analiziranje} - pregled specifikacij in analiziranje le-teh. Z analiziranjem se definira poslovno logiko in pa tudi finančni plan projekta.
-\item \textbf{Zasnova sistema} - glede na predhodno analizo se načrtuje arhitekturo programske opreme.
-\item \textbf{Izvedba} - razvoj programske opreme v manjših enotah s funkcionalnim testiranjem.
-\item \textbf{Integracija in testiranje} - integracija vsake enote, razvite v prejšnji fazi in po integraciji, katerim sledi testiranje celotnega sistema za morebitne napake.
-\item \textbf{Uvedba sistema} – po opravljenih vseh funkcionalnih in nefunkcionalnih testiranjih izdelek deluje v proizvodnem okolju.
-\item \textbf{Vzdrževanje} - odpravljanje težav in izdaja nove različice s popravki se izvaja po potrebi.
+\item \textbf{Zbiranje zahtev:} vse možne zahteve so zajete v dokumentih z opisom izdelka.
+\item \textbf{Analiziranje:} pregled specifikacij in analiziranje le-teh. Z analiziranjem se definira poslovno logiko in pa tudi finančni plan projekta.
+\item \textbf{Zasnova sistema:} glede na predhodno analizo se načrtuje arhitekturo programske opreme.
+\item \textbf{Izvedba:} razvoj programske opreme v manjših enotah s funkcionalnim testiranjem.
+\item \textbf{Integracija in testiranje:} integracija vsake enote, razvite v prejšnji fazi in po integraciji, katerim sledi testiranje celotnega sistema za morebitne napake.
+\item \textbf{Uvedba sistema:} po opravljenih vseh funkcionalnih in nefunkcionalnih testiranjih izdelek deluje v proizvodnem okolju.
+\item \textbf{Vzdrževanje:} odpravljanje težav in izdaja nove različice s popravki se izvaja po potrebi.
 \end{enumerate}
 \end{description}
 
@@ -434,9 +730,9 @@ Aplikacija naj omogoča vnos novih in urejanje obstoječih publikacij. Vsak vnos
 
 Aplikacija mora biti pregledna in enostavna za uporabo. Podpirati mora registracijo novih uporabnikov v aplikacijo in omejiti dostop do določene vsebine glede na vlogo uporabnika. Dostop do posameznih strani naj bo omogočen le prijavljenim uporabnikom z uporabniškim imenom in geslom ter primernim dostopom (Slika \ref{user-rights}). Definirani uporabniki so:
 \begin{itemize}
-\item \textbf{Uporabnik} - omogočen je pregled objavljenih publikacij in pripadajočih vsebin.
-\item \textbf{Urednik} - lahko ureja publikacije, vsebine ter parametre za posamezno publikacijo.
-\item \textbf{Administrator} - ima polni nadzor aplikacije.
+\item \textbf{Uporabnik:} omogočen je pregled objavljenih publikacij in pripadajočih vsebin.
+\item \textbf{Urednik:} lahko ureja publikacije, vsebine ter parametre za posamezno publikacijo.
+\item \textbf{Administrator:} ima polni nadzor aplikacije.
 \end{itemize}
 
 \begin{figure}[h]
@@ -531,7 +827,7 @@ Aplikacija je sestavljena iz sklopov strani, do katerih lahko dostopamo iz razli
 \item dodajanje: obrazec za kreiranje vnosa novih podatkov
 \end{itemize}
 
-\item \textbf{Iskalnik}: stran za iskanje po publikacijah
+\item \textbf{Iskalnik}: stran za prikaz in iskanje publikacij
 \end{description}
 
 \subsection{Postavitev spletne strani}
@@ -558,7 +854,7 @@ Vse strani uporabljajo enak koncept. Za enostavno premikanje med stranmi se na d
 \label{version-control}
 Orodje, ki upravlja in sledi različnim verzijam programske kode ali drugih podatkov, je poznano kot sistem za verzioniranje podatkov. V angleščini poznamo več izrazov, ki se navezujejo na omenjeno orodje, to so Version Control System (VCS), Source Code Manager (SCM) in Revision Control System (RCS). Nadzor različic, znan tudi kot nadzor vira, je praksa sledenja in upravljanja sprememb programske kode. Sistem običajno hrani kodo na dogovorjeni lokaciji na centralnem strežniku (primer GitHub). Razvijalci delajo na svojih lokalnih kopijah izvorne kode, ki jih pridobijo iz centralnega repozitorija. Svoje spremembe pošiljajo na centralni strežnik, pri čemer sistem omogoča tudi reševanje konfliktov, ko dva ali več razvijalcev poskuša poslati na strežnik spremembe istega dela posamične datoteke. Sistem omogoča obnavljanje stanja izvorne kode iz poljubne verzije v preteklosti.
 
-V našem projektu smo se odločili uporabiti sistem za verzioniranje kode Git. Je distribuiran sistem s poudarkom na hitrosti, integriteti podatkov in podpira vzporedne nelinearne tokove dela. Predstavljen je bil leta 2005, za potrebo razvoja Linuxovega jedra iz strani Linux razvijalcev \cite{git-history} in je postal najbolj razširjen sistem na tem področju. Git repozitorij gostujemo na brezplačnem ponudniku omenjene storitve - GitHub (Slika \ref{github-project}). Poleg brezplačnega gostovanja ponuja tudi vrsto drugih rešitev, kot je na primer beleženje dela (ang. "Task Management"), neprekinjeno integracijo (ang. ''Continuous Integration") in vrsto drugih integracij.
+V našem projektu smo se odločili uporabiti sistem za verzioniranje kode Git. Je distribuiran sistem s poudarkom na hitrosti, integriteti podatkov in podpira vzporedne nelinearne tokove dela. Predstavljen je bil leta 2005, za potrebo razvoja Linuxovega jedra iz strani Linux razvijalcev \cite{git-history} in je postal najbolj razširjen sistem na tem področju. Git repozitorij gostujemo na brezplačnem ponudniku omenjene storitve - GitHub (Slika \ref{github-project}). Poleg brezplačnega gostovanja ponuja tudi vrsto drugih rešitev, kot je na primer beleženje dela (ang. task management), neprekinjeno integracijo (ang. Continuous Integration - CI) in vrsto drugih integracij.
 
 \begin{figure}[h]
 \begin{center}
@@ -606,7 +902,7 @@ Konfiguriranje slike vsebnika zahteva ustvarjanje konfiguracijske datoteke. Ta j
 Vsebnik je skupina procesov v operacijskem sistemu z jedrom Linux, ki upravlja računske vire z nadzornimi skupinami in zagotavlja izolacijo virov z uporabo imenskih prostorov. Ob zagonu vsebnika se uporabi vsebniška slika (ang. container image), v kateri so zapisane informacije o izvajanju programske opreme in preko katere Docker tudi priklopi nov, prazen bralno-pisalni datotečni sloj. Slika se ustvari s postopkom gradnje, ki je zapisan v datoteki $Dockerfile$.
 
 V kodi \ref{lst:dcb-snipet} je prikazan primer grajenja slike, ki smo jo uporabili pri razvoju zalednega dela naše aplikacije.
-\begin{lstlisting}[language=bash, style=mystyle,caption={Grajenje slike Docker vmesnika.},label=lst:dcb-snipet]
+\begin{lstlisting}[language=bash, style=mystyle,caption={Grajenje slike Docker vsebnika.},label=lst:dcb-snipet]
 $ docker build .
 [+] Building 69.1s (9/9)                             FINISHED
 => [internal] load build definition from Dockerfile    0.1s
@@ -668,7 +964,7 @@ PostgreSQL deluje na vseh večjih operacijskih sistemih in ima zmogljive dodatke
 
 
 \subsubsection{UUID}
-Za identifikacijo naših entitet smo uporabili enoličen univerzalen identifikator - \verb=UUID= (ang. "Universally Unique Identifier"). To je standardna identifikacijska koda, ki se uporablja v postopku izdelave programske opreme. Uporablja se za generiranje univerzalnih unikatnih identifikatorjev, ki omogočajo prepoznavanje in razlikovanje predmeta znotraj sistema ali istega predmeta v različnih kontekstih.
+Za identifikacijo naših entitet smo uporabili enoličen univerzalen identifikator - \verb=UUID= (ang. Universally Unique Identifier). To je standardna identifikacijska koda, ki se uporablja v postopku izdelave programske opreme. Uporablja se za generiranje univerzalnih unikatnih identifikatorjev, ki omogočajo prepoznavanje in razlikovanje predmeta znotraj sistema ali istega predmeta v različnih kontekstih.
 
 UUID je sestavljen iz 128 bitov (32 znakov). Vsak znak je predstavljen v šestnajstiškem (heksadecimalnem) zapisu, kar pomeni, da je znak lahko število od \verb=0= do \verb=9=, ali pa črka od \verb=a= do \verb=f= \cite{uuid-rfc}.
 
@@ -689,7 +985,7 @@ Verjetnost unikatno generiranega UUID-ja
 S tem je dokaz Izreka~\ref{iz:1} zaključen.
 \end{dokaz}
 
-Če nadaljujemo računanje na podlagi rojstnodnevnega paradoksa, pridemo do rešitve, ki nam pove, da je verjetnost resnično majhna. Da se pojavi duplikat, bi morali 85 zaporednih let vsako sekundo generirati milijardo vrednosti. Datoteka z generiranimi UUID-ji bi bila na koncu velika $45EB$ (Exabyte) ($45kb*1000^6$) \cite{uuid-collisions}
+Če nadaljujemo računanje na podlagi rojstnodnevnega paradoksa, pridemo do rešitve, ki nam pove, da je verjetnost resnično majhna. Da se pojavi duplikat, bi morali 85 zaporednih let vsako sekundo generirati milijardo vrednosti. Datoteka z generiranimi UUID-ji bi bila na koncu velika $45EB$ (ang. Exabyte) ($45kb*1000^6$) \cite{uuid-collisions}.
 
 
 
@@ -753,7 +1049,7 @@ Najprej bomo opisali kako smo projekt zasnovali in vpeljali različne arhitektur
 \section{Zagon aplikacije v lokalnem okolju}
 Postavitev projekta je lahko včasih zelo zamudno delo, s katerim razvijalec izgubi veliko nepotrebnega časa. Za zagon projekta mora razvijalec imeti nameščena orodja \verb=Makefile=, \verb=Docker= (\ref{docker-section}) in \verb=Git= (\ref{version-control}). Z uporabo vsebnikov smo ustvarili okolje, katerega je enostavno zagnati ne glede na operacijski sistem, kjer želimo aplikacijo zaganjati.
 
-Za prenos projekta na svoj računalnik mora razvijalec imeti dostop do \verb=Git= repozitorija, katerega gostimo na platformi \verb=GitHub=. Z ukazom (Ukaz \ref{lst:git-clone}), ki ga poženemo v ukazni vrstici poskrbimo, da so vse datoteke iz \verb=GitHub= repozitorija uspešno prenesene v direktorij na računalniku.
+Za prenos projekta na svoj računalnik mora razvijalec imeti dostop do \verb=Git= repozitorija, katerega gostimo na platformi \verb=GitHub=. Z ukazom (Koda \ref{lst:git-clone}), ki ga poženemo v ukazni vrstici poskrbimo, da so vse datoteke iz \verb=GitHub= repozitorija uspešno prenesene v direktorij na računalniku.
 
 \begin{lstlisting}[language=bash,style=mystyle,caption={Ukaz za prenos datotek iz GitHub repozitorija.},label=lst:git-clone]
 $ git clone git@github.com:marolt/diploma.git
@@ -765,24 +1061,24 @@ Da je postavitev projekta enostavna, smo ukaze, ki so potrebni za zagon projekta
 \begin{lstlisting}[language=bash,style=mystyle,caption={Prikaz zagnanih vsebnikov.},label=lst:running-containers]
 $ docker-compose ps
 
-Name           Command                State  Ports
+Name           Command                State Ports
 ------------------------------------------------------------
-d_web_1        /run.sh.                 Up   :80->80/tcp
-d_app_1        reflex -c /reflex.conf   Up   :3002->80/tcp
-d_users_1      reflex -c /reflex.conf   Up   :3001->80/tcp
-d_firestore_1  dockerize -template=/... Up   :9099->9099/tcp
-8787/tcp
-d_minio_1      /usr/bin/docker-entry... Up   9000/tcp
-d_memcached_1  docker-entrypoint.sh ... Up   11211/tcp
-d_postgres_1   docker-entrypoint.sh ... Up   :5433->5432/tcp
-d_trace_1      /go/bin/all-in-one-linux Up   14250/tcp
-:14268->14268/tcp
-:16686->16686/tcp
+d_web_1        /run.sh.                 Up  :80->80/tcp
+d_app_1        reflex -c /reflex.conf   Up  :3002->80/tcp
+d_users_1      reflex -c /reflex.conf   Up  :3001->80/tcp
+d_firestore_1  dockerize -template=/... Up  :9099->9099/tcp
+                                            8787/tcp
+d_minio_1      /usr/bin/docker-entry... Up  9000/tcp
+d_memcached_1  docker-entrypoint.sh ... Up  11211/tcp
+d_postgres_1   docker-entrypoint.sh ... Up  :5433->5432/tcp
+d_trace_1      /go/bin/all-in-one-linux Up  14250/tcp
+                                            :14268->14268/tcp
+                                            :16686->16686/tcp
 d_teus_1       /bin/prometheus --con... Up  9090/tcp
 \end{lstlisting}
 
 
-Z ukazom $\verb=docker-compose ps=$ (Koda \ref{lst:running-containers}) lahko razberemo, da se ob postavitvi projekta zažene devet vsebnikov. Ti poskrbijo za streženje vseh potrebnih datotek za popolno delovanje čelnega in zalednega dela aplikacije. Za lažjo predstavitev celotnega projekta ali zgradbe aplikacije je diagram celotne arhitekture prikazan na sliki \ref{final-arch}
+Z ukazom $\verb=docker-compose ps=$ (Koda \ref{lst:running-containers}) lahko razberemo, da se ob postavitvi projekta zažene devet vsebnikov. Ti poskrbijo za streženje vseh potrebnih datotek za popolno delovanje čelnega in zalednega dela aplikacije. Za lažjo predstavitev celotnega projekta ali zgradbe aplikacije je diagram celotne arhitekture prikazan na sliki \ref{final-arch}.
 
 \begin{figure}[h]
 \begin{center}
@@ -813,21 +1109,20 @@ V aplikaciji smo definirali dve mikrostoritvi (Slika \ref{app-architecture}). En
 
 % Arhitekturni koncept kode sledi uporabi dobre prakse. Kodo, ki skrbi za pridobivanje in shranjevanje podatkov smo ločili
 
-Koncept kode sledi heksagonalni arhitekturi (ang. hexagonal architecture). Z omenjeno arhitekturo zagotovimo, da je domenska logika neodvisna od trenutne infrastrukture. Uporabljamo vzorec repozitorija s katerim ločimo poslovno kodo od kode, ki skrbi za pridobivanje in shranjevanje podatkov. Za vsako zbirko podatkov smo definirali vmesnik (ang. Interface). Vmesnik definira metode, ki so lahko različno implementirane glede na infrastrukturo. Ta način nam omogoča enostavno spreminjanje implementacije v primeru, ko hočemo zamenjati infrastrukturo podatkovne baze.
+Koncept kode sledi heksagonalni arhitekturi (ang. hexagonal architecture). Z omenjeno arhitekturo zagotovimo, da je domenska logika neodvisna od trenutne infrastrukture. Uporabljamo vzorec repozitorija s katerim ločimo poslovno kodo od kode, ki skrbi za pridobivanje in shranjevanje podatkov. Za vsako zbirko podatkov smo definirali vmesnik (ang. Interface). Vmesnik definira metode, ki so lahko različno implementirane glede na infrastrukturo (Koda \ref{lst:article-repository}). Ta način nam omogoča enostavno spreminjanje implementacije v primeru, ko hočemo zamenjati infrastrukturo podatkovne baze.
 
-Za potrebe aplikacije smo vmesnike implementirali s $PostgreSQL$ podatkovno baze (Koda \ref{lst:article-repository}).
 \begin{lstlisting}[language=go, style=mystyle,caption={Vmesnik, ki definira repozitorij za publikacije.},label=lst:article-repository]
 // ArticleRepository defines the datastore handling persisting Article records.
 type ArticleRepository interface {
-Create(ctx context.Context, article *Article, callback ArticleCallbackFn) (*Article, error)
-Delete(ctx context.Context, id utils.BINARY16) error
-Find(ctx context.Context, id utils.BINARY16) (*Article, error)
-Update(ctx context.Context, article *Article, callback ArticleCallbackFn) (*Article, error)
+  Create(ctx context.Context, article *Article, callback ArticleCallbackFn) (*Article, error)
+  Delete(ctx context.Context, id utils.BINARY16) error
+  Find(ctx context.Context, id utils.BINARY16) (*Article, error)
+  Update(ctx context.Context, article *Article, callback ArticleCallbackFn) (*Article, error)
 }
 
 // ArticleSearchRepository defines the datastore handling searching Article records.
 type ArticleSearchRepository interface {
-Search(ctx context.Context, args SearchParams) (SearchResults, error)
+  Search(ctx context.Context, args SearchParams) (SearchResults, error)
 }
 \end{lstlisting}
 
@@ -1014,35 +1309,36 @@ Postavitev podatkovne sheme se izvede v zbirki podatkov vsakič, ko je potrebno 
 V aplikaciji uporabljamo programsko orodje \verb=go-migrate=. Omogoča izvajanje migracij za različne vrste podatkovnih baz, med njimi tudi PostgreSQL, katero uporabljamo mi. Z orodjem ustvarimo migracijske datoteke, v katere napišemo shemo podatkovne baze. Vsaka migracijska akcija vsebuje dve datoteki. V eni datoteki so definirani ukazi (SQL stavki) za postavitev podatkovne sheme (Koda \ref{lst:schema-migration}), in v drugi ukazi za  povrnitev podatkovne sheme v stanje pred migracijo.
 
 
-\begin{lstlisting}[language=sql, style=mystyle,caption={Izsek koda, za kreiranje tabele "articles", namenjeno hranjenju podatkov o publikacijah.},label=lst:schema-migration]
+\begin{lstlisting}[language=sql, style=mystyle,caption={Izsek kode za kreiranje tabele $articles$, katere namenjen je hranjenje podatkov o publikacijah.},label=lst:schema-migration]
 -- Table Definition
 CREATE TABLE "articles"
 (
-"uuid"            uuid      NOT NULL PRIMARY KEY,
-"source_uuid"     uuid      NOT NULL REFERENCES sources (uuid) ON DELETE CASCADE,
-"title"           text      NOT NULL,
-"url"             text      NOT NULL DEFAULT '',
-"year"            int,
-"comment"         text      NOT NULL DEFAULT '',
-"temperature_min" int       NOT NULL DEFAULT 0,
-"temperature_max" int       NOT NULL DEFAULT 0,
-"file_uuid"       uuid,
-"approved_by"     uuid,
-"released_at"     timestamp          DEFAULT null,
-"created_at"      timestamp NOT NULL DEFAULT now(),
-"updated_at"      timestamp NOT NULL DEFAULT now()
+  "uuid"            uuid   NOT NULL PRIMARY KEY,
+  "source_uuid"     uuid   NOT NULL REFERENCES sources(uuid) 
+                           ON DELETE CASCADE,
+  "title"           text   NOT NULL,
+  "url"             text   NOT NULL DEFAULT '',
+  "year"            int,
+  "comment"         text   NOT NULL DEFAULT '',
+  "temperature_min" int    NOT NULL DEFAULT 0,
+  "temperature_max" int    NOT NULL DEFAULT 0,
+  "file_uuid"       uuid,
+  "approved_by"     uuid,
+  "released_at"     timestamp          DEFAULT null,
+  "created_at"      timestamp NOT NULL DEFAULT now(),
+  "updated_at"      timestamp NOT NULL DEFAULT now()
 );
 \end{lstlisting}
 
 % #####################################################################
-\subsubsection{ Struktura podatkov }
+\subsubsection{Struktura podatkov }
 Z migracijami smo definirali celotno strukturo podatkovne baze, ki jo potrebujemo. Definirali smo 13 tabel, ki skrbijo, da so podatki pravilno shranjeni. Vizualni prikaz tabel in medsebojnih relacij je viden na sliki ~\ref{database-diagram-er}. Opis posameznih tabel:
 \begin{description}
-\item[gomigrate]: Tabela vsebuje informacije o stanju migracij. Ob vsakem izvajanju migracij se v tabelo zapiše identifikator migracije, glede na katerega se izvajajo nadaljnje migracije za podatkovno shemo.
+\item[gomigrate:] Tabela vsebuje informacije o stanju migracij. Ob vsakem izvajanju migracij se v tabelo zapiše identifikator migracije, glede na katerega se izvajajo nadaljnje migracije za podatkovno shemo.
 
-\item[users]: Tabela vsebuje informacije o uporabnikih, ki so registrirani v sistem. Uporabniki se v aplikaciji razlikujejo glede na enoličen identifikator UUID in unikaten e-poštni naslov (``email``).
+\item[users:] Tabela vsebuje informacije o uporabnikih, ki so registrirani v sistem. Uporabniki se v aplikaciji razlikujejo glede na enoličen identifikator UUID in unikaten e-poštni naslov (``email``).
 
-\item[articles]: Tabela vsebuje informacije o publikacijah, vnesenih s strani uporabnika. Vsebuje informacije, kot so naslov, leto izdaje, komentar, najvišja in najnižja temperatura. Poleg informacij, ki jih vnese uporabnik, imamo tudi evidenco o tem, kdo je potrdil publikacijo. Tabela vsebuje tudi relacije z ostalimi entitetami, za povezavo z metodami, avtorji, viri, dinamičnimi podatki in živili. Ena publikacija lahko ima le en vir, zato je ta relacija definirana s tujim ključem v isti tabeli, prav tako velja za pripeto datoteko.
+\item[articles:] Tabela vsebuje informacije o publikacijah, vnesenih s strani uporabnika. Vsebuje informacije, kot so naslov, leto izdaje, komentar, najvišja in najnižja temperatura. Poleg informacij, ki jih vnese uporabnik, imamo tudi evidenco o tem, kdo je potrdil publikacijo. Tabela vsebuje tudi relacije z ostalimi entitetami, za povezavo z metodami, avtorji, viri, dinamičnimi podatki in živili. Ena publikacija lahko ima le en vir, zato je ta relacija definirana s tujim ključem v isti tabeli, prav tako velja za pripeto datoteko.
 
 Ostale relacije, kot so živila, pa so definirana kot mnogo-proti-mnogo, kar pomeni, da potrebujemo medsebojne tabele za povezovanje entitet.
 \begin{itemize}
@@ -1052,22 +1348,22 @@ Ostale relacije, kot so živila, pa so definirana kot mnogo-proti-mnogo, kar pom
 \item article\_fields: tabela za povezavo dinamičnih podatkov s publikacijami
 \end{itemize}
 
-\item[authors]: Tabela vsebuje informacije o avtorjih, katerih publikacije so vnesene v naši aplikaciji. Za povezavo se uporablja medsebojna tabela $article\_authors$.
+\item[authors:] Tabela vsebuje informacije o avtorjih, katerih publikacije so vnesene v naši aplikaciji. Za povezavo se uporablja medsebojna tabela $article\_authors$.
 
-\item[methods]: Tabela vsebuje informacije o metodah, ki jih posamezne publikacije uporabljajo. Za povezavo se uporablja medsebojna tabela $article\_methods$.
+\item[methods:] Tabela vsebuje informacije o metodah, ki jih posamezne publikacije uporabljajo. Za medsebojno povezavo s publikacijami se uporablja tabela $article\_methods$.
 
-\item[foodstuffs]: Tabela vsebuje informacije o živilih, ki so bila uporabljena pri posameznih publikacijah. Za povezavo se uporablja medsebojna tabela $article\_foodstuffs$.
+\item[foodstuffs:] Tabela vsebuje informacije o živilih, ki so bila uporabljena pri posameznih publikacijah. Za medsebojno povezavo s publikacijami se uporablja tabela $article\_foodstuffs$.
 
-\item[foodstuffs]: Tabela vsebuje informacije o živilih, ki so registrirani v sistem. Za povezavo se uporablja medsebojna tabela $article\_foodstuffs$.
+\item[foodstuffs:] Tabela vsebuje informacije o živilih, ki so registrirani v sistem. Za medsebojno povezavo s publikacijami se uporablja tabela $article\_foodstuffs$.
 
-\item[sources]: Tabela vsebuje informacije o virih, iz katerih črpamo publikacije. Tip vira je definiran kot $enum$, čigar vrednost je definirana kot "knjiga", "internetni vir", "revija". Za definicijo tipa smo uporabili PostgreSQL ukaz:
+\item[sources:] Tabela vsebuje informacije o virih, iz katerih črpamo publikacije. Tip vira je definiran kot $enum$, čigar vrednost je definirana kot knjiga, internetni vir ali revija. Za definicijo tipa smo uporabili $PostgreSQL$ ukaz:
 \begin{lstlisting}[language=sql, style=mystyle]
 CREATE TYPE source_type AS ENUM ('web','book','magazine')
 \end{lstlisting}
 
-\item[fields]: Tabela vsebuje informacije o vseh dinamično definiranih podatkih v aplikaciji. Podatki se razlikujejo glede na tip. Vsebujejo lahko enega ali več vrednosti. V primeru, da je podatek sestavljen iz večih vrednosti, uporabimo relacijsko tabelo $field\_values$, kjer so zapisane vrednosti za posamezen podatek.
+\item[fields:] Tabela vsebuje informacije o vseh dinamično definiranih podatkih v aplikaciji. Podatki se razlikujejo glede na tip. Vsebujejo lahko enega ali več vrednosti. V primeru, da je podatek sestavljen iz večih vrednosti, uporabimo relacijsko tabelo $field\_values$, kjer so zapisane vrednosti za posamezen podatek.
 
-\item[article\_fields]: Tabela vsebuje relacijo med dinamičnimi podatki in njihovimi vrednostmi. Za potrebe optimalnega iskanja hrani različne tipe vrednosti:
+\item[article\_fields:] Tabela vsebuje relacijo med dinamičnimi podatki in njihovimi vrednostmi. Za potrebe optimalnega iskanja hrani različne tipe vrednosti:
 \begin{itemize}
 \item value\_varchar: hrani tekstovno vrednost
 \item value\_date: hrani časovno vrednost
@@ -1188,13 +1484,13 @@ npm install
 npm serve
 \end{lstlisting}
 
-Pomembno je tudi poudariti, da je aplikacija enostranska (ang. single-page), kar pomeni, da deluje znotraj brskalnika in ne potrebuje ponovnega nalaganja strani med svojim delovanjem. Je le ena sama stran, ki jo obiščemo in na kateri se nato naloži vso ostalo vsebino s pomočjo kode JavaScripta.
+Pomembno je tudi poudariti, da je aplikacija enostranska (ang. single-page), kar pomeni, da deluje znotraj brskalnika in ne potrebuje ponovnega nalaganja strani med svojim delovanjem. Je le ena sama stran, ki jo obiščemo in na kateri se nato naloži vso ostalo vsebino s pomočjo kode $JavaScript$.
 
 Kot je razvidno iz prikaza zagnanih vsebnikov (Koda: \ref{lst:running-containers}), ima čelni del odprta vrata 80, kar pomeni, da je stran dostopna na lokalnem spletnem naslovu \url{http://localhost:80/}. 
 
 % #####################################################################
 \section{Razvoj vnosa dinamičnih podatkov}
-Za potrebe aplikacije smo razvili popolnoma dinamičen način za dodajanje novih parametrov publikacije. Te paremetre lahko dodajamo, urejamo in brišemo tudi med tem, ko urejamo publikacijo, in kasneje izvajamo razne filtre nad vnesenimi podatki.
+Za potrebe aplikacije smo razvili popolnoma dinamičen način za dodajanje novih parametrov publikacije (Slika \ref{fields-list}). Te paremetre lahko dodajamo, urejamo in brišemo tudi med tem, ko urejamo publikacijo, in kasneje izvajamo razne filtre nad vnesenimi podatki.
 
 \begin{figure}[h]
 \begin{center}
@@ -1278,7 +1574,7 @@ Ta podatek predstavlja podobne vrednosti, kot vnosno polje \sn{Input}, z razliko
 % #####################################################################
 \subsubsection{Izbirno polje - checkbox}
 \label{type-checkbox-page}
-Ta predstavlja podatek, katere vrednosti so statične in vnaprej definirane. Vnos podatkov je podoben kot pri \sn{izbirnem polju - Select} (Slika \ref{type-select-page}), z razliko, da je podatek prikazan na drugačen način. Ta tip podatka nam ne omogoča iskanja po vrednostih in sprotnega dodajanja med samim urejanjem publikacije.
+Ta predstavlja podatek, katere vrednosti so statične in vnaprej definirane. Vnos podatkov je podoben kot pri \sn{izbirnem polju - Select} (Slika \ref{type-checkbox}), z razliko, da je podatek prikazan na drugačen način. Ta tip podatka nam ne omogoča iskanja po vrednostih in sprotnega dodajanja med samim urejanjem publikacije.
 
 \begin{figure}[h]
 \begin{center}
@@ -1638,7 +1934,7 @@ Na sliki \ref{seach-example} je prikazana praktična uporaba filtrov. V njihovi 
 % #####################################################################
 \chapter{Sklepne ugotovitve}
 
-Med razvojem aplikacije, ki smo jo opisali skozi celotno diplomsko delo, sem se hotel naučiti čim več. Spoznal sem nov programski jezik - \verb=Go= in nov arhitekturni koncept mikrostoritev (ang. microservice). Omenjeni dve stvari sta me dodatno spodbudili k delu in spoznavanju novih stvari na področju razvoja programske opreme in pa tudi same organizacije dela.
+Med razvojem aplikacije, ki smo jo opisali skozi celotno diplomsko delo, sem se hotel naučiti čim več. Spoznal sem nov programski jezik - \verb=Go= in nov arhitekturni koncept mikrostoritev (ang. microservice). Omenjeni dve stvari sta me dodatno spodbudili k delu in spoznavanju novih orodij in tehnologij na področju razvoja programske opreme in pa tudi same organizacije dela.
 
 Z vpeljavo arhitekturnega koncepta mikrostoritev je bila izdelana spletna aplikacija. Pri izdelavi diplomske naloge je bil upoštevan celoten postopek, od ideje in načrtovanja, do same izvedbe in testiranja aplikacije. Pri njenem razvoju in izvedbi smo se soočili z različnimi omejitvami in težavami, katere smo uspešno odpravili in zagotovili, da aplikacija deluje hitro in brez napak.
 
